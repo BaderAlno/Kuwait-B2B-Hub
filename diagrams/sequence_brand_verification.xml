@@ -1,0 +1,175 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- Title -->
+    <mxCell id="2" value="Brand Verification Sequence Diagram — Kuwait B2B Hub" style="text;fontStyle=1;fontSize=15;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="100" y="10" width="780" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== PARTICIPANTS ===== -->
+    <mxCell id="10" value="Brand Owner" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="40" y="50" width="120" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="11" value="System API&#xa;(Next.js)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="250" y="50" width="120" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="12" value="Database&#xa;(Supabase)" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="460" y="50" width="120" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="13" value="Admin" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d6b656;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="670" y="50" width="120" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="14" value="Notification&#xa;Service" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="880" y="50" width="120" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== LIFELINES ===== -->
+    <mxCell id="20" value="" style="endArrow=none;dashed=1;strokeColor=#999999;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="100" y="100" as="sourcePoint"/>
+        <mxPoint x="100" y="820" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="21" value="" style="endArrow=none;dashed=1;strokeColor=#999999;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="310" y="100" as="sourcePoint"/>
+        <mxPoint x="310" y="820" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="22" value="" style="endArrow=none;dashed=1;strokeColor=#999999;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="520" y="100" as="sourcePoint"/>
+        <mxPoint x="520" y="820" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="23" value="" style="endArrow=none;dashed=1;strokeColor=#999999;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="730" y="100" as="sourcePoint"/>
+        <mxPoint x="730" y="820" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="24" value="" style="endArrow=none;dashed=1;strokeColor=#999999;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="940" y="100" as="sourcePoint"/>
+        <mxPoint x="940" y="820" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ===== MESSAGES ===== -->
+
+    <!-- 1. Brand Owner → System: POST /api/brands -->
+    <mxCell id="30" value="1: POST /api/auth/register + POST /api/brands {name, description}" style="endArrow=block;endFill=1;strokeColor=#82b366;strokeWidth=2;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="100" y="150" as="sourcePoint"/>
+        <mxPoint x="310" y="150" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 2. System → DB: INSERT brand status=pending -->
+    <mxCell id="31" value="2: INSERT INTO brands (owner_id, name, status=&#39;pending&#39;)" style="endArrow=block;endFill=1;strokeColor=#666666;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="310" y="210" as="sourcePoint"/>
+        <mxPoint x="520" y="210" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- DB → System: brandId -->
+    <mxCell id="32" value="{brandId, status: pending}" style="endArrow=open;dashed=1;strokeColor=#666666;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="520" y="255" as="sourcePoint"/>
+        <mxPoint x="310" y="255" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 3. System → Notification → Admin: notify pending verification -->
+    <mxCell id="33" value="3: notifyAdmin(&#39;New brand pending verification&#39;, brandId)" style="endArrow=block;endFill=1;strokeColor=#9673a6;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="310" y="305" as="sourcePoint"/>
+        <mxPoint x="940" y="305" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Notification → Admin -->
+    <mxCell id="34" value="Email: New brand &#39;XYZ&#39; awaiting approval" style="endArrow=block;endFill=1;strokeColor=#d6b656;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="940" y="355" as="sourcePoint"/>
+        <mxPoint x="730" y="355" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- System → Brand Owner: 201 Created -->
+    <mxCell id="35" value="3b: 201 Created — {brandId, status: pending verification}" style="endArrow=open;dashed=1;strokeColor=#82b366;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="310" y="400" as="sourcePoint"/>
+        <mxPoint x="100" y="400" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 4. Admin → System: PATCH /api/admin/brands/:id -->
+    <mxCell id="36" value="4: PATCH /api/admin/brands/:id {status: approved}" style="endArrow=block;endFill=1;strokeColor=#d6b656;strokeWidth=2;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="730" y="460" as="sourcePoint"/>
+        <mxPoint x="310" y="460" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 5. System → DB: UPDATE brand status=approved -->
+    <mxCell id="37" value="5: UPDATE brands SET status=&#39;approved&#39; WHERE id=:id" style="endArrow=block;endFill=1;strokeColor=#666666;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="310" y="510" as="sourcePoint"/>
+        <mxPoint x="520" y="510" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- DB → System: success -->
+    <mxCell id="38" value="UPDATE success" style="endArrow=open;dashed=1;strokeColor=#666666;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="520" y="555" as="sourcePoint"/>
+        <mxPoint x="310" y="555" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 6. System → Notification: notify brand owner -->
+    <mxCell id="39" value="6: notifyBrandOwner(ownerId, &#39;Brand approved&#39;)" style="endArrow=block;endFill=1;strokeColor=#9673a6;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="310" y="605" as="sourcePoint"/>
+        <mxPoint x="940" y="605" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 7. Notification → Brand Owner: brand approved -->
+    <mxCell id="40" value="7: Email/SMS — Your brand has been approved!" style="endArrow=block;endFill=1;strokeColor=#82b366;strokeWidth=2;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="940" y="655" as="sourcePoint"/>
+        <mxPoint x="100" y="655" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 8. System → Admin: 200 OK -->
+    <mxCell id="41" value="8: 200 OK — Brand approved, owner notified" style="endArrow=open;dashed=1;strokeColor=#d6b656;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="310" y="710" as="sourcePoint"/>
+        <mxPoint x="730" y="710" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Activation boxes -->
+    <mxCell id="50" value="" style="fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="94" y="140" width="12" height="525" as="geometry"/>
+    </mxCell>
+    <mxCell id="51" value="" style="fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="304" y="140" width="12" height="580" as="geometry"/>
+    </mxCell>
+    <mxCell id="52" value="" style="fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="514" y="200" width="12" height="360" as="geometry"/>
+    </mxCell>
+    <mxCell id="53" value="" style="fillColor=#ffe6cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="724" y="345" width="12" height="375" as="geometry"/>
+    </mxCell>
+    <mxCell id="54" value="" style="fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="934" y="295" width="12" height="370" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

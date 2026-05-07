@@ -1,0 +1,215 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- Title -->
+    <mxCell id="2" value="Ishikawa (Fishbone) Diagram — Kuwait B2B Hub" style="text;fontStyle=1;fontSize=16;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="150" y="10" width="760" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== EFFECT BOX (red) ===== -->
+    <mxCell id="3" value="EFFECT:&#xa;Delayed Final&#xa;Submission" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;fontStyle=1;fontSize=13;align=center;" vertex="1" parent="1">
+      <mxGeometry x="870" y="290" width="165" height="90" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== MAIN SPINE (horizontal arrow → effect) ===== -->
+    <mxCell id="4" value="" style="endArrow=block;endFill=1;strokeColor=#b85450;strokeWidth=4;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="60" y="335" as="sourcePoint"/>
+        <mxPoint x="870" y="335" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ===== UPPER BRANCHES ===== -->
+
+    <!-- Branch 1: People (upper-left) -->
+    <mxCell id="10" value="" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=3;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="155" y="155" as="sourcePoint"/>
+        <mxPoint x="255" y="335" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="11" value="PEOPLE" style="text;fontStyle=1;fontSize=14;fontColor=#6c8ebf;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="85" y="120" width="120" height="28" as="geometry"/>
+    </mxCell>
+
+    <!-- Sub-cause 1a: Team availability -->
+    <mxCell id="12" value="" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="95" y="185" as="sourcePoint"/>
+        <mxPoint x="170" y="240" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="13" value="Team Availability" style="text;fontSize=11;fontColor=#333333;align=right;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="0" y="170" width="150" height="22" as="geometry"/>
+    </mxCell>
+
+    <!-- Sub-cause 1b: Skill gaps -->
+    <mxCell id="14" value="" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="135" y="220" as="sourcePoint"/>
+        <mxPoint x="195" y="270" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="15" value="Skill Gaps in&#xa;Full-Stack Dev" style="text;fontSize=11;fontColor=#333333;align=right;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="0" y="210" width="150" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- Branch 2: Process (upper-middle-left) -->
+    <mxCell id="20" value="" style="endArrow=block;endFill=1;strokeColor=#82b366;strokeWidth=3;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="360" y="155" as="sourcePoint"/>
+        <mxPoint x="455" y="335" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="21" value="PROCESS" style="text;fontStyle=1;fontSize=14;fontColor=#82b366;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="290" y="120" width="130" height="28" as="geometry"/>
+    </mxCell>
+
+    <!-- Sub-cause 2a: Unclear requirements -->
+    <mxCell id="22" value="" style="endArrow=block;endFill=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="295" y="185" as="sourcePoint"/>
+        <mxPoint x="375" y="240" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="23" value="Unclear Initial&#xa;Requirements" style="text;fontSize=11;fontColor=#333333;align=right;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="170" y="170" width="155" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- Sub-cause 2b: Review delays -->
+    <mxCell id="24" value="" style="endArrow=block;endFill=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="335" y="220" as="sourcePoint"/>
+        <mxPoint x="405" y="275" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="25" value="Supervisor Review&#xa;Delays" style="text;fontSize=11;fontColor=#333333;align=right;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="185" y="215" width="155" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- Branch 3: Technology (upper-right) -->
+    <mxCell id="30" value="" style="endArrow=block;endFill=1;strokeColor=#9673a6;strokeWidth=3;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="570" y="155" as="sourcePoint"/>
+        <mxPoint x="630" y="335" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="31" value="TECHNOLOGY" style="text;fontStyle=1;fontSize=14;fontColor=#9673a6;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="480" y="120" width="160" height="28" as="geometry"/>
+    </mxCell>
+
+    <!-- Sub-cause 3a: API limitations -->
+    <mxCell id="32" value="" style="endArrow=block;endFill=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="500" y="185" as="sourcePoint"/>
+        <mxPoint x="565" y="240" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="33" value="Supabase API&#xa;Rate Limits" style="text;fontSize=11;fontColor=#333333;align=left;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="490" y="170" width="150" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- Sub-cause 3b: Deployment issues -->
+    <mxCell id="34" value="" style="endArrow=block;endFill=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="535" y="220" as="sourcePoint"/>
+        <mxPoint x="590" y="270" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="35" value="Vercel Deployment&#xa;Build Failures" style="text;fontSize=11;fontColor=#333333;align=left;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="530" y="210" width="160" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== LOWER BRANCHES ===== -->
+
+    <!-- Branch 4: Environment (lower-left) -->
+    <mxCell id="40" value="" style="endArrow=block;endFill=1;strokeColor=#d6b656;strokeWidth=3;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="310" y="520" as="sourcePoint"/>
+        <mxPoint x="410" y="335" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="41" value="ENVIRONMENT" style="text;fontStyle=1;fontSize=14;fontColor=#d6b656;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="225" y="540" width="175" height="28" as="geometry"/>
+    </mxCell>
+
+    <!-- Sub-cause 4a: University deadline conflicts -->
+    <mxCell id="42" value="" style="endArrow=block;endFill=1;strokeColor=#d6b656;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="245" y="488" as="sourcePoint"/>
+        <mxPoint x="340" y="420" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="43" value="University Exam&#xa;Deadline Conflicts" style="text;fontSize=11;fontColor=#333333;align=left;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="195" y="488" width="165" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- Sub-cause 4b: Remote work challenges -->
+    <mxCell id="44" value="" style="endArrow=block;endFill=1;strokeColor=#d6b656;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="278" y="440" as="sourcePoint"/>
+        <mxPoint x="358" y="380" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="45" value="Remote Team&#xa;Coordination" style="text;fontSize=11;fontColor=#333333;align=left;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="195" y="440" width="155" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- Branch 5: Materials (lower-right) -->
+    <mxCell id="50" value="" style="endArrow=block;endFill=1;strokeColor=#666666;strokeWidth=3;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="590" y="520" as="sourcePoint"/>
+        <mxPoint x="660" y="335" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="51" value="MATERIALS" style="text;fontStyle=1;fontSize=14;fontColor=#666666;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="510" y="540" width="160" height="28" as="geometry"/>
+    </mxCell>
+
+    <!-- Sub-cause 5a: Documentation gaps -->
+    <mxCell id="52" value="" style="endArrow=block;endFill=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="525" y="488" as="sourcePoint"/>
+        <mxPoint x="600" y="420" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="53" value="Incomplete&#xa;Documentation" style="text;fontSize=11;fontColor=#333333;align=left;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="480" y="480" width="155" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- Sub-cause 5b: Resource unavailability -->
+    <mxCell id="54" value="" style="endArrow=block;endFill=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="558" y="440" as="sourcePoint"/>
+        <mxPoint x="620" y="380" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="55" value="Library/Tool&#xa;Unavailability" style="text;fontSize=11;fontColor=#333333;align=left;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="490" y="435" width="155" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== BRANCH LABELS (bold boxes near spine intersections) ===== -->
+    <mxCell id="60" value="People" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="230" y="322" width="80" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="61" value="Process" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="420" y="322" width="80" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="62" value="Technology" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="600" y="322" width="90" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="63" value="Environment" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="345" y="322" width="95" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="64" value="Materials" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="620" y="322" width="80" height="26" as="geometry"/>
+    </mxCell>
+
+    <!-- HEAD of fish (circle near effect) -->
+    <mxCell id="70" value="" style="ellipse;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="845" y="318" width="35" height="35" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

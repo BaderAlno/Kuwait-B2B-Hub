@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /orders
+Disallow: /admin
+Disallow: /brand/dashboard
+Disallow: /brand/orders
+Disallow: /brand/products
+Disallow: /brand/profile
+Disallow: /api/
+Sitemap: https://kuwaitb2bhub.com/sitemap.xml

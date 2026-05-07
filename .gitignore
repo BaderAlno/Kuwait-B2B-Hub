@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+**/.DS_Store
+*.pem
+~$*
+
+# Next.js
+app/.next/
+app/out/
+app/build/
+
+# Node
+app/node_modules/
+
+# Environment secrets — NEVER commit these
+app/.env*.local
+app/.env
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Claude / AI agent config
+.claude/

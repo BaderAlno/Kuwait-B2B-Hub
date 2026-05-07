@@ -1,0 +1,623 @@
+{
+  "users": [
+    {
+      "id": "admin-001",
+      "name": "Platform Admin",
+      "email": "admin@b2bhub.kw",
+      "password": "Admin@123456",
+      "role": "admin",
+      "company_name": "Kuwait B2B Hub",
+      "verification_status": "approved",
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "brand-owner-001",
+      "name": "Khalid Al-Rashid",
+      "email": "khalid@kuwaitfashion.com",
+      "password": "Brand@123",
+      "role": "brand_owner",
+      "company_name": "Kuwait Fashion House",
+      "verification_status": "approved",
+      "created_at": "2025-01-10T00:00:00Z"
+    },
+    {
+      "id": "brand-owner-002",
+      "name": "Sara Al-Mutairi",
+      "email": "sara@gulftech.com",
+      "password": "Brand@123",
+      "role": "brand_owner",
+      "company_name": "Gulf Tech Solutions",
+      "verification_status": "approved",
+      "created_at": "2025-01-12T00:00:00Z"
+    },
+    {
+      "id": "brand-owner-004",
+      "name": "Dana Al-Ghanim",
+      "email": "dana@desertrose.kw",
+      "password": "Brand@123",
+      "role": "brand_owner",
+      "company_name": "Desert Rose Beauty",
+      "verification_status": "approved",
+      "created_at": "2025-01-05T00:00:00Z"
+    },
+    {
+      "id": "buyer-001",
+      "name": "Mohammed Al-Sabah",
+      "email": "mohammed@retailco.kw",
+      "password": "Buyer@123",
+      "role": "buyer",
+      "company_name": "RetailCo Kuwait",
+      "verification_status": "approved",
+      "created_at": "2025-01-15T00:00:00Z",
+      "whatsapp_number": "96599887766"
+    },
+    {
+      "id": "buyer-002",
+      "name": "Fatima Al-Amer",
+      "email": "fatima@horizonmart.com",
+      "password": "Buyer@123",
+      "role": "buyer",
+      "company_name": "Horizon Mart",
+      "verification_status": "approved",
+      "created_at": "2025-01-20T00:00:00Z",
+      "whatsapp_number": "96566554433"
+    },
+    {
+      "id": "user-1775337231365-n3yxsqzoo",
+      "name": "Bader Alnoumas",
+      "email": "bdrmfr17@gmail.com",
+      "password": "123456",
+      "role": "buyer",
+      "company_name": "العبغبع",
+      "verification_status": "approved",
+      "created_at": "2026-04-04T21:13:51.365Z"
+    }
+  ],
+  "brands": [
+    {
+      "id": "brand-001",
+      "owner_id": "brand-owner-001",
+      "brand_name": "Kuwait Fashion House",
+      "description": "Premium wholesale fashion and apparel for the Gulf region. We specialize in traditional and contemporary wear with competitive MOQs for retail buyers across the Middle East.",
+      "logo_url": "https://images.unsplash.com/photo-1544441893-675973e31985?w=128&h=128&fit=crop",
+      "status": "approved",
+      "verification_tier": "premium",
+      "created_at": "2025-01-10T00:00:00Z",
+      "whatsapp_number": "96591234567",
+      "business_hours": "Mon–Sat, 9AM–6PM Kuwait time",
+      "auto_reply_message": "We respond within 2 business hours",
+      "whatsapp_clicks": 0
+    },
+    {
+      "id": "brand-002",
+      "owner_id": "brand-owner-002",
+      "brand_name": "Gulf Tech Solutions",
+      "description": "Wholesale electronics, accessories, and smart home devices. Trusted by over 200 retailers across the GCC. Professional distribution from Kuwait City.",
+      "logo_url": "https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=128&h=128&fit=crop",
+      "status": "approved",
+      "verification_tier": "premium",
+      "created_at": "2025-01-12T00:00:00Z",
+      "whatsapp_number": "96598765432",
+      "business_hours": "Sun–Thu, 8AM–5PM Kuwait time",
+      "auto_reply_message": "We typically reply within 4 business hours",
+      "whatsapp_clicks": 0
+    },
+    {
+      "id": "brand-004",
+      "owner_id": "brand-owner-004",
+      "brand_name": "Desert Rose Beauty",
+      "description": "Organic Kuwaiti skin care and luxury perfumes. We use ancestral ingredients with modern science for the sophisticated Arab consumer.",
+      "logo_url": "https://images.unsplash.com/photo-1596462502278-27bfad450216?w=128&h=128&fit=crop",
+      "status": "approved",
+      "verification_tier": "premium",
+      "created_at": "2025-01-05T00:00:00Z"
+    }
+  ],
+  "brand_trust": [
+    {
+      "brand_id": "brand-001",
+      "response_rate": 94,
+      "completion_rate": 98,
+      "avg_response_hours": 4,
+      "total_fulfilled": 428,
+      "orders_this_month": 34,
+      "avg_fulfillment_days": 1.5,
+      "badges": [
+        "verified_supplier",
+        "prime_business",
+        "fast_responder"
+      ]
+    },
+    {
+      "brand_id": "brand-002",
+      "response_rate": 88,
+      "completion_rate": 96,
+      "avg_response_hours": 7,
+      "total_fulfilled": 112,
+      "orders_this_month": 12,
+      "avg_fulfillment_days": 3.8,
+      "badges": [
+        "verified_supplier"
+      ]
+    },
+    {
+      "brand_id": "brand-004",
+      "response_rate": 100,
+      "completion_rate": 100,
+      "avg_response_hours": 1,
+      "total_fulfilled": 86,
+      "orders_this_month": 19,
+      "avg_fulfillment_days": 1.2,
+      "badges": [
+        "verified_supplier",
+        "premium_member"
+      ]
+    }
+  ],
+  "buyer_trust": [
+    {
+      "buyer_id": "buyer-001",
+      "total_orders": 31,
+      "completion_rate": 100,
+      "cancellation_rate": 0,
+      "badges": [
+        "trusted_buyer",
+        "veteran"
+      ]
+    },
+    {
+      "buyer_id": "buyer-002",
+      "total_orders": 12,
+      "completion_rate": 92,
+      "cancellation_rate": 2,
+      "badges": [
+        "frequent_buyer"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-001",
+      "brand_id": "brand-001",
+      "name": "Royal Kandura (Silk-Cotton)",
+      "description": "Our finest kandura crafted from Japanese silk-cotton blend. Breathable, wrinkle-resistant, and tailored to perfection for modern GCC professionals.",
+      "price": 32.5,
+      "moq": 15,
+      "stock": 450,
+      "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+      "bulk_pricing_tiers": [
+        {
+          "min_qty": 15,
+          "max_qty": 49,
+          "price": 32.5
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 99,
+          "price": 28
+        },
+        {
+          "min_qty": 100,
+          "max_qty": null,
+          "price": 24.5
+        }
+      ],
+      "created_at": "2025-01-15T00:00:00Z"
+    },
+    {
+      "id": "prod-1775414680548-rbnscns1k",
+      "brand_id": "brand-001",
+      "name": "ًWindows",
+      "description": "black",
+      "price": 0.03,
+      "moq": 2,
+      "stock": 4,
+      "image_url": "",
+      "bulk_pricing_tiers": [
+        {
+          "min_qty": 2,
+          "max_qty": 2,
+          "price": 0.03
+        },
+        {
+          "min_qty": 1,
+          "max_qty": 2,
+          "price": 0.04
+        }
+      ],
+      "created_at": "2026-04-05T18:44:40.548Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-001",
+      "buyer_id": "buyer-001",
+      "brand_id": "brand-001",
+      "status": "completed",
+      "total_amount": 1625,
+      "created_at": "2025-03-10T09:00:00Z"
+    },
+    {
+      "id": "order-afbe6c49420c",
+      "buyer_id": "51f3a12b-52ac-42c6-9302-5b862765b8d8",
+      "brand_id": "brand-001",
+      "status": "pending",
+      "total_amount": 487.5,
+      "created_at": "2026-04-07T11:44:14.920Z"
+    },
+    {
+      "id": "order-e842238be64c",
+      "buyer_id": "b84c5ee8-0f3f-447b-b991-a92991edd393",
+      "brand_id": "brand-001",
+      "status": "approved",
+      "total_amount": 487.5,
+      "created_at": "2026-05-07T09:14:03.626Z"
+    }
+  ],
+  "order_items": [
+    {
+      "id": "item-001",
+      "order_id": "order-001",
+      "product_id": "prod-001",
+      "quantity": 50,
+      "unit_price": 32.5
+    },
+    {
+      "id": "item-cea7eadc313b",
+      "order_id": "order-afbe6c49420c",
+      "product_id": "prod-001",
+      "quantity": 15,
+      "unit_price": 32.5
+    },
+    {
+      "id": "item-51bcb18dfc0b",
+      "order_id": "order-e842238be64c",
+      "product_id": "prod-001",
+      "quantity": 15,
+      "unit_price": 32.5
+    }
+  ],
+  "messages": [],
+  "reviews": [
+    {
+      "id": "rev-001",
+      "brand_id": "brand-001",
+      "order_id": "order-001",
+      "buyer_id": "buyer-001",
+      "rating": 5,
+      "content": "Exceptional quality kanduras. The Japanese silk-cotton blend is exactly what our premium clients expect. Fast shipping to Kuwait City too.",
+      "anonymous": false,
+      "flagged": false,
+      "brand_reply": "Thank you for the review, Mohammed! We always prioritize quality for our local partners.",
+      "created_at": "2025-03-15T10:00:00Z"
+    },
+    {
+      "id": "rev-002",
+      "brand_id": "brand-001",
+      "order_id": null,
+      "buyer_id": "buyer-002",
+      "rating": 4,
+      "content": "Great selection of traditional wear. MOQs were negotiable which helped us as a mid-sized retailer. Consistency was at 90%.",
+      "anonymous": false,
+      "flagged": false,
+      "brand_reply": null,
+      "created_at": "2025-03-16T12:00:00Z"
+    },
+    {
+      "id": "rev-003",
+      "brand_id": "brand-001",
+      "order_id": null,
+      "buyer_id": "buyer-001",
+      "rating": 5,
+      "content": "Best wholesale fashion partner in Kuwait. Communication is very direct and clear.",
+      "anonymous": true,
+      "flagged": false,
+      "brand_reply": null,
+      "created_at": "2025-03-14T09:00:00Z"
+    },
+    {
+      "id": "rev-004",
+      "brand_id": "brand-001",
+      "order_id": null,
+      "buyer_id": "buyer-002",
+      "rating": 5,
+      "content": "Superior stitching and fast delivery. Very reliable for the holiday season.",
+      "anonymous": false,
+      "flagged": false,
+      "brand_reply": null,
+      "created_at": "2025-03-18T15:30:00Z"
+    },
+    {
+      "id": "rev-005",
+      "brand_id": "brand-002",
+      "order_id": null,
+      "buyer_id": "buyer-001",
+      "rating": 5,
+      "content": "Gulf Tech's distribution is top-tier. The Smart Home hubs are selling like hotcakes. Very professional Saras.",
+      "anonymous": false,
+      "flagged": false,
+      "brand_reply": "Thank you Mohammed! We have more smart stock coming in next week.",
+      "created_at": "2025-03-12T11:00:00Z"
+    },
+    {
+      "id": "rev-006",
+      "brand_id": "brand-002",
+      "order_id": null,
+      "buyer_id": "buyer-002",
+      "rating": 5,
+      "content": "Highly recommended for electronics. All units are tested and verified before delivery.",
+      "anonymous": false,
+      "flagged": false,
+      "brand_reply": null,
+      "created_at": "2025-03-14T14:00:00Z"
+    },
+    {
+      "id": "rev-007",
+      "brand_id": "brand-004",
+      "rating": 5,
+      "content": "The Desert Rose Oud is incredible. Our boutique clients are obsessed with the scent profile. Dana was very helpful.",
+      "buyer_id": "buyer-001",
+      "anonymous": false,
+      "flagged": false,
+      "brand_reply": "Shukran! We are thrilled to be in your boutiques.",
+      "created_at": "2025-03-10T09:00:00Z"
+    },
+    {
+      "id": "rev-008",
+      "brand_id": "brand-004",
+      "rating": 4,
+      "content": "Premium skin care that truly feels luxury. Packaging was beautiful and secured. Will reorder again.",
+      "buyer_id": "buyer-002",
+      "anonymous": true,
+      "flagged": false,
+      "brand_reply": null,
+      "created_at": "2025-03-11T16:20:00Z"
+    },
+    {
+      "id": "review-d9576652",
+      "brand_id": "brand-001",
+      "order_id": null,
+      "buyer_id": "buyer-001",
+      "rating": 5,
+      "content": "",
+      "anonymous": false,
+      "flagged": false,
+      "brand_reply": null,
+      "created_at": "2026-04-04T07:19:55.892Z"
+    },
+    {
+      "id": "review-7359d072",
+      "brand_id": "brand-001",
+      "order_id": null,
+      "buyer_id": "buyer-001",
+      "rating": 4,
+      "content": "شي جيد\n",
+      "anonymous": false,
+      "flagged": false,
+      "brand_reply": null,
+      "created_at": "2026-04-04T07:20:30.392Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-001",
+      "user_id": "buyer-001",
+      "type": "order_approved",
+      "title": "Order Approved!",
+      "body": "Gulf Tech Solutions approved your order #order-002 for KD 920.00",
+      "read": true,
+      "action_url": "/orders/order-002",
+      "icon_type": "success",
+      "created_at": "2025-03-05T10:30:00Z"
+    },
+    {
+      "id": "notif-002",
+      "user_id": "buyer-001",
+      "type": "order_approved",
+      "title": "Order Approved!",
+      "body": "Kuwait Fashion House approved your order #order-005 for KD 540.00",
+      "read": true,
+      "action_url": "/orders/order-005",
+      "icon_type": "success",
+      "created_at": "2025-03-14T09:00:00Z"
+    },
+    {
+      "id": "notif-003",
+      "user_id": "buyer-001",
+      "type": "order_completed",
+      "title": "Order Fulfilled!",
+      "body": "Your order from Kuwait Fashion House has been completed. Leave a review?",
+      "read": false,
+      "action_url": "/orders/order-001",
+      "icon_type": "info",
+      "created_at": "2025-03-11T09:00:00Z"
+    },
+    {
+      "id": "notif-004",
+      "user_id": "buyer-001",
+      "type": "new_brand",
+      "title": "New Brand on the Platform",
+      "body": "Desert Rose Beauty just joined Kuwait B2B Hub. Check their catalog!",
+      "read": false,
+      "action_url": "/brands/brand-004",
+      "icon_type": "store",
+      "created_at": "2025-01-05T10:00:00Z"
+    },
+    {
+      "id": "notif-005",
+      "user_id": "buyer-001",
+      "type": "review_reminder",
+      "title": "How was your experience?",
+      "body": "You haven't reviewed your order from Gulf Tech Solutions yet.",
+      "read": false,
+      "action_url": "/orders/order-002",
+      "icon_type": "star",
+      "created_at": "2025-03-22T10:00:00Z"
+    },
+    {
+      "id": "notif-006",
+      "user_id": "buyer-002",
+      "type": "new_brand",
+      "title": "New Brand on the Platform",
+      "body": "Kuwait Fashion House just joined Kuwait B2B Hub. Check their catalog!",
+      "read": true,
+      "action_url": "/brands/brand-001",
+      "icon_type": "store",
+      "created_at": "2025-01-10T10:00:00Z"
+    },
+    {
+      "id": "notif-007",
+      "user_id": "buyer-002",
+      "type": "review_reminder",
+      "title": "How was your experience?",
+      "body": "You haven't reviewed your order from Desert Rose Beauty yet.",
+      "read": false,
+      "action_url": "/orders/order-004",
+      "icon_type": "star",
+      "created_at": "2025-03-19T10:00:00Z"
+    },
+    {
+      "id": "notif-008",
+      "user_id": "brand-owner-001",
+      "type": "new_order",
+      "title": "New Order Request!",
+      "body": "Mohammed Al-Sabah from RetailCo Kuwait placed an order request for KD 1,625.00",
+      "read": true,
+      "action_url": "/brand/orders/order-001",
+      "icon_type": "package",
+      "created_at": "2025-03-10T09:00:00Z"
+    },
+    {
+      "id": "notif-009",
+      "user_id": "brand-owner-001",
+      "type": "new_order",
+      "title": "New Order Request!",
+      "body": "Mohammed Al-Sabah from RetailCo Kuwait placed an order request for KD 540.00",
+      "read": false,
+      "action_url": "/brand/orders/order-005",
+      "icon_type": "package",
+      "created_at": "2025-03-14T08:45:00Z"
+    },
+    {
+      "id": "notif-010",
+      "user_id": "brand-owner-001",
+      "type": "low_stock",
+      "title": "Low Stock Warning",
+      "body": "Royal Kandura (Silk-Cotton) is running low — consider restocking soon",
+      "read": true,
+      "action_url": "/brand/products",
+      "icon_type": "warning",
+      "created_at": "2025-03-15T08:00:00Z"
+    },
+    {
+      "id": "notif-011",
+      "user_id": "brand-owner-004",
+      "type": "new_order",
+      "title": "New Order Request!",
+      "body": "Fatima Al-Amer from Horizon Mart placed an order request for KD 1,150.00",
+      "read": false,
+      "action_url": "/brand/orders/order-004",
+      "icon_type": "package",
+      "created_at": "2025-03-12T11:00:00Z"
+    },
+    {
+      "id": "notif-012",
+      "user_id": "brand-owner-004",
+      "type": "new_review",
+      "title": "New Review Received",
+      "body": "Mohammed Al-Sabah left a 5★ review on your brand",
+      "read": false,
+      "action_url": "/brand/profile",
+      "icon_type": "star",
+      "created_at": "2025-02-20T10:00:00Z"
+    },
+    {
+      "id": "notif-013",
+      "user_id": "brand-owner-004",
+      "type": "account_approved",
+      "title": "Your Brand is Now Live!",
+      "body": "Congratulations! Desert Rose Beauty has been verified and is now visible on the marketplace.",
+      "read": true,
+      "action_url": "/brand/profile",
+      "icon_type": "success",
+      "created_at": "2025-01-06T10:00:00Z"
+    },
+    {
+      "id": "notif-014",
+      "user_id": "admin-001",
+      "type": "new_brand_registration",
+      "title": "New Brand Awaiting Approval",
+      "body": "Al Watan Foods by Ahmad Hassan submitted for verification",
+      "read": false,
+      "action_url": "/admin/brands",
+      "icon_type": "store",
+      "created_at": "2025-02-01T00:00:00Z"
+    },
+    {
+      "id": "notif-015",
+      "user_id": "admin-001",
+      "type": "new_user",
+      "title": "New User Registration",
+      "body": "Fatima Al-Amer joined as Business Buyer from Horizon Mart",
+      "read": true,
+      "action_url": "/admin/users",
+      "icon_type": "user",
+      "created_at": "2025-01-20T00:00:00Z"
+    },
+    {
+      "id": "notif-016",
+      "user_id": "admin-001",
+      "type": "platform_milestone",
+      "title": "Platform Milestone!",
+      "body": "Kuwait B2B Hub just reached 10 total orders!",
+      "read": true,
+      "action_url": "/admin/dashboard",
+      "icon_type": "milestone",
+      "created_at": "2025-03-15T00:00:00Z"
+    },
+    {
+      "id": "notif-017",
+      "user_id": "admin-001",
+      "type": "new_brand_registration",
+      "title": "New Brand Awaiting Approval",
+      "body": "Desert Rose Beauty by Dana Al-Ghanim submitted for verification",
+      "read": true,
+      "action_url": "/admin/brands",
+      "icon_type": "store",
+      "created_at": "2025-01-05T00:00:00Z"
+    },
+    {
+      "id": "notif-1775337231366-81piplr7g",
+      "user_id": "admin-001",
+      "type": "new_user",
+      "title": "New User Registration",
+      "body": "Bader Alnoumas joined as Business Buyer from العبغبع",
+      "read": false,
+      "action_url": "/admin/users",
+      "icon_type": "user",
+      "created_at": "2026-04-04T21:13:00Z"
+    },
+    {
+      "id": "notif-0e356fedbb88",
+      "user_id": "brand-owner-001",
+      "type": "new_order",
+      "title": "New Order Request!",
+      "body": "Abdullah Alshammire from Vexa placed an order request for KD 487.50",
+      "read": false,
+      "action_url": "/brand/orders/order-afbe6c49420c",
+      "icon_type": "package",
+      "created_at": "2026-04-07T11:44:14.934Z"
+    },
+    {
+      "id": "notif-c50ba6c9887e",
+      "user_id": "brand-owner-001",
+      "type": "new_order",
+      "title": "New Order Received!",
+      "body": "Bader Alnoumas from null placed a new order for KD 487.50",
+      "read": false,
+      "action_url": "/brand/orders/order-e842238be64c",
+      "icon_type": "package",
+      "created_at": "2026-05-07T09:14:03.649Z"
+    }
+  ]
+}

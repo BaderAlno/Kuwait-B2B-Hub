@@ -1,0 +1,121 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- Title -->
+    <mxCell id="2" value="Deployment Diagram — Kuwait B2B Hub" style="text;fontStyle=1;fontSize=16;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="230" y="15" width="600" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== NODE 1: User Device ===== -->
+    <mxCell id="10" value="«device»&#xa;User Device" style="swimlane;fontStyle=1;align=center;startSize=40;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="30" y="80" width="200" height="240" as="geometry"/>
+    </mxCell>
+    <!-- Browser component -->
+    <mxCell id="11" value="«component»&#xa;Web Browser" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="10">
+      <mxGeometry x="25" y="55" width="150" height="45" as="geometry"/>
+    </mxCell>
+    <!-- React App component -->
+    <mxCell id="12" value="«component»&#xa;Next.js React App" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="10">
+      <mxGeometry x="25" y="115" width="150" height="45" as="geometry"/>
+    </mxCell>
+    <!-- Supabase JS client -->
+    <mxCell id="13" value="«library»&#xa;@supabase/supabase-js" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="10">
+      <mxGeometry x="25" y="175" width="150" height="45" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== NODE 2: Vercel Edge Network ===== -->
+    <mxCell id="20" value="«cloud»&#xa;Vercel Edge Network" style="swimlane;fontStyle=1;align=center;startSize=40;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="290" y="80" width="220" height="240" as="geometry"/>
+    </mxCell>
+    <!-- Edge Functions -->
+    <mxCell id="21" value="«component»&#xa;Edge Middleware" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="20">
+      <mxGeometry x="25" y="55" width="170" height="45" as="geometry"/>
+    </mxCell>
+    <!-- CDN -->
+    <mxCell id="22" value="«component»&#xa;Static Asset CDN" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="20">
+      <mxGeometry x="25" y="115" width="170" height="45" as="geometry"/>
+    </mxCell>
+    <!-- SSL -->
+    <mxCell id="23" value="«component»&#xa;TLS/SSL Termination" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="20">
+      <mxGeometry x="25" y="175" width="170" height="45" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== NODE 3: Next.js Serverless ===== -->
+    <mxCell id="30" value="«serverless»&#xa;Next.js API Routes" style="swimlane;fontStyle=1;align=center;startSize=40;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="570" y="80" width="220" height="240" as="geometry"/>
+    </mxCell>
+    <!-- API Routes -->
+    <mxCell id="31" value="«component»&#xa;/api/auth/*" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="30">
+      <mxGeometry x="25" y="55" width="170" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="32" value="«component»&#xa;/api/brands/* + /api/products/*" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="30">
+      <mxGeometry x="25" y="105" width="170" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="33" value="«component»&#xa;/api/orders/* + /api/admin/*" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="30">
+      <mxGeometry x="25" y="155" width="170" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="34" value="«library»&#xa;@supabase/ssr (server)" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="30">
+      <mxGeometry x="25" y="200" width="170" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== NODE 4: Supabase Cloud ===== -->
+    <mxCell id="40" value="«cloud»&#xa;Supabase Cloud" style="swimlane;fontStyle=1;align=center;startSize=40;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="850" y="80" width="250" height="240" as="geometry"/>
+    </mxCell>
+    <!-- Supabase Auth -->
+    <mxCell id="41" value="«service»&#xa;Supabase Auth&#xa;(JWT + Sessions)" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="40">
+      <mxGeometry x="25" y="55" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <!-- PostgreSQL -->
+    <mxCell id="42" value="«database»&#xa;PostgreSQL 15&#xa;(Row-Level Security)" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="40">
+      <mxGeometry x="25" y="120" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <!-- Realtime -->
+    <mxCell id="43" value="«service»&#xa;Realtime (notifications)" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="40">
+      <mxGeometry x="25" y="180" width="200" height="45" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== CONNECTIONS ===== -->
+
+    <!-- User Device → Vercel (HTTPS/TLS) -->
+    <mxCell id="50" value="HTTPS / TLS 1.3" style="endArrow=block;endFill=1;startArrow=block;startFill=1;strokeColor=#6c8ebf;strokeWidth=2;fontSize=11;fontStyle=1;" edge="1" source="10" target="20" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="230" y="200" as="sourcePoint"/>
+        <mxPoint x="290" y="200" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Vercel → Next.js Serverless (internal routing) -->
+    <mxCell id="51" value="Internal Routing&#xa;(API Requests)" style="endArrow=block;endFill=1;startArrow=block;startFill=1;strokeColor=#666666;strokeWidth=2;fontSize=11;fontStyle=1;" edge="1" source="20" target="30" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="510" y="200" as="sourcePoint"/>
+        <mxPoint x="570" y="200" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Next.js → Supabase (PostgreSQL + Auth) -->
+    <mxCell id="52" value="HTTPS REST API /&#xa;WebSocket (Realtime)" style="endArrow=block;endFill=1;startArrow=block;startFill=1;strokeColor=#9673a6;strokeWidth=2;fontSize=11;fontStyle=1;" edge="1" source="30" target="40" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="790" y="200" as="sourcePoint"/>
+        <mxPoint x="850" y="200" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Browser direct to Supabase Auth (for auth flow) -->
+    <mxCell id="53" value="Direct Auth Calls (PKCE Flow)" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1;dashed=1;fontSize=10;" edge="1" source="10" target="40" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="130" y="420"/>
+          <mxPoint x="975" y="420"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ===== NOTES ===== -->
+    <mxCell id="60" value="Kuwait B2B Hub — Production Deployment&#xa;Platform: Vercel (Next.js 14) + Supabase&#xa;Region: Middle East (UAE / closest to Kuwait)&#xa;Auth: Row-Level Security (RLS) enforced" style="text;align=left;verticalAlign=top;fillColor=#ffffc0;strokeColor=#cccc00;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="30" y="380" width="330" height="80" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

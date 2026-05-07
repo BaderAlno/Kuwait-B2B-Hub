@@ -1,0 +1,585 @@
+{
+  "nav": {
+    "marketplace": "Marketplace",
+    "orders": "My Orders", 
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "signOut": "Sign Out",
+    "products": "Products",
+    "brands": "Brands",
+    "users": "Users"
+  },
+  "marketplace": {
+    "hero": {
+      "title": "Connect with Kuwait's Top Wholesale Brands",
+      "subtitle": "Browse verified product catalogs and place bulk wholesale orders",
+      "searchPlaceholder": "Search brands, products, categories...",
+      "searchButton": "Search",
+      "badge": "100% Verified Brands"
+    },
+    "stats": {
+      "activeBrands": "Active Brands",
+      "productsListed": "Products Listed",
+      "verified": "Verified",
+      "allBrands": "All Brands",
+      "fastProcessing": "Fast Processing",
+      "analytics": "Analytics",
+      "howItWorks": {
+        "title": "How it works",
+        "step1": "Browse approved brands",
+        "step2": "Select products & quantities",
+        "step3": "Submit order request",
+        "step4": "Brand reviews & approves"
+      }
+    },
+    "filters": {
+      "all": "All Categories",
+      "fashion": "Fashion & Apparel",
+      "electronics": "Electronics & Tech",
+      "food": "Food & Beverages",
+      "beauty": "Beauty & Cosmetics",
+      "home": "Home & Lifestyle",
+      "sports": "Sports & Outdoors"
+    },
+    "moq": {
+      "title": "Min. Order (MOQ)",
+      "ranges": {
+        "1-50": "1–50 units",
+        "51-200": "51–200 units",
+        "201-500": "201–500 units",
+        "500+": "500+ units"
+      }
+    },
+    "sort": {
+      "title": "Sort By",
+      "options": {
+        "recent": "Most Recent",
+        "rated": "Highest Rated",
+        "orders": "Most Orders",
+        "az": "A–Z"
+      }
+    },
+    "brandCard": {
+      "products": "{count} products",
+      "fulfilled": "{count} fulfilled",
+      "viewCatalog": "View Catalog",
+      "premiumVerified": "Premium Verified",
+      "verifiedBusiness": "Verified Business",
+      "newSupplier": "New Supplier"
+    },
+    "results": {
+      "found": "{count} brands found",
+      "noResults": "No brands found",
+      "noResultsHint": "Try a different search term or category"
+    }
+  },
+  "orders": {
+    "title": "My Orders",
+    "subtitle": "{count} total orders",
+    "newOrder": "+ New Order",
+    "orderNumber": "Order #{id}",
+    "itemsCount": "{count} item(s)",
+    "filters": {
+      "all": "All",
+      "pending": "Pending",
+      "approved": "Approved",
+      "completed": "Completed",
+      "rejected": "Rejected"
+    },
+    "card": {
+      "orderNumber": "Order #{id}",
+      "items": "{count} item(s)",
+      "viewDetails": "View Details"
+    },
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "completed": "Completed",
+      "rejected": "Rejected"
+    },
+    "empty": {
+      "title": "No orders yet",
+      "subtitle": "Browse the marketplace and place your first wholesale order",
+      "cta": "Browse Marketplace"
+    }
+  },
+  "dashboard": {
+    "greeting": "Good morning, {name}",
+    "greetingEvening": "Good evening, {name}",
+    "subtitle": "{company} {role}",
+    "metrics": {
+      "totalOrders": "Total Orders",
+      "totalRevenue": "Total Revenue",
+      "incomingOrders": "Incoming Orders",
+      "productsListed": "Products Listed",
+      "avgResponseTime": "Avg Response Time",
+      "pending": "Pending",
+      "approved": "Approved",
+      "totalSpent": "Total Spent"
+    },
+    "charts": {
+      "orderActivity": "Order Activity",
+      "last6Months": "Last 6 Months",
+      "ordersPerMonth": "Orders placed per month",
+      "spendingByBrand": "Spending by Brand",
+      "orderStatus": "Order Status Breakdown"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "browseMarketplace": "Browse Marketplace",
+      "viewAllOrders": "View All Orders",
+      "addProduct": "Add Product",
+      "viewAnalytics": "View Analytics"
+    },
+    "recentOrders": "Recent Orders",
+    "viewAll": "View All →",
+    "empty": {
+      "noOrders": "No orders found",
+      "browse": "Browse Marketplace"
+    }
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email Address",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "role": {
+      "label": "I am a...",
+      "buyer": "Business Buyer",
+      "buyerDesc": "I want to purchase wholesale products",
+      "brand": "Brand Owner",
+      "brandDesc": "I want to sell my products wholesale"
+    },
+    "login": {
+      "title": "Sign in to B2BHub",
+      "subtitle": "Access Kuwait's premier wholesale marketplace for verified brands and bulk buyers.",
+      "noAccount": "New to B2BHub?",
+      "registerLink": "Create an account",
+      "workEmail": "Work Email",
+      "emailPlaceholder": "your@company.com",
+      "password": "Password",
+      "loading": "Signing in",
+      "button": "Sign In",
+      "demoLabel": "Try a demo account"
+    },
+    "register": {
+      "title": "Create your account",
+      "alreadyAccount": "Already have an account?",
+      "loginLink": "Sign in",
+      "steps": {
+        "role": "Account Type",
+        "details": "Details"
+      },
+      "usagePrompt": "How will you use B2BHub?",
+      "roles": {
+        "brand": {
+          "title": "Brand Owner",
+          "desc": "Sell wholesale to verified buyers",
+          "warning": "Brand accounts require verification before going live on the marketplace."
+        },
+        "buyer": {
+          "title": "Business Buyer",
+          "desc": "Purchase wholesale from verified brands"
+        }
+      },
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "e.g. Mohammed Al-Rashidi",
+      "companyName": "Company Name",
+      "companyPlaceholder": "e.g. Gulf Retail Group",
+      "workEmail": "Work Email",
+      "emailPlaceholder": "your@company.com",
+      "password": "Password",
+      "passwordPlaceholder": "Min. 6 characters",
+      "confirmPassword": "Confirm Password",
+      "confirmPlaceholder": "Repeat password",
+      "loadingAccount": "Creating account",
+      "button": "Create Account"
+    }
+  },
+  "trust": {
+    "title": "Trust & Reliability",
+    "subtitle": "Verified performance metrics for this supplier",
+    "responseRate": "Response Rate",
+    "completionRate": "Completion Rate",
+    "avgResponseTime": "Avg Response Time",
+    "memberSince": "Member since {date}",
+    "ordersCompleted": "{count} orders completed",
+    "completedOrders": "Completed Orders",
+    "memberSinceLabel": "Member Since",
+    "platformStatus": "Platform Status",
+    "active": "Active",
+    "inactive": "Inactive",
+    "suspended": "Suspended",
+    "within1h": "Within 1 hour",
+    "within4h": "Within 4 hours",
+    "within24h": "Within 24 hours",
+    "score": "Trust Score",
+    "verified": "Verified Supplier",
+    "badge": {
+      "premium": "Premium Verified",
+      "verified": "Verified Business",
+      "new": "New Supplier"
+    },
+    "modal": {
+      "title": "What does Verified mean?",
+      "body": "This supplier was manually verified by Kuwait B2B Hub. We confirmed their Commercial Registration (CR) number, validated their business address, and verified the owner's ID.",
+      "lastVerified": "Last verified",
+      "close": "Close"
+    },
+    "writeReview": "Write a Review",
+    "reviews": "{count} reviews",
+    "noReviews": "No reviews yet — be the first to order from this brand",
+    "reviewPrompt": "How was your experience with {brand}?",
+    "anonymous": "Post anonymously",
+    "sortRecent": "Most Recent",
+    "sortHigh": "Highest Rated",
+    "sortLow": "Lowest Rated",
+    "noReviewsHint": "Ratings and reviews help other buyers find reliable suppliers."
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Mark all as read",
+    "empty": "You're all caught up!",
+    "emptyHint": "No new notifications",
+    "viewAll": "View all notifications"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "sortBy": "Sort by",
+    "analytics": "Analytics",
+    "currency": {
+      "label": "Currency",
+      "pricesIn": "Prices in {symbol}"
+    },
+    "language": "Language",
+    "settings": "Settings",
+    "signOut": "Sign Out",
+    "comingSoon": "Coming Soon",
+    "all": "All",
+    "pending": "Pending",
+    "approved": "Approved",
+    "completed": "Completed",
+    "rejected": "Rejected",
+    "units": "units",
+    "loadMore": "Load more",
+    "viewAll": "View All",
+    "status": {
+      "awaitingReview": "Awaiting Review",
+      "fulfilledOrders": "Fulfilled Orders",
+      "discoverVerified": "Discover thousands of verified products.",
+      "totalOrdersCount": "View your {count} orders",
+      "itemsCount": "{count} items"
+    },
+    "trend": {
+      "vsLastMonth": "vs last month"
+    },
+    "trust": {
+      "buildTitle": "Build your reputation",
+      "buildSubtitle": "Share your experience with {count} completed orders."
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "step1": "Browse approved brands",
+      "step2": "Select products & quantities",
+      "step3": "Submit order request",
+      "step4": "Brand reviews & approves"
+    }
+  },
+  "admin": {
+    "sidebar": {
+      "panel": "Admin Panel",
+      "dashboard": "Dashboard",
+      "brands": "Brands",
+      "users": "Users",
+      "orders": "Orders"
+    },
+    "overview": {
+      "title": "Admin Overview",
+      "subtitle": "Network performance & approvals"
+    },
+    "stats": {
+      "activeBrands": "Active Brands",
+      "pendingBrands": "Pending Brands",
+      "totalRevenue": "Total Revenue",
+      "totalOrders": "Total Orders",
+      "networkGrowth": "Network Growth",
+      "networkGrowthDesc": "{count} registered businesses.",
+      "marketplaceSize": "Marketplace Size",
+      "marketplaceSizeDesc": "{count} brands registered total."
+    },
+    "pending": {
+      "title": "Pending Registrations",
+      "manage": "Manage",
+      "allClear": "All Clear"
+    },
+    "moderation": {
+      "title": "Review Moderation",
+      "flagged": "{count} Flagged",
+      "healthyContent": "Healthy Content",
+      "from": "from {name}",
+      "anonymous": "Anonymous",
+      "noComment": "— No comment —",
+      "keepContent": "Keep Content",
+      "remove": "Remove",
+      "flaggedLabel": "Flagged"
+    }
+  },
+  "brandCatalogView": {
+    "productsCount": "{count} Products",
+    "wholesaleOnly": "Wholesale Only",
+    "ordersFulfilled": "{count} orders fulfilled",
+    "ordersThisMonth": "{count} orders this month",
+    "writeReview": "Write Review",
+    "marketplaceLink": "Marketplace",
+    "catalogTitle": "Wholesale Catalog",
+    "noProducts": "No products yet",
+    "noProductsHint": "This brand hasn't listed products for wholesale yet.",
+    "moq": "MOQ: {count} units",
+    "stock": "Stock: {count}",
+    "unitPriceFor": "unit price for {count} qty",
+    "addToOrder": "Add to Order",
+    "removeFromOrder": "Remove",
+    "orderSummary": "Order Summary",
+    "orderSummaryEmpty": "Add products from the catalog to build your order request.",
+    "total": "Total",
+    "submitOrder": "Submit Order Request",
+    "submitOrderHint": "The brand will review and respond to your request",
+    "typicallyReplies": "Typically replies:",
+    "orderSubmitted": "Order Request Submitted!",
+    "units": "units"
+  },
+  "orderDetails": {
+    "title": "Order Detail",
+    "backToOrders": "Back to Orders",
+    "printInvoice": "Print Invoice",
+    "sku": "SKU: {sku}",
+    "orderId": "ID: #{id} · {brand}",
+    "summary": "Order Summary",
+    "visitBrand": "Visit",
+    "verifiedBrand": "Verified Brand",
+    "orderDate": "Date",
+    "totalAmount": "Total Amount",
+    "itemsCount": "Items ({count})",
+    "total": "Total",
+    "chat": {
+      "title": "Messages regarding Order #{id}",
+      "noMessages": "No messages yet. Ask the brand a question!",
+      "placeholder": "Type a message…"
+    },
+    "alerts": {
+      "awaiting": "Awaiting response from {brand}.",
+      "approved": "Your order has been approved!",
+      "rejected": "Your order was rejected."
+    },
+    "whatsapp": {
+      "sendDetails": "Send order details via WhatsApp?",
+      "sendDetailsHint": "Let {brand} know you've submitted an order on the platform.",
+      "sendButton": "Send via WhatsApp",
+      "approvedShare": "Share this good news via WhatsApp",
+      "approvedShareButton": "Share Update"
+    },
+    "review": {
+      "title": "Rate your experience",
+      "subtitle": "How was {brand}?",
+      "button": "Write Review"
+    },
+    "units": "{count} unit(s)",
+    "itemsHeader": "Order Items",
+    "table": {
+      "product": "PRODUCT",
+      "quantity": "QUANTITY",
+      "price": "PRICE",
+      "total": "TOTAL"
+    },
+    "summaryFields": {
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "shippingHint": "Calculated upon approval",
+      "total": "Total"
+    },
+    "supplier": {
+      "title": "Supplier Info",
+      "verified": "Verified Manufacturer"
+    },
+    "logistics": {
+      "title": "Logistics Details",
+      "address": "Shipping Address",
+      "phone": "Contact Number"
+    },
+    "timeline": {
+      "title": "Order History",
+      "placed": "Order Placed",
+      "review": "Brand Review",
+      "approved": "Order Approved",
+      "fulfillment": "Fulfillment",
+      "ongoing": "Ongoing",
+      "completed": "Completed",
+      "pending": "Pending",
+      "delivered": "Delivered"
+    }
+  },
+  "brandSidebar": {
+    "label": "Brand Owner",
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "orders": "Orders",
+    "profile": "Brand Profile",
+    "analytics": "Analytics",
+    "settings": "Settings"
+  },
+  "brandOrders": {
+    "title": "Order Requests",
+    "totalRequests": "{count} total requests received",
+    "empty": {
+      "title": "No orders found",
+      "subtitle": "Orders matching your filter will appear here."
+    },
+    "card": {
+       "buyerId": "{name} · ID: #{id}",
+       "itemsTotal": "{count} item(s) total"
+    },
+    "actions": {
+       "approve": "Approve",
+       "reject": "Reject",
+       "viewFullDetails": "View Full Details"
+    }
+  },
+  "brandProducts": {
+    "title": "Product Catalog",
+    "totalProducts": "{count} total products listed",
+    "importCatalog": "Import Catalog",
+    "addNewProduct": "Add New Product",
+    "import": "Import",
+    "deleteConfirm": "Delete this product?",
+    "empty": {
+      "title": "No products yet",
+      "subtitle": "Add your first wholesale product with bulk pricing tiers to attract buyers.",
+      "addFirst": "Add First Product"
+    },
+    "table": {
+      "product": "Product",
+      "basePrice": "Base Price",
+      "moq": "MOQ",
+      "stock": "Stock",
+      "pricingTiers": "Pricing Tiers",
+      "actions": "Actions"
+    },
+    "card": {
+       "inStock": "{count} in stock",
+       "moqLabel": "MOQ: {count}",
+       "units": "units"
+    }
+  },
+  "brandProfileSettings": {
+    "title": "Brand Profile",
+    "subtitle": "Manage your public brand identity",
+    "saved": "Profile saved successfully!",
+    "awaitingVerification": {
+      "title": "Awaiting Verification",
+      "subtitle": "Your brand is currently under review by our team. You'll be notified once approved."
+    },
+    "editInfo": {
+      "title": "Edit Information",
+      "brandName": "Official Brand Name",
+      "brandNamePlaceholder": "e.g. Al-Fares Wholesale",
+      "description": "Brand Description",
+      "descriptionPlaceholder": "Describe your brand, heritage, product range, and certifications to help buyers trust you.",
+      "logoUrl": "Logo Image URL",
+      "logoUrlPlaceholder": "https://example.com/logo.png",
+      "logoHint": "Use a high-quality square logo for best results.",
+      "saveButton": "Save Brand Profile",
+      "saving": "Saving…"
+    },
+    "whatsappSection": {
+      "title": "WhatsApp Business",
+      "clicks": "{count} clicks this month",
+      "number": "WhatsApp Business Number",
+      "numberPlaceholder": "9123 4567",
+      "numberHint": "Buyers can contact you directly via WhatsApp.",
+      "hours": "Business Hours",
+      "hoursPlaceholder": "e.g. Mon–Sat, 9AM–6PM Kuwait time",
+      "autoReply": "Auto-Reply Message",
+      "autoReplyPlaceholder": "e.g. We respond within 2 business hours",
+      "autoReplyHint": "Shown to buyers as \"This brand typically replies: [message]\""
+    },
+    "preview": {
+      "title": "Public Preview",
+      "brandName": "Brand Name",
+      "verified": "Verified Supplier",
+      "placeholderDescription": "Your detailed brand story and catalog information will appear here for buyers in the marketplace.",
+      "products": "{count} Products",
+      "viewCatalog": "View Catalog",
+      "viewLive": "View Live Profile"
+    },
+    "rankingTip": {
+      "title": "Improve Your Ranking",
+      "description": "Brands with complete descriptions and high-quality logos receive 3x more order requests."
+    }
+  },
+  "brandDashboard": {
+    "title": "Brand Dashboard",
+    "subtitle": "Manage your products and orders",
+    "metrics": {
+      "totalRevenue": "Total Revenue",
+      "incomingOrders": "Incoming Orders",
+      "productsListed": "Products Listed",
+      "avgResponseTime": "Avg Response Time",
+      "newThisWeek": "{count} new this week",
+      "active": "active",
+      "fastResponder": "⚡ Fast responder"
+    },
+    "trend": {
+      "vsLastMonth": "vs last month"
+    },
+    "analytics": {
+        "title": "Analytics",
+        "orderActivity": "Order Activity",
+        "ordersPerMonth": "Orders placed per month"
+    },
+    "orders": {
+      "title": "Recent Order Requests",
+      "viewAll": "View All",
+      "empty": {
+        "title": "No pending orders",
+        "subtitle": "New order requests will appear here"
+      }
+    },
+    "products": {
+      "addFirst": "Add First Product",
+      "title": "Products Performance",
+      "manage": "Manage",
+      "viewAll": "View all products",
+      "empty": {
+        "title": "No products yet",
+        "addFirst": "Add First Product"
+      },
+      "table": {
+        "product": "Product",
+        "orders": "Orders",
+        "revenue": "Revenue",
+        "stock": "Stock",
+        "status": "Status"
+      },
+      "status": {
+          "active": "Active",
+          "lowStock": "Low Stock",
+          "outOfStock": "Out of Stock"
+      }
+    }
+  }
+}

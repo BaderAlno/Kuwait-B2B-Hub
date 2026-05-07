@@ -1,0 +1,179 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- ===== ROW 1 CLASSES ===== -->
+
+    <!-- User (blue) -->
+    <mxCell id="2" value="User" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="20" y="40" width="185" height="175" as="geometry"/>
+    </mxCell>
+    <mxCell id="3" value="+ id : UUID&#xa;+ email : string&#xa;+ password_hash : string&#xa;+ role : enum {owner,buyer,admin}&#xa;+ is_verified : boolean&#xa;+ created_at : timestamp" style="text;align=left;verticalAlign=top;spacingLeft=6;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="2">
+      <mxGeometry x="0" y="28" width="185" height="147" as="geometry"/>
+    </mxCell>
+
+    <!-- Brand (green) -->
+    <mxCell id="4" value="Brand" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="235" y="40" width="185" height="175" as="geometry"/>
+    </mxCell>
+    <mxCell id="5" value="+ id : UUID&#xa;+ owner_id : UUID (FK→User)&#xa;+ name : string&#xa;+ description : text&#xa;+ status : enum {pending,approved,rejected}&#xa;+ logo_url : string" style="text;align=left;verticalAlign=top;spacingLeft=6;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="4">
+      <mxGeometry x="0" y="28" width="185" height="147" as="geometry"/>
+    </mxCell>
+
+    <!-- Product (green) -->
+    <mxCell id="6" value="Product" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="450" y="40" width="185" height="195" as="geometry"/>
+    </mxCell>
+    <mxCell id="7" value="+ id : UUID&#xa;+ brand_id : UUID (FK→Brand)&#xa;+ name : string&#xa;+ price : decimal&#xa;+ stock : integer&#xa;+ moq : integer&#xa;+ unit : string" style="text;align=left;verticalAlign=top;spacingLeft=6;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="6">
+      <mxGeometry x="0" y="28" width="185" height="167" as="geometry"/>
+    </mxCell>
+
+    <!-- Order (orange) -->
+    <mxCell id="8" value="Order" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#ffe6cc;strokeColor=#d6b656;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="665" y="40" width="185" height="175" as="geometry"/>
+    </mxCell>
+    <mxCell id="9" value="+ id : UUID&#xa;+ buyer_id : UUID (FK→User)&#xa;+ brand_id : UUID (FK→Brand)&#xa;+ status : enum {pending,confirmed,shipped}&#xa;+ total_amount : decimal&#xa;+ created_at : timestamp" style="text;align=left;verticalAlign=top;spacingLeft=6;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="8">
+      <mxGeometry x="0" y="28" width="185" height="147" as="geometry"/>
+    </mxCell>
+
+    <!-- OrderItem (orange) -->
+    <mxCell id="10" value="OrderItem" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#ffe6cc;strokeColor=#d6b656;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="880" y="40" width="185" height="155" as="geometry"/>
+    </mxCell>
+    <mxCell id="11" value="+ id : UUID&#xa;+ order_id : UUID (FK→Order)&#xa;+ product_id : UUID (FK→Product)&#xa;+ qty : integer&#xa;+ unit_price : decimal" style="text;align=left;verticalAlign=top;spacingLeft=6;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="10">
+      <mxGeometry x="0" y="28" width="185" height="127" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== ROW 2 CLASSES ===== -->
+
+    <!-- Review (purple) -->
+    <mxCell id="12" value="Review" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="20" y="300" width="185" height="155" as="geometry"/>
+    </mxCell>
+    <mxCell id="13" value="+ id : UUID&#xa;+ buyer_id : UUID (FK→User)&#xa;+ brand_id : UUID (FK→Brand)&#xa;+ rating : integer (1-5)&#xa;+ comment : text" style="text;align=left;verticalAlign=top;spacingLeft=6;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="12">
+      <mxGeometry x="0" y="28" width="185" height="127" as="geometry"/>
+    </mxCell>
+
+    <!-- Notification (gray) -->
+    <mxCell id="14" value="Notification" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="235" y="300" width="185" height="175" as="geometry"/>
+    </mxCell>
+    <mxCell id="15" value="+ id : UUID&#xa;+ user_id : UUID (FK→User)&#xa;+ type : enum {order,brand,system}&#xa;+ message : text&#xa;+ is_read : boolean&#xa;+ created_at : timestamp" style="text;align=left;verticalAlign=top;spacingLeft=6;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="14">
+      <mxGeometry x="0" y="28" width="185" height="147" as="geometry"/>
+    </mxCell>
+
+    <!-- BrandTrust (purple) -->
+    <mxCell id="16" value="BrandTrust" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="450" y="300" width="185" height="155" as="geometry"/>
+    </mxCell>
+    <mxCell id="17" value="+ id : UUID&#xa;+ brand_id : UUID (FK→Brand)&#xa;+ score : decimal (0-100)&#xa;+ tier : enum {bronze,silver,gold}&#xa;+ updated_at : timestamp" style="text;align=left;verticalAlign=top;spacingLeft=6;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="16">
+      <mxGeometry x="0" y="28" width="185" height="127" as="geometry"/>
+    </mxCell>
+
+    <!-- BuyerTrust (purple) -->
+    <mxCell id="18" value="BuyerTrust" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="665" y="300" width="185" height="155" as="geometry"/>
+    </mxCell>
+    <mxCell id="19" value="+ id : UUID&#xa;+ buyer_id : UUID (FK→User)&#xa;+ score : decimal (0-100)&#xa;+ tier : enum {bronze,silver,gold}&#xa;+ updated_at : timestamp" style="text;align=left;verticalAlign=top;spacingLeft=6;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="18">
+      <mxGeometry x="0" y="28" width="185" height="127" as="geometry"/>
+    </mxCell>
+
+    <!-- Message (gray) -->
+    <mxCell id="20" value="Message" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="880" y="300" width="185" height="155" as="geometry"/>
+    </mxCell>
+    <mxCell id="21" value="+ id : UUID&#xa;+ sender_id : UUID (FK→User)&#xa;+ receiver_id : UUID (FK→User)&#xa;+ content : text&#xa;+ sent_at : timestamp" style="text;align=left;verticalAlign=top;spacingLeft=6;strokeColor=none;fillColor=none;fontSize=11;" vertex="1" parent="20">
+      <mxGeometry x="0" y="28" width="185" height="127" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== RELATIONSHIP EDGES ===== -->
+
+    <!-- User 1..*  Brand (owns) -->
+    <mxCell id="30" value="1 owns *" style="endArrow=open;endFill=0;strokeColor=#6c8ebf;fontSize=10;" edge="1" source="2" target="4" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Brand 1..* Product -->
+    <mxCell id="31" value="1 has *" style="endArrow=open;endFill=0;strokeColor=#82b366;fontSize=10;" edge="1" source="4" target="6" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- User 1..* Order (buyer) -->
+    <mxCell id="32" value="places *" style="endArrow=open;endFill=0;strokeColor=#d6b656;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="2" target="8" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="112" y="18"/>
+          <mxPoint x="757" y="18"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Order 1..* OrderItem -->
+    <mxCell id="33" value="1 has *" style="endArrow=open;endFill=0;strokeColor=#d6b656;fontSize=10;" edge="1" source="8" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Product 1..* OrderItem -->
+    <mxCell id="34" value="in *" style="endArrow=open;endFill=0;strokeColor=#82b366;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="6" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="872" y="137"/>
+          <mxPoint x="972" y="137"/>
+          <mxPoint x="972" y="40"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- User 1..* Review -->
+    <mxCell id="35" value="writes *" style="endArrow=open;endFill=0;strokeColor=#9673a6;fontSize=10;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" source="2" target="12" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Brand 1..* Review -->
+    <mxCell id="36" value="receives *" style="endArrow=open;endFill=0;strokeColor=#9673a6;fontSize=10;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" source="4" target="12" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- User 1..* Notification -->
+    <mxCell id="37" value="receives *" style="endArrow=open;endFill=0;strokeColor=#666666;fontSize=10;" edge="1" source="2" target="14" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="112" y="275"/>
+          <mxPoint x="327" y="275"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Brand 1..1 BrandTrust -->
+    <mxCell id="38" value="1 has 1" style="endArrow=open;endFill=0;strokeColor=#9673a6;fontSize=10;" edge="1" source="4" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="327" y="275"/>
+          <mxPoint x="542" y="275"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- User 1..1 BuyerTrust -->
+    <mxCell id="39" value="1 has 1" style="endArrow=open;endFill=0;strokeColor=#9673a6;fontSize=10;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" source="2" target="18" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="205" y="530"/>
+          <mxPoint x="665" y="530"/>
+          <mxPoint x="665" y="300"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- User 1..* Message (sender) -->
+    <mxCell id="40" value="sends *" style="endArrow=open;endFill=0;strokeColor=#666666;fontSize=10;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" source="2" target="20" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="205" y="560"/>
+          <mxPoint x="880" y="560"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>

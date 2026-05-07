@@ -1,0 +1,586 @@
+{
+  "nav": {
+    "marketplace": "السوق",
+    "orders": "طلباتي",
+    "dashboard": "لوحة التحكم",
+    "profile": "الحساب",
+    "signOut": "تسجيل الخروج",
+    "products": "المنتجات",
+    "brands": "العلامات التجارية",
+    "users": "المستخدمين"
+  },
+  "marketplace": {
+    "hero": {
+      "title": "تواصل مع أبرز العلامات التجارية الكويتية بالجملة",
+      "subtitle": "تصفح الكتالوجات الموثّقة وأبرم صفقات الجملة في مكان واحد",
+      "searchPlaceholder": "ابحث عن علامات تجارية، منتجات، تصنيفات...",
+      "searchButton": "بحث",
+      "badge": "جميع العلامات موثّقة ١٠٠٪"
+    },
+    "stats": {
+      "activeBrands": "علامة نشطة",
+      "productsListed": "منتج مدرج",
+      "verified": "موثّق",
+      "allBrands": "جميع العلامات",
+      "fastProcessing": "معالجة سريعة",
+      "analytics": "التحليلات",
+      "howItWorks": {
+        "title": "كيف يعمل النظام؟",
+        "step1": "تصفح العلامات التجارية المعتمدة",
+        "step2": "اختر المنتجات والكميات",
+        "step3": "قدم طلب شراء",
+        "step4": "تقوم العلامة بالمراجعة والموافقة"
+      }
+    },
+    "filters": {
+      "all": "جميع الفئات",
+      "fashion": "الأزياء والملابس",
+      "electronics": "الإلكترونيات والتقنية",
+      "food": "الأغذية والمشروبات",
+      "beauty": "الجمال ومستحضرات التجميل",
+      "home": "المنزل وأسلوب الحياة",
+      "sports": "الرياضة والهواء الطلق"
+    },
+    "moq": {
+      "title": "الحد الأدنى (MOQ)",
+      "ranges": {
+        "1-50": "1–50 وحدة",
+        "51-200": "51–200 وحدة",
+        "201-500": "201–500 وحدة",
+        "500+": "500+ وحدة"
+      }
+    },
+    "sort": {
+      "title": "فرز حسب",
+      "options": {
+        "recent": "الأحدث",
+        "rated": "الأعلى تقييماً",
+        "orders": "الأكثر طلباً",
+        "az": "أ–ي"
+      }
+    },
+    "brandCard": {
+      "products": "{count} منتج",
+      "fulfilled": "{count} طلب منجز",
+      "viewCatalog": "عرض الكتالوج",
+      "premiumVerified": "موثّق بريميوم",
+      "verifiedBusiness": "شركة موثّقة",
+      "newSupplier": "مورد جديد"
+    },
+    "results": {
+      "found": "تم العثور على {count} علامة تجارية",
+      "noResults": "لا توجد نتائج",
+      "noResultsHint": "جرّب كلمة بحث أو تصنيفاً مختلفاً"
+    }
+  },
+  "orders": {
+    "title": "طلباتي",
+    "subtitle": "{count} طلب إجمالي",
+    "newOrder": "+ طلب جديد",
+    "orderNumber": "طلب #{id}",
+    "itemsCount": "{count} عنصر",
+    "filters": {
+      "all": "الكل",
+      "pending": "قيد الانتظار",
+      "approved": "مقبول",
+      "completed": "مكتمل",
+      "rejected": "مرفوض"
+    },
+    "card": {
+      "orderNumber": "طلب #{id}",
+      "items": "{count} عنصر",
+      "viewDetails": "عرض التفاصيل"
+    },
+    "status": {
+      "pending": "قيد الانتظار",
+      "approved": "مقبول",
+      "completed": "مكتمل",
+      "rejected": "مرفوض"
+    },
+    "empty": {
+      "title": "لا توجد طلبات بعد",
+      "subtitle": "تصفّح السوق وضع أول طلب جملة لك",
+      "cta": "تصفّح السوق"
+    }
+  },
+  "dashboard": {
+    "greeting": "صباح الخير، {name}",
+    "greetingEvening": "مساء الخير، {name}",
+    "subtitle": "{company} {role}",
+    "metrics": {
+      "totalOrders": "إجمالي الطلبات",
+      "totalRevenue": "إجمالي الإيرادات",
+      "incomingOrders": "الطلبات الواردة",
+      "productsListed": "المنتجات المدرجة",
+      "avgResponseTime": "متوسط وقت الرد",
+      "pending": "قيد الانتظار",
+      "approved": "تمت الموافقة",
+      "totalSpent": "إجمالي الإنفاق"
+    },
+    "charts": {
+      "orderActivity": "نشاط الطلبات",
+      "last6Months": "آخر ٦ أشهر",
+      "ordersPerMonth": "الطلبات المقدّمة شهرياً",
+      "spendingByBrand": "الإنفاق حسب العلامة",
+      "orderStatus": "توزيع حالات الطلبات"
+    },
+    "quickActions": {
+      "title": "إجراءات سريعة",
+      "browseMarketplace": "تصفّح السوق",
+      "viewAllOrders": "عرض جميع الطلبات",
+      "addProduct": "إضافة منتج",
+      "viewAnalytics": "عرض التحليلات"
+    },
+    "recentOrders": "الطلبيات الأخيرة",
+    "viewAll": "عرض الكل ←",
+    "empty": {
+      "noOrders": "لم يتم العثور على طلبيات",
+      "browse": "تصفح السوق"
+    }
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "noAccount": "ليس لديك حساب؟",
+    "hasAccount": "لديك حساب بالفعل؟",
+    "role": {
+      "label": "أنا...",
+      "buyer": "مشترٍ تجاري",
+      "buyerDesc": "أريد شراء منتجات بالجملة",
+      "brand": "صاحب علامة تجارية",
+      "brandDesc": "أريد بيع منتجاتي بالجملة"
+    },
+    "login": {
+      "title": "تسجيل الدخول إلى B2BHub",
+      "subtitle": "ادخل إلى سوق الجملة الرائد في الكويت للعلامات التجارية الموثّقة.",
+      "noAccount": "جديد على B2BHub؟",
+      "registerLink": "إنشاء حساب",
+      "workEmail": "البريد الإلكتروني للعمل",
+      "emailPlaceholder": "your@company.com",
+      "password": "كلمة المرور",
+      "loading": "جاري تسجيل الدخول",
+      "button": "تسجيل الدخول",
+      "demoLabel": "جرّب حساباً تجريبياً"
+    },
+    "register": {
+      "title": "إنشاء حسابك",
+      "alreadyAccount": "لديك حساب بالفعل؟",
+      "loginLink": "تسجيل الدخول",
+      "steps": {
+        "role": "نوع الحساب",
+        "details": "التفاصيل"
+      },
+      "usagePrompt": "كيف ستستخدم B2BHub؟",
+      "roles": {
+        "brand": {
+          "title": "صاحب علامة تجارية",
+          "desc": "بيع بالجملة لمشترين موثّقين",
+          "warning": "تتطلب حسابات العلامات التجارية التحقق قبل الظهور في السوق."
+        },
+        "buyer": {
+          "title": "مشترٍ تجاري",
+          "desc": "شراء بالجملة من علامات تجارية موثّقة"
+        }
+      },
+      "fullName": "الاسم الكامل",
+      "fullNamePlaceholder": "مثال: محمد الراشدي",
+      "companyName": "اسم الشركة",
+      "companyPlaceholder": "مثال: مجموعة الخليج للتجزئة",
+      "workEmail": "البريد الإلكتروني للعمل",
+      "emailPlaceholder": "your@company.com",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "٦ أحرف على الأقل",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "confirmPlaceholder": "أعد كتابة كلمة المرور",
+      "loadingAccount": "جاري إنشاء الحساب",
+      "button": "إنشاء الحساب"
+    }
+  },
+  "trust": {
+    "title": "الثقة والموثوقية",
+    "subtitle": "مؤشرات الأداء الموثّقة لهذا المورد",
+    "responseRate": "معدل الاستجابة",
+    "completionRate": "معدل الإنجاز",
+    "avgResponseTime": "متوسط وقت الرد",
+    "memberSince": "عضو منذ {date}",
+    "ordersCompleted": "{count} طلب منجز",
+    "completedOrders": "الطلبات المنجزة",
+    "memberSinceLabel": "عضو منذ",
+    "platformStatus": "حالة المنصة",
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "suspended": "موقوف",
+    "within1h": "خلال ساعة",
+    "within4h": "خلال 4 ساعات",
+    "within24h": "خلال 24 ساعة",
+    "score": "مؤشر الثقة",
+    "verified": "مورد موثّق",
+    "badge": {
+      "premium": "موثّق بريميوم",
+      "verified": "شركة موثّقة",
+      "new": "مورد جديد"
+    },
+    "modal": {
+      "title": "ماذا يعني موثّق؟",
+      "body": "تم التحقق من هذا المورد يدوياً من قِبل Kuwait B2B Hub. قمنا بتأكيد رقم السجل التجاري والتحقق من عنوان الشركة وهوية المالك.",
+      "lastVerified": "آخر توثيق",
+      "close": "إغلاق"
+    },
+    "writeReview": "كتابة تقييم",
+    "reviews": "{count} تقييم",
+    "noReviews": "لا توجد تقييمات بعد — كن أول من يطلب من هذه العلامة",
+    "reviewPrompt": "كيف كانت تجربتك مع {brand}؟",
+    "anonymous": "نشر بهوية مجهولة",
+    "sortRecent": "الأحدث",
+    "sortHigh": "الأعلى تقييماً",
+    "sortLow": "الأقل تقييماً",
+    "noReviewsHint": "تساعد التقييمات والمراجعات المشترين الآخرين في العثور على موردين موثوقين."
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "markAllRead": "تحديد الكل كمقروء",
+    "empty": "أنت على اطّلاع بكل شيء!",
+    "emptyHint": "لا توجد إشعارات جديدة",
+    "viewAll": "عرض جميع الإشعارات"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ ما",
+    "retry": "حاول مجدداً",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "confirm": "تأكيد",
+    "back": "رجوع",
+    "next": "التالي",
+    "submit": "إرسال",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sortBy": "فرز حسب",
+    "analytics": "التحليلات",
+    "currency": {
+      "label": "العملة",
+      "pricesIn": "الأسعار بـ {symbol}"
+    },
+    "language": "اللغة",
+    "settings": "الإعدادات",
+    "signOut": "تسجيل الخروج",
+    "comingSoon": "قريباً",
+    "all": "الكل",
+    "pending": "قيد الانتظار",
+    "approved": "مقبول",
+    "completed": "مكتمل",
+    "rejected": "مرفوض",
+    "units": "وحدات",
+    "loadMore": "تحميل المزيد",
+    "viewAll": "عرض الكل",
+    "status": {
+      "awaitingReview": "قيد المراجعة",
+      "fulfilledOrders": "طلبيات مكتملة",
+      "discoverVerified": "اكتشف آلاف المنتجات الموثقة.",
+      "totalOrdersCount": "عرض {count} طلبيات",
+      "itemsCount": "{count} قطع"
+    },
+    "trend": {
+      "vsLastMonth": "مقارنة بالشهر الماضي"
+    },
+    "trust": {
+      "buildTitle": "ابنِ سمعتك",
+      "buildSubtitle": "شارك تجربتك مع {count} طلبيات مكتملة."
+    },
+    "howItWorks": {
+      "title": "كيف يعمل النظام",
+      "step1": "تصفح الماركات المعتمدة",
+      "step2": "اختر المنتجات والكميات",
+      "step3": "أرسل طلب الطلبية",
+      "step4": "الماركة تراجع وتوافق"
+    },
+    "noData": "لا توجد بيانات متاحة حالياً"
+  },
+  "admin": {
+    "sidebar": {
+      "panel": "لوحة الإدارة",
+      "dashboard": "لوحة التحكم",
+      "brands": "العلامات التجارية",
+      "users": "المستخدمين",
+      "orders": "الطلبات"
+    },
+    "overview": {
+      "title": "نظرة عامة على الإدارة",
+      "subtitle": "أداء الشبكة والموافقات"
+    },
+    "stats": {
+      "activeBrands": "العلامات التجارية النشطة",
+      "pendingBrands": "العلامات التجارية المعلقة",
+      "totalRevenue": "إجمالي الإيرادات",
+      "totalOrders": "إجمالي الطلبات",
+      "networkGrowth": "نمو الشبكة",
+      "networkGrowthDesc": "{count} شركات مسجلة.",
+      "marketplaceSize": "حجم السوق",
+      "marketplaceSizeDesc": "إجمالي {count} علامة تجارية مسجلة."
+    },
+    "pending": {
+      "title": "تسجيلات معلقة",
+      "manage": "إدارة",
+      "allClear": "كل شيء منجز"
+    },
+    "moderation": {
+      "title": "مراجعة التقارير",
+      "flagged": "{count} بلاغات",
+      "healthyContent": "محتوى سليم",
+      "from": "من {name}",
+      "anonymous": "مجهول",
+      "noComment": "— لا يوجد تعليق —",
+      "keepContent": "الإبقاء على المحتوى",
+      "remove": "إزالة",
+      "flaggedLabel": "مبلغ عنه"
+    }
+  },
+  "brandCatalogView": {
+    "productsCount": "{count} منتجات",
+    "wholesaleOnly": "للجملة فقط",
+    "ordersFulfilled": "تم تنفيذ {count} طلبات",
+    "ordersThisMonth": "{count} طلبات هذا الشهر",
+    "writeReview": "كتابة تقييم",
+    "marketplaceLink": "السوق",
+    "catalogTitle": "كتالوج الجملة",
+    "noProducts": "لا توجد منتجات بعد",
+    "noProductsHint": "هذه العلامة التجارية لم تدرج منتجات للجملة بعد.",
+    "moq": "الحد الأدنى للطلب: {count} وحدات",
+    "stock": "المخزون: {count}",
+    "unitPriceFor": "سعر الوحدة لـ {count} وحدة",
+    "addToOrder": "إضافة للطلب",
+    "removeFromOrder": "إزالة",
+    "orderSummary": "ملخص الطلب",
+    "orderSummaryEmpty": "أضف منتجات من الكتالوج لبناء طلبك.",
+    "total": "الإجمالي",
+    "submitOrder": "إرسال طلب الشراء",
+    "submitOrderHint": "ستقوم العلامة التجارية بمراجعة طلبك والرد عليه",
+    "typicallyReplies": "عادة ما يرد:",
+    "orderSubmitted": "تم إرسال طلب الطلبية!",
+    "units": "وحدة"
+  },
+  "orderDetails": {
+    "title": "تفاصيل الطلب",
+    "backToOrders": "العودة للطلبات",
+    "printInvoice": "طباعة الفاتورة",
+    "sku": "رمز المنتج: {sku}",
+    "orderId": "رقم الطلب: #{id} · {brand}",
+    "summary": "ملخص الطلب",
+    "visitBrand": "زيارة",
+    "verifiedBrand": "علامة تجارية موثقة",
+    "orderDate": "التاريخ",
+    "totalAmount": "المبلغ الإجمالي",
+    "itemsCount": "العناصر ({count})",
+    "total": "الإجمالي",
+    "chat": {
+      "title": "رسائل بخصوص الطلب #{id}",
+      "noMessages": "لا توجد رسائل بعد. اسأل العلامة التجارية سؤالاً!",
+      "placeholder": "اكتب رسالة..."
+    },
+    "alerts": {
+      "awaiting": "بانتظار الرد من {brand}.",
+      "approved": "تم قبول طلبك!",
+      "rejected": "تم رفض طلبك."
+    },
+    "whatsapp": {
+      "sendDetails": "إرسال تفاصيل الطلب عبر الواتساب؟",
+      "sendDetailsHint": "أخبر {brand} بأنك أرسلت طلباً عبر المنصة.",
+      "sendButton": "إرسال عبر الواتساب",
+      "approvedShare": "شارك هذه الأخبار السارة عبر الواتساب",
+      "approvedShareButton": "مشاركة التحديث"
+    },
+    "review": {
+      "title": "قيم تجربتك",
+      "subtitle": "كيف كانت تجربتك مع {brand}؟",
+      "button": "كتابة تقييم"
+    },
+    "units": "{count} وحدة",
+    "itemsHeader": "أصناف الطلب",
+    "table": {
+      "product": "المنتج",
+      "quantity": "الكمية",
+      "price": "السعر",
+      "total": "الإجمالي"
+    },
+    "summaryFields": {
+      "subtotal": "المجموع الفرعي",
+      "shipping": "الشحن",
+      "shippingHint": "يتم احتسابه عند الموافقة",
+      "total": "الإجمالي"
+    },
+    "supplier": {
+      "title": "معلومات المورد",
+      "verified": "مصنع موثق"
+    },
+    "logistics": {
+      "title": "تفاصيل اللوجستيات",
+      "address": "عنوان الشحن",
+      "phone": "رقم التواصل"
+    },
+    "timeline": {
+      "title": "سجل الطلب",
+      "placed": "تم تقديم الطلب",
+      "review": "مراجعة العلامة التجارية",
+      "approved": "تم قبول الطلب",
+      "fulfillment": "التنفيذ والشحن",
+      "ongoing": "جاري...",
+      "completed": "مكتمل",
+      "pending": "قيد الانتظار",
+      "delivered": "تم التوصيل"
+    }
+  },
+  "brandSidebar": {
+    "label": "صاحب العلامة التجارية",
+    "dashboard": "لوحة التحكم",
+    "products": "المنتجات",
+    "orders": "الطلبات",
+    "profile": "ملف العلامة التجارية",
+    "analytics": "التحليلات",
+    "settings": "الإعدادات"
+  },
+  "brandOrders": {
+    "title": "طلبات الشراء",
+    "totalRequests": "إجمالي {count} طلبات مستلمة",
+    "empty": {
+      "title": "لم يتم العثور على طلبات",
+      "subtitle": "ستظهر الطلبات التي تطابق الفلتر هنا."
+    },
+    "card": {
+       "buyerId": "{name} · رقم: #{id}",
+       "itemsTotal": "إجمالي {count} عناصر"
+    },
+    "actions": {
+       "approve": "قبول",
+       "reject": "رفض",
+       "viewFullDetails": "عرض التفاصيل الكاملة"
+    }
+  },
+  "brandProducts": {
+    "title": "كتالوج المنتجات",
+    "totalProducts": "إجمالي {count} منتجات مدرجة",
+    "importCatalog": "استيراد الكتالوج",
+    "addNewProduct": "إضافة منتج جديد",
+    "import": "استيراد",
+    "deleteConfirm": "هل تريد حذف هذا المنتج؟",
+    "empty": {
+      "title": "لا توجد منتجات بعد",
+      "subtitle": "أضف منتجك الأول بأسعار الجملة لجذب المشترين.",
+      "addFirst": "إضافة أول منتج"
+    },
+    "table": {
+      "product": "المنتج",
+      "basePrice": "السعر الأساسي",
+      "moq": "الحد الأدنى للطلب",
+      "stock": "المخزون",
+      "pricingTiers": "شرائح الأسعار",
+      "actions": "الإجراءات"
+    },
+    "card": {
+       "inStock": "{count} في المخزون",
+       "moqLabel": "الحد الأدنى: {count}",
+       "units": "وحدات"
+    }
+  },
+  "brandProfileSettings": {
+    "title": "ملف العلامة التجارية",
+    "subtitle": "إدارة هويتك التجارية العلنية",
+    "saved": "تم حفظ الملف الشخصي بنجاح!",
+    "awaitingVerification": {
+      "title": "قيد التحقق",
+      "subtitle": "علامتك التجارية حالياً تحت المراجعة من قبل فريقنا. سيتم إخطارك بمجرد الموافقة."
+    },
+    "editInfo": {
+      "title": "تعديل المعلومات",
+      "brandName": "اسم العلامة التجارية الرسمي",
+      "brandNamePlaceholder": "مثال: الفارس للجملة",
+      "description": "وصف العلامة التجارية",
+      "descriptionPlaceholder": "صف علامتك التجارية، وتراثها، ومجموعة منتجاتها، وشهاداتها لمساعدة المشترين في الوثوق بك.",
+      "logoUrl": "رابط شعار العلامة التجارية",
+      "logoUrlPlaceholder": "https://example.com/logo.png",
+      "logoHint": "استخدم شعاراً مربعاً بجودة عالية للحصول على أفضل النتائج.",
+      "saveButton": "حفظ ملف العلامة التجارية",
+      "saving": "جاري الحفظ..."
+    },
+    "whatsappSection": {
+      "title": "واتساب للأعمال",
+      "clicks": "{count} نقرات هذا الشهر",
+      "number": "رقم واتساب للأعمال",
+      "numberPlaceholder": "9123 4567",
+      "numberHint": "يمكن للمشترين الاتصال بك مباشرة عبر واتساب.",
+      "hours": "ساعات العمل",
+      "hoursPlaceholder": "مثال: من السبت إلى الخميس، 9 صباحاً - 6 مساءً بتوقيت الكويت",
+      "autoReply": "رسالة الرد الآلي",
+      "autoReplyPlaceholder": "مثال: نرد خلال ساعتي عمل",
+      "autoReplyHint": "تظهر للمشترين كالتالي: \"غالباً ما ترد هذه العلامة التجارية خلال: [الرسالة]\""
+    },
+    "preview": {
+      "title": "معاينة علنية",
+      "brandName": "اسم العلامة التجارية",
+      "verified": "مورد معتمد",
+      "placeholderDescription": "ستظهر قصة علامتك التجارية المفصلة ومعلومات الكتالوج هنا للمشترين في المتجر.",
+      "products": "{count} منتجات",
+      "viewCatalog": "عرض الكتالوج",
+      "viewLive": "عرض الملف المباشر"
+    },
+    "rankingTip": {
+      "title": "حسن ترتيبك",
+      "description": "العلامات التجارية التي لديها وصف كامل وشعارات عالية الجودة تحصل على طلبات شراء أكثر بـ 3 أضعاف."
+    }
+  },
+  "brandDashboard": {
+    "title": "لوحة تحكم العلامة التجارية",
+    "subtitle": "إدارة منتجاتك وطلباتك",
+    "metrics": {
+      "totalRevenue": "إجمالي الإيرادات",
+      "incomingOrders": "الطلبات الواردة",
+      "productsListed": "المنتجات المدرجة",
+      "avgResponseTime": "متوسط وقت الرد",
+      "newThisWeek": "{count} جديد هذا الأسبوع",
+      "active": "نشط",
+      "fastResponder": "⚡ رد سريع"
+    },
+    "trend": {
+      "vsLastMonth": "مقارنة بالشهر الماضي"
+    },
+    "analytics": {
+        "title": "التحليلات",
+        "orderActivity": "نشاط الطلبات",
+        "ordersPerMonth": "الطلبات المستلمة شهرياً"
+    },
+    "orders": {
+      "title": "طلبات الشراء الأخيرة",
+      "viewAll": "عرض الكل",
+      "empty": {
+        "title": "لا توجد طلبات معلقة",
+        "subtitle": "ستظهر طلبات الشراء الجديدة هنا"
+      }
+    },
+    "products": {
+      "addFirst": "أضف منتجك الأول",
+      "title": "أداء المنتجات",
+      "manage": "إدارة",
+      "viewAll": "عرض جميع المنتجات",
+      "empty": {
+        "title": "لا توجد منتجات بعد",
+        "addFirst": "إضافة أول منتج"
+      },
+      "table": {
+        "product": "المنتج",
+        "orders": "الطلبات",
+        "revenue": "الإيرادات",
+        "stock": "المخزون",
+        "status": "الحالة"
+      },
+      "status": {
+          "active": "نشط",
+          "lowStock": "مخزون منخفض",
+          "outOfStock": "نفذ المخزون"
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- Title -->
+    <mxCell id="2" value="Level 0 Context DFD — Kuwait B2B Hub" style="text;fontStyle=1;fontSize=16;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="250" y="15" width="560" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== CENTRAL SYSTEM ===== -->
+    <mxCell id="3" value="Kuwait B2B Hub" style="ellipse;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+      <mxGeometry x="330" y="260" width="200" height="100" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== EXTERNAL ENTITIES ===== -->
+
+    <!-- Admin (top-left) -->
+    <mxCell id="4" value="Admin" style="rounded=0;fillColor=#ffe6cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="60" y="60" width="130" height="60" as="geometry"/>
+    </mxCell>
+
+    <!-- Brand Owner (top-right) -->
+    <mxCell id="5" value="Brand Owner" style="rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="680" y="60" width="130" height="60" as="geometry"/>
+    </mxCell>
+
+    <!-- Business Buyer (bottom-right) -->
+    <mxCell id="6" value="Business Buyer" style="rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="680" y="480" width="130" height="60" as="geometry"/>
+    </mxCell>
+
+    <!-- Supabase Auth (bottom-left) -->
+    <mxCell id="7" value="Supabase Auth" style="rounded=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="60" y="480" width="130" height="60" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== DATA FLOWS ===== -->
+
+    <!-- Admin → System: Manage brands/users -->
+    <mxCell id="10" value="Approve/reject brands&#xa;Manage users" style="endArrow=block;endFill=1;strokeColor=#d6b656;strokeWidth=2;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="190" y="90" as="sourcePoint"/>
+        <mxPoint x="370" y="285" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- System → Admin: reports/alerts -->
+    <mxCell id="11" value="Reports, alerts&#xa;Pending reviews" style="endArrow=block;endFill=1;strokeColor=#d6b656;strokeWidth=2;dashed=1;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="340" y="265" as="sourcePoint"/>
+        <mxPoint x="170" y="120" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Brand Owner → System: products/catalog -->
+    <mxCell id="12" value="Products, prices&#xa;Brand profile" style="endArrow=block;endFill=1;strokeColor=#82b366;strokeWidth=2;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="680" y="90" as="sourcePoint"/>
+        <mxPoint x="500" y="285" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- System → Brand Owner: notifications/orders -->
+    <mxCell id="13" value="Order notifications&#xa;Trust score updates" style="endArrow=block;endFill=1;strokeColor=#82b366;strokeWidth=2;dashed=1;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="520" y="265" as="sourcePoint"/>
+        <mxPoint x="700" y="120" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Business Buyer → System: browse/order -->
+    <mxCell id="14" value="Search products&#xa;Place orders" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=2;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="680" y="490" as="sourcePoint"/>
+        <mxPoint x="510" y="360" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- System → Buyer: confirmations -->
+    <mxCell id="15" value="Order confirmations&#xa;Product catalog" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=2;dashed=1;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="530" y="360" as="sourcePoint"/>
+        <mxPoint x="700" y="480" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Supabase Auth → System: tokens -->
+    <mxCell id="16" value="JWT tokens&#xa;Session data" style="endArrow=block;endFill=1;strokeColor=#666666;strokeWidth=2;dashed=1;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="190" y="490" as="sourcePoint"/>
+        <mxPoint x="360" y="360" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- System → Supabase Auth: auth requests -->
+    <mxCell id="17" value="Auth requests&#xa;Token validation" style="endArrow=block;endFill=1;strokeColor=#666666;strokeWidth=2;fontSize=11;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="340" y="360" as="sourcePoint"/>
+        <mxPoint x="170" y="510" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Legend -->
+    <mxCell id="20" value="Legend" style="swimlane;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;startSize=22;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="30" y="630" width="250" height="120" as="geometry"/>
+    </mxCell>
+    <mxCell id="21" value="Solid arrow = data input to system&#xa;Dashed arrow = data output from system&#xa;Ellipse = system process boundary&#xa;Rectangle = external entity" style="text;align=left;verticalAlign=top;spacingLeft=6;fontSize=11;" vertex="1" parent="20">
+      <mxGeometry x="5" y="22" width="240" height="93" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

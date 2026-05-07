@@ -1,0 +1,930 @@
+./contexts/CurrencyContext.tsx:27:      const saved = localStorage.getItem('b2b_currency');
+./contexts/CurrencyContext.tsx:30:      const seen = localStorage.getItem('b2b_market_seen');
+./contexts/CurrencyContext.tsx:38:    try { localStorage.setItem('b2b_currency', code); } catch { /* ignore */ }
+./contexts/CurrencyContext.tsx:43:    try { localStorage.setItem('b2b_market_seen', '1'); } catch { /* ignore */ }
+./contexts/CurrencyContext.tsx:64:  if (!ctx) throw new Error('useCurrency must be used within CurrencyProvider');
+./app/brands/[id]/page.tsx:56:  const t = useTranslations('brandCatalogView');
+./app/brands/[id]/page.tsx:57:  const tCommon = useTranslations('common');
+./app/brands/[id]/page.tsx:58:  const tMarketplace = useTranslations('marketplace');
+./app/brands/[id]/page.tsx:59:  const tTrust = useTranslations('trust');
+./app/brands/[id]/page.tsx:68:      fetch('/api/auth/me'),
+./app/brands/[id]/page.tsx:111:    const res = await fetch('/api/orders', {
+./app/brands/[id]/page.tsx:115:    if (res.status === 401) { router.push('/login'); return; }
+./app/brands/[id]/page.tsx:117:    setTimeout(() => router.push('/orders'), 2500);
+./app/brands/[id]/page.tsx:126:    fetch('/api/brands/whatsapp-click', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ brand_id: id }) });
+./app/brands/[id]/page.tsx:177:                      <span style={{ color: 'var(--text-muted)' }}>({tTrust('reviews', { count: reviewData.total_reviews })})</span>
+./app/brands/[id]/page.tsx:184:                    <span style={{ fontWeight: 600 }}>💬 {t('typicallyReplies')}</span> {brand.auto_reply_message}
+./app/brands/[id]/page.tsx:188:                  <span>🛍️ {t('productsCount', { count: products.length })}</span>
+./app/brands/[id]/page.tsx:189:                  <span>📦 {t('wholesaleOnly')}</span>
+./app/brands/[id]/page.tsx:190:                  {trust?.total_fulfilled && <span>✅ {t('ordersFulfilled', { count: trust.total_fulfilled })}</span>}
+./app/brands/[id]/page.tsx:191:                  {trust?.orders_this_month && <span>📈 {t('ordersThisMonth', { count: trust.orders_this_month })}</span>}
+./app/brands/[id]/page.tsx:202:                    <Star size={13} /> <span className="desktop-only" style={{ [locale === 'ar' ? 'marginRight' : 'marginLeft']: 4 }}>{t('writeReview')}</span>
+./app/brands/[id]/page.tsx:207:                  <span className="desktop-only" style={{ [locale === 'ar' ? 'marginRight' : 'marginLeft']: 4 }}>{t('marketplaceLink')}</span>
+./app/brands/[id]/page.tsx:220:                    <Shield size={18} style={{ color: '#1A1A2E' }} /> {tTrust('title')}
+./app/brands/[id]/page.tsx:234:                <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 800, marginBottom: 20, color: '#111827' }}>{t('catalogTitle')}</h2>
+./app/brands/[id]/page.tsx:238:                    <h3>{t('noProducts')}</h3>
+./app/brands/[id]/page.tsx:239:                    <p>{t('noProductsHint')}</p>
+./app/brands/[id]/page.tsx:258:                              <span className="product-meta-item" style={{ fontSize: 13, color: '#6B7280', display: 'flex', alignItems: 'center', gap: 6 }}><Package size={14} /> {t('moq', { count: product.moq })}</span>
+./app/brands/[id]/page.tsx:259:                              <span className="product-meta-item" style={{ fontSize: 13, color: product.stock < 20 ? '#DC4444' : '#6B7280', display: 'flex', alignItems: 'center', gap: 6 }}><CheckCircle2 size={14} /> {t('stock', { count: product.stock })}</span>
+./app/brands/[id]/page.tsx:266:                                    {tier.min_qty}+ {t('units')}: {formatPrice(tier.price)}
+./app/brands/[id]/page.tsx:275:                              <div className="product-per-unit" style={{ fontSize: 12, color: '#6B7280', fontWeight: 500 }}>{t('unitPriceFor', { count: qty })}</div>
+./app/brands/[id]/page.tsx:286:                                <X size={15} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }} /> {t('removeFromOrder')}
+./app/brands/[id]/page.tsx:290:                                <Plus size={15} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }} /> {t('addToOrder')}
+./app/brands/[id]/page.tsx:304:                    <Star size={18} style={{ color: '#F59E0B' }} /> {tTrust('title')}
+./app/brands/[id]/page.tsx:328:                            <option value="recent">{tTrust('sortRecent')}</option>
+./app/brands/[id]/page.tsx:329:                            <option value="high">{tTrust('sortHigh')}</option>
+./app/brands/[id]/page.tsx:330:                            <option value="low">{tTrust('sortLow')}</option>
+./app/brands/[id]/page.tsx:343:                        <button className="btn btn-ghost" style={{ alignSelf: 'center', marginTop: 12 }}>{tCommon('loadMore')}</button>
+./app/brands/[id]/page.tsx:351:                      <h3>{tTrust('noReviews')}</h3>
+./app/brands/[id]/page.tsx:352:                      <p>{tTrust('noReviewsHint')}</p>
+./app/brands/[id]/page.tsx:354:                        <button className="btn btn-primary" style={{ marginTop: 16 }} onClick={() => setShowReviewModal(true)}>{tTrust('writeReview')}</button>
+./app/brands/[id]/page.tsx:366:                  <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 15, fontWeight: 700 }}>{t('orderSummary')}</h2>
+./app/brands/[id]/page.tsx:374:                  <div className="alert alert-success">✅ {t('orderSubmitted')}</div>
+./app/brands/[id]/page.tsx:377:                    {t('orderSummaryEmpty')}
+./app/brands/[id]/page.tsx:384:                        <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{item.quantity} {tCommon('units')} × {formatPrice(item.price)}</div>
+./app/brands/[id]/page.tsx:394:                    <span style={{ color: 'var(--text-secondary)', fontSize: 13 }}>{t('total')}</span>
+./app/brands/[id]/page.tsx:398:                    {submitting ? <><span className="spinner" /> {tCommon('loading')}…</> : <><Send size={15} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6, transform: locale === 'ar' ? 'scaleX(-1)' : 'none' }} /> {t('submitOrder')}</>}
+./app/brands/[id]/page.tsx:401:                    {t('submitOrderHint')}
+./app/brand/products/new/page.tsx:30:      const res = await fetch('/api/products', {
+./app/brand/products/new/page.tsx:36:      router.push('/brand/products');
+./app/brand/products/new/page.tsx:37:    } catch { setError('Network error'); }
+./app/brand/products/page.tsx:24:  const t = useTranslations('brandProducts');
+./app/brand/products/page.tsx:25:  const tSidebar = useTranslations('brandSidebar');
+./app/brand/products/page.tsx:26:  const tCommon = useTranslations('common');
+./app/brand/products/page.tsx:30:    const res = await fetch('/api/products');
+./app/brand/products/page.tsx:39:    if (!confirm(t('deleteConfirm'))) return;
+./app/brand/products/page.tsx:51:          <span className="dash-sidebar-label">{tSidebar('label')}</span>
+./app/brand/products/page.tsx:52:          <Link href="/brand/dashboard" className="sidebar-link" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><LayoutDashboard size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('dashboard')}</Link>
+./app/brand/products/page.tsx:53:          <Link href="/brand/products"  className="sidebar-link active" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><ShoppingBag size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('products')}</Link>
+./app/brand/products/page.tsx:54:          <Link href="/brand/orders"    className="sidebar-link" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><Package size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('orders')}</Link>
+./app/brand/products/page.tsx:55:          <Link href="/brand/profile"   className="sidebar-link" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><Tags size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('profile')}</Link>
+./app/brand/products/page.tsx:68:              <h1>{t('title')}</h1>
+./app/brand/products/page.tsx:69:              <p>{t('totalProducts', { count: products.length })}</p>
+./app/brand/products/page.tsx:73:                <Upload size={15} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }} /> {t('importCatalog')}
+./app/brand/products/page.tsx:75:              <Link href="/brand/products/new" className="btn btn-primary"><Plus size={15} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }}/> {t('addNewProduct')}</Link>
+./app/brand/products/page.tsx:82:              <Upload size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }} /> {t('import')}
+./app/brand/products/page.tsx:85:              <Plus size={18} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }} /> {t('addNewProduct')}
+./app/brand/products/page.tsx:97:                <h3>{t('empty.title')}</h3>
+./app/brand/products/page.tsx:98:                <p>{t('empty.subtitle')}</p>
+./app/brand/products/page.tsx:101:                    <Upload size={14} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }} /> {t('importCatalog')}
+./app/brand/products/page.tsx:103:                  <Link href="/brand/products/new" className="btn btn-primary">{t('empty.addFirst')}</Link>
+./app/brand/products/page.tsx:121:                          <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>{t('card.moqLabel', { count: p.moq })}</span>
+./app/brand/products/page.tsx:129:                            {t('card.inStock', { count: p.stock })}
+./app/brand/products/page.tsx:137:                        <Pencil size={13} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }}/> {tCommon('edit')}
+./app/brand/products/page.tsx:141:                        {deleteId === p.id ? <span className="spinner"/> : <><Trash2 size={13} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }}/> {tCommon('delete')}</>}
+./app/brand/products/page.tsx:153:                      <th style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('table.product')}</th>
+./app/brand/products/page.tsx:154:                      <th style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('table.basePrice')}</th>
+./app/brand/products/page.tsx:155:                      <th style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('table.moq')}</th>
+./app/brand/products/page.tsx:156:                      <th style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('table.stock')}</th>
+./app/brand/products/page.tsx:157:                      <th style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('table.pricingTiers')}</th>
+./app/brand/products/page.tsx:158:                      <th className={locale === 'ar' ? 'text-left' : 'text-right'}>{t('table.actions')}</th>
+./app/brand/products/page.tsx:176:                        <td style={{ color: 'var(--text-secondary)', textAlign: locale === 'ar' ? 'right' : 'left' }}>{p.moq} {t('card.units')}</td>
+./app/brand/products/page.tsx:195:                              <Pencil size={13} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 4 }}/> {tCommon('edit')}
+./app/brand/dashboard/page.tsx:30:    const s = document.createElement('script');
+./app/brand/dashboard/page.tsx:44:    return { label: d.toLocaleString('default', { month: 'short' }), year: d.getFullYear(), month: d.getMonth() };
+./app/brand/dashboard/page.tsx:91:  const t = useTranslations('brandSidebar');
+./app/brand/dashboard/page.tsx:95:      <span className="dash-sidebar-label">{t('label')}</span>
+./app/brand/dashboard/page.tsx:96:      <Link href="/brand/dashboard" className={`sidebar-link ${active === 'dashboard' ? 'active' : ''}`} style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><LayoutDashboard size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {t('dashboard')}</Link>
+./app/brand/dashboard/page.tsx:97:      <Link href="/brand/products"  className={`sidebar-link ${active === 'products'  ? 'active' : ''}`} style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><ShoppingBag size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {t('products')}</Link>
+./app/brand/dashboard/page.tsx:98:      <Link href="/brand/orders"    className={`sidebar-link ${active === 'orders'    ? 'active' : ''}`} style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><Package size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {t('orders')}</Link>
+./app/brand/dashboard/page.tsx:99:      <Link href="/brand/profile"   className={`sidebar-link ${active === 'profile'   ? 'active' : ''}`} style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><Tags size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {t('profile')}</Link>
+./app/brand/dashboard/page.tsx:108:  const t = useTranslations('brandDashboard');
+./app/brand/dashboard/page.tsx:109:  const tCommon = useTranslations('common');
+./app/brand/dashboard/page.tsx:123:    const [oRes, pRes] = await Promise.all([fetch('/api/orders'), fetch('/api/products')]);
+./app/brand/dashboard/page.tsx:244:        <span style={{ fontWeight: 400, color: 'var(--text-muted)' }}>&nbsp;{t('trend.vsLastMonth')}</span>
+./app/brand/dashboard/page.tsx:259:      active: { bg: 'var(--approved-bg)',  color: 'var(--success)',  label: t('products.status.active')      },
+./app/brand/dashboard/page.tsx:260:      low:    { bg: 'var(--pending-bg)',   color: 'var(--warning)',  label: t('products.status.lowStock')    },
+./app/brand/dashboard/page.tsx:261:      out:    { bg: 'var(--rejected-bg)',  color: 'var(--danger)',   label: t('products.status.outOfStock')  },
+./app/brand/dashboard/page.tsx:280:            <div><h1>{t('title')}</h1><p>{t('subtitle')}</p></div>
+./app/brand/dashboard/page.tsx:281:            <Link href="/brand/products/new" className="btn btn-primary" style={{ gap: 8 }}><ShoppingBag size={15}/> {t('products.addFirst')}</Link>
+./app/brand/dashboard/page.tsx:295:                    <div className="stat-label">{t('metrics.totalRevenue')}</div>
+./app/brand/dashboard/page.tsx:304:                    <div className="stat-label">{t('metrics.incomingOrders')}</div>
+./app/brand/dashboard/page.tsx:306:                      <span style={{ fontSize: 10, color: '#D97706', fontWeight: 700, display: 'block' }}>{t('metrics.newThisWeek', { count: newThisWeek })}</span>
+./app/brand/dashboard/page.tsx:315:                    <div className="stat-label">{t('metrics.productsListed')}</div>
+./app/brand/dashboard/page.tsx:316:                    <span style={{ fontSize: 10, color: '#16A34A', fontWeight: 700, display: 'block' }}>{activeProds.length} {t('metrics.active')}</span>
+./app/brand/dashboard/page.tsx:324:                    <div className="stat-label">{t('metrics.avgResponseTime')}</div>
+./app/brand/dashboard/page.tsx:325:                    <span style={{ fontSize: 10, color: '#2563EB', fontWeight: 700, display: 'block' }}>{t('metrics.fastResponder')}</span>
+./app/brand/dashboard/page.tsx:335:              <Plus size={16}/> {t('products.empty.addFirst')}
+./app/brand/dashboard/page.tsx:338:              <Package size={16}/> {t('orders.title')}
+./app/brand/dashboard/page.tsx:344:            <SectionLabel label={t('analytics.title')} title={t('analytics.orderActivity')}/>
+./app/brand/dashboard/page.tsx:346:              {t('analytics.ordersPerMonth')}
+./app/brand/dashboard/page.tsx:362:                <h2 style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('orders.title')}</h2>
+./app/brand/dashboard/page.tsx:364:                  {t('orders.viewAll')} {locale === 'ar' ? <ArrowRight size={14} style={{ transform: 'rotate(180deg)' }}/> : <ArrowRight size={14}/>}
+./app/brand/dashboard/page.tsx:371:                  <h3>{t('orders.empty.title')}</h3>
+./app/brand/dashboard/page.tsx:372:                  <p>{t('orders.empty.subtitle')}</p>
+./app/brand/dashboard/page.tsx:389:                          {actionLoading === order.id+'approved' ? <span className="spinner"/> : <><Check size={14}/> {tCommon('confirm')}</>}
+./app/brand/dashboard/page.tsx:394:                          {actionLoading === order.id+'rejected' ? <span className="spinner"/> : <><X size={14}/> {tCommon('cancel')}</>}
+./app/brand/dashboard/page.tsx:403:                    {t('orders.viewAll')}
+./app/brand/dashboard/page.tsx:412:                <h2 style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('products.title')}</h2>
+./app/brand/dashboard/page.tsx:414:                  {t('products.viewAll')} {locale === 'ar' ? <ArrowRight size={14} style={{ transform: 'rotate(180deg)' }}/> : <ArrowRight size={14}/>}
+./app/brand/dashboard/page.tsx:421:                  <h3>{t('products.empty.title')}</h3>
+./app/brand/dashboard/page.tsx:422:                  <Link href="/brand/products/new" className="btn btn-primary btn-sm">{t('products.empty.addFirst')}</Link>
+./app/brand/dashboard/page.tsx:430:                          <th style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('products.table.product')}</th>
+./app/brand/dashboard/page.tsx:431:                          <th className="desktop-only" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('products.table.orders')}</th>
+./app/brand/dashboard/page.tsx:432:                          <th className="desktop-only" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('products.table.revenue')}</th>
+./app/brand/dashboard/page.tsx:433:                          <th style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('products.table.stock')}</th>
+./app/brand/dashboard/page.tsx:434:                          <th style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('products.table.status')}</th>
+./app/brand/dashboard/page.tsx:457:                      {t('products.viewAll')} {locale === 'ar' ? <ArrowRight size={13} style={{ transform: 'rotate(180deg)' }}/> : <ArrowRight size={13}/>}
+./app/brand/profile/page.tsx:30:  const [dialCode, setDialCode] = useState('+965');
+./app/brand/profile/page.tsx:31:  const t = useTranslations('brandProfileSettings');
+./app/brand/profile/page.tsx:32:  const tSidebar = useTranslations('brandSidebar');
+./app/brand/profile/page.tsx:36:    fetch('/api/brands?mine=true').then(r => r.json()).then(d => {
+./app/brand/profile/page.tsx:44:          const digits = g.code.replace('+', '');
+./app/brand/profile/page.tsx:59:    const fullWa = form.whatsapp_number ? `${dialCode.replace('+', '')}${form.whatsapp_number.replace(/\D/g, '')}` : '';
+./app/brand/profile/page.tsx:60:    await fetch('/api/brands', {
+./app/brand/profile/page.tsx:72:          <span className="dash-sidebar-label">{tSidebar('label')}</span>
+./app/brand/profile/page.tsx:73:          <Link href="/brand/dashboard" className="sidebar-link" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><LayoutDashboard size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('dashboard')}</Link>
+./app/brand/profile/page.tsx:74:          <Link href="/brand/products"  className="sidebar-link" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><ShoppingBag size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('products')}</Link>
+./app/brand/profile/page.tsx:75:          <Link href="/brand/orders"    className="sidebar-link" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><Package size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('orders')}</Link>
+./app/brand/profile/page.tsx:76:          <Link href="/brand/profile"   className="sidebar-link active" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><Tags size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('profile')}</Link>
+./app/brand/profile/page.tsx:82:              <h1>{t('title')}</h1>
+./app/brand/profile/page.tsx:83:              <p>{t('subtitle')}</p>
+./app/brand/profile/page.tsx:95:                    <Save size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }}/> {t('saved')}
+./app/brand/profile/page.tsx:103:                      <strong>{t('awaitingVerification.title')}</strong>
+./app/brand/profile/page.tsx:104:                      <p style={{ fontSize: 13, marginTop: 4, opacity: 0.9 }}>{t('awaitingVerification.subtitle')}</p>
+./app/brand/profile/page.tsx:110:                  <div className="card-header" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><h2>{t('editInfo.title')}</h2></div>
+./app/brand/profile/page.tsx:113:                      <label className="form-label">{t('editInfo.brandName')}</label>
+./app/brand/profile/page.tsx:116:                        placeholder={t('editInfo.brandNamePlaceholder')} />
+./app/brand/profile/page.tsx:119:                      <label className="form-label">{t('editInfo.description')}</label>
+./app/brand/profile/page.tsx:121:                        placeholder={t('editInfo.descriptionPlaceholder')}
+./app/brand/profile/page.tsx:125:                      <label className="form-label">{t('editInfo.logoUrl')}</label>
+./app/brand/profile/page.tsx:128:                        <input className="form-input" style={{ [locale === 'ar' ? 'paddingRight' : 'paddingLeft']: 38 }} placeholder={t('editInfo.logoUrlPlaceholder')}
+./app/brand/profile/page.tsx:131:                      <span className="form-hint">{t('editInfo.logoHint')}</span>
+./app/brand/profile/page.tsx:137:                        <span style={{ fontWeight: 700, fontSize: 14, color: '#15803D' }}>{t('whatsappSection.title')}</span>
+./app/brand/profile/page.tsx:140:                            {t('whatsappSection.clicks', { count: brand.whatsapp_clicks })}
+./app/brand/profile/page.tsx:145:                        <label className="form-label" style={{ fontSize: 12 }}>{t('whatsappSection.number')}</label>
+./app/brand/profile/page.tsx:157:                          <input className="form-input" placeholder={t('whatsappSection.numberPlaceholder')} value={form.whatsapp_number}
+./app/brand/profile/page.tsx:161:                        <span className="form-hint">{t('whatsappSection.numberHint')}</span>
+./app/brand/profile/page.tsx:164:                        <label className="form-label" style={{ fontSize: 12 }}>{t('whatsappSection.hours')}</label>
+./app/brand/profile/page.tsx:165:                        <input className="form-input" placeholder={t('whatsappSection.hoursPlaceholder')}
+./app/brand/profile/page.tsx:169:                        <label className="form-label" style={{ fontSize: 12 }}>{t('whatsappSection.autoReply')}</label>
+./app/brand/profile/page.tsx:170:                        <input className="form-input" placeholder={t('whatsappSection.autoReplyPlaceholder')}
+./app/brand/profile/page.tsx:172:                        <span className="form-hint">{t('whatsappSection.autoReplyHint')}</span>
+./app/brand/profile/page.tsx:177:                      {saving ? <><span className="spinner" style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {t('editInfo.saving')}</> : <><Save size={18} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {t('editInfo.saveButton')}</>}
+./app/brand/profile/page.tsx:186:                    <h2 style={{ fontSize: 14, textTransform: 'uppercase', letterSpacing: '0.05em',color: 'var(--text-muted)' }}>{t('preview.title')}</h2>
+./app/brand/profile/page.tsx:199:                          <div style={{ fontWeight: 800, fontSize: 18, color: 'var(--navy)' }}>{form.brand_name || t('preview.brandName')}</div>
+./app/brand/profile/page.tsx:201:                            <div style={{ width: 6, height: 6, background: 'currentColor', borderRadius: '50%' }}/> {t('preview.verified')}
+./app/brand/profile/page.tsx:206:                        {form.description || t('preview.placeholderDescription')}
+./app/brand/profile/page.tsx:210:                      <span style={{ fontSize: 12, color: 'var(--text-muted)', fontWeight: 600 }}>{t('preview.products', { count: 0 })}</span>
+./app/brand/profile/page.tsx:212:                        {t('preview.viewCatalog')} <ExternalLink size={12}/>
+./app/brand/profile/page.tsx:219:                      <ExternalLink size={15}/> {t('preview.viewLive')}
+./app/brand/profile/page.tsx:228:                      <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--navy)', marginBottom: 4 }}>{t('rankingTip.title')}</h3>
+./app/brand/profile/page.tsx:230:                        {t('rankingTip.description')}
+./app/brand/orders/[id]/page.tsx:30:  const t = useTranslations('brandSidebar');
+./app/brand/orders/[id]/page.tsx:31:  const tOrders = useTranslations('brandOrders');
+./app/brand/orders/[id]/page.tsx:44:    const [meRes, orderRes] = await Promise.all([fetch('/api/auth/me'), fetch(`/api/orders/${id}`)]);
+./app/brand/orders/[id]/page.tsx:72:    await fetch('/api/messages', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ order_id: id, content: newMessage }) });
+./app/brand/orders/[id]/page.tsx:93:          <span className="dash-sidebar-label">{t('label')}</span>
+./app/brand/orders/[id]/page.tsx:94:          <Link href="/brand/dashboard" className="sidebar-link"><LayoutDashboard size={16}/> {t('dashboard')}</Link>
+./app/brand/orders/[id]/page.tsx:95:          <Link href="/brand/products"  className="sidebar-link"><ShoppingBag size={16}/> {t('products')}</Link>
+./app/brand/orders/[id]/page.tsx:96:          <Link href="/brand/orders"    className="sidebar-link active"><Package size={16}/> {t('orders')}</Link>
+./app/brand/orders/[id]/page.tsx:97:          <Link href="/brand/profile"   className="sidebar-link"><Tags size={16}/> {t('profile')}</Link>
+./app/brand/orders/[id]/page.tsx:117:                  <button className="btn btn-success" disabled={actionLoading === 'approved'} onClick={() => handleAction('approved')}>
+./app/brand/orders/[id]/page.tsx:118:                    {actionLoading === 'approved' ? <span className="spinner"/> : <><Check size={14}/> {tOrders('actions.approve')}</>}
+./app/brand/orders/[id]/page.tsx:121:                    disabled={actionLoading === 'rejected'} onClick={() => handleAction('rejected')}>
+./app/brand/orders/[id]/page.tsx:122:                    {actionLoading === 'rejected' ? <span className="spinner"/> : <><X size={14}/> {tOrders('actions.reject')}</>}
+./app/brand/orders/[id]/page.tsx:134:                <button className="btn btn-success btn-sm" disabled={actionLoading === 'approved'} onClick={() => handleAction('approved')}>
+./app/brand/orders/[id]/page.tsx:135:                  {actionLoading === 'approved' ? <span className="spinner"/> : tOrders('actions.approve')}
+./app/brand/orders/[id]/page.tsx:138:                  disabled={actionLoading === 'rejected'} onClick={() => handleAction('rejected')}>
+./app/brand/orders/[id]/page.tsx:139:                  {actionLoading === 'rejected' ? <span className="spinner"/> : tOrders('actions.reject')}
+./app/brand/orders/page.tsx:19:  const [filter, setFilter] = useState('all');
+./app/brand/orders/page.tsx:22:  const t = useTranslations('brandOrders');
+./app/brand/orders/page.tsx:23:  const tSidebar = useTranslations('brandSidebar');
+./app/brand/orders/page.tsx:24:  const tCommon = useTranslations('common');
+./app/brand/orders/page.tsx:28:    const res = await fetch('/api/orders');
+./app/brand/orders/page.tsx:51:          <span className="dash-sidebar-label">{tSidebar('label')}</span>
+./app/brand/orders/page.tsx:52:          <Link href="/brand/dashboard" className="sidebar-link" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><LayoutDashboard size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('dashboard')}</Link>
+./app/brand/orders/page.tsx:53:          <Link href="/brand/products"  className="sidebar-link" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><ShoppingBag size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('products')}</Link>
+./app/brand/orders/page.tsx:54:          <Link href="/brand/orders"    className="sidebar-link active" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><Package size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('orders')}</Link>
+./app/brand/orders/page.tsx:55:          <Link href="/brand/profile"   className="sidebar-link" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><Tags size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 8 }}/> {tSidebar('profile')}</Link>
+./app/brand/orders/page.tsx:61:              <h1>{t('title')}</h1>
+./app/brand/orders/page.tsx:62:              <p>{t('totalRequests', { count: orders.length })}</p>
+./app/brand/orders/page.tsx:68:              {[['all', tCommon('all')], ['pending', tCommon('pending')], ['approved', tCommon('approved')], ['completed', tCommon('completed')], ['rejected', tCommon('rejected')]].map(([val, label]) => (
+./app/brand/orders/page.tsx:95:                <h3>{t('empty.title')}</h3>
+./app/brand/orders/page.tsx:96:                <p>{t('empty.subtitle')}</p>
+./app/brand/orders/page.tsx:111:                          <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>{t('card.buyerId', { name: String(order.buyer?.name || ''), id: String(order.id.slice(-8)) })}</div>
+./app/brand/orders/page.tsx:131:                      <span>{t('card.itemsTotal', { count: order.items?.length })}</span>
+./app/brand/orders/page.tsx:141:                          {actionLoading === order.id+'approved' ? <span className="spinner"/> : <><Check size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }}/> {t('actions.approve')}</>}
+./app/brand/orders/page.tsx:146:                          {actionLoading === order.id+'rejected' ? <span className="spinner"/> : <><X size={16} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 6 }}/> {t('actions.reject')}</>}
+./app/brand/orders/page.tsx:161:                        {t('actions.viewFullDetails')} <ChevronRight size={16} style={{ [locale === 'ar' ? 'marginRight' : 'marginLeft']: 6, transform: locale === 'ar' ? 'rotate(180deg)' : 'none' }}/>
+./app/marketplace/page.tsx:28:  const t = useTranslations('marketplace');
+./app/marketplace/page.tsx:29:  const tCommon = useTranslations('common');
+./app/marketplace/page.tsx:87:                  ⭐ {t('hero.badge')}
+./app/marketplace/page.tsx:90:                  {currencyConfig.flag} {tCommon('currency.pricesIn', { symbol: currencyConfig.symbol })}
+./app/marketplace/page.tsx:94:                {t('hero.title')}
+./app/marketplace/page.tsx:97:                {t('hero.subtitle')}
+./app/marketplace/page.tsx:101:                <input id="brand-search" placeholder={t('hero.searchPlaceholder')}
+./app/marketplace/page.tsx:103:                <button className="btn btn-primary btn-sm" style={{ flexShrink: 0 }}>{t('hero.searchButton')}</button>
+./app/marketplace/page.tsx:110:                [brands.length.toString(), t('stats.activeBrands')],
+./app/marketplace/page.tsx:111:                [String(brands.reduce((s, b) => s + (b.product_count || 0), 0)), t('stats.productsListed')],
+./app/marketplace/page.tsx:112:                ['100%', t('stats.verified')],
+./app/marketplace/page.tsx:113:                ['24h', t('stats.fastProcessing')],
+./app/marketplace/page.tsx:127:            { label: `✦ ${t('filters.all')}`, value: '' },
+./app/marketplace/page.tsx:128:            { label: `👒 ${t('filters.fashion')}`, value: 'fashion' },
+./app/marketplace/page.tsx:129:            { label: `📱 ${t('filters.electronics')}`, value: 'electronics' },
+./app/marketplace/page.tsx:130:            { label: `🍱 ${t('filters.food')}`, value: 'food' },
+./app/marketplace/page.tsx:131:            { label: `💄 ${t('filters.beauty')}`, value: 'beauty' },
+./app/marketplace/page.tsx:132:            { label: `🏠 ${t('filters.home')}`, value: 'home' },
+./app/marketplace/page.tsx:133:            { label: `⚽ ${t('filters.sports')}`, value: 'sports' },
+./app/marketplace/page.tsx:152:                <span style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-primary)' }}>{tCommon('filter')}</span>
+./app/marketplace/page.tsx:156:                <div className="filter-section-title">{t('filters.all')}</div>
+./app/marketplace/page.tsx:158:                  t('filters.fashion'), t('filters.electronics'), t('filters.food'),
+./app/marketplace/page.tsx:159:                  t('filters.beauty'), t('filters.home'), t('filters.sports')
+./app/marketplace/page.tsx:168:                <div className="filter-section-title">{tCommon('confirm')}</div>
+./app/marketplace/page.tsx:177:                <div className="filter-section-title">{t('moq.title')}</div>
+./app/marketplace/page.tsx:178:                {Object.entries(t.raw('moq.ranges')).map(([key, label]) => (
+./app/marketplace/page.tsx:186:                <div className="filter-section-title">{t('sort.title')}</div>
+./app/marketplace/page.tsx:187:                {Object.entries(t.raw('sort.options')).map(([key, label]) => (
+./app/marketplace/page.tsx:199:                  {loading ? tCommon('loading') : t('results.found', { count: brands.length })}
+./app/marketplace/page.tsx:203:                  {tCommon('retry')}
+./app/marketplace/page.tsx:222:                    <h3>{t('results.noResults')}</h3>
+./app/marketplace/page.tsx:223:                    <p>{t('results.noResultsHint')}</p>
+./app/marketplace/page.tsx:224:                    <button className="btn btn-ghost btn-sm" onClick={() => { setSearch(''); fetchBrands('').then(b => setBrands(b)); }}>{tCommon('retry')}</button>
+./app/marketplace/page.tsx:263:                            <span className="brand-tag">🛍️ {t('brandCard.products', { count: brand.product_count })}</span>
+./app/marketplace/page.tsx:265:                              {t('brandCard.viewCatalog')} 
+./app/marketplace/page.tsx:297:                            {t('brandCard.products', { count: brand.product_count })}
+./app/marketplace/page.tsx:302:                              <> · {t('brandCard.fulfilled', { count: brand.trust.total_fulfilled })}</>
+./app/admin/brands/page.tsx:17:  const t = useTranslations('admin');
+./app/admin/brands/page.tsx:18:  const tCommon = useTranslations('common');
+./app/admin/brands/page.tsx:21:  const [filter, setFilter] = useState('all');
+./app/admin/brands/page.tsx:27:    const res = await fetch('/api/admin/brands');
+./app/admin/brands/page.tsx:63:          <span className="dash-sidebar-label">{t('sidebar.panel')}</span>
+./app/admin/brands/page.tsx:64:          <Link href="/admin/dashboard" className="sidebar-link"><LayoutDashboard size={16}/> {t('sidebar.dashboard')}</Link>
+./app/admin/brands/page.tsx:65:          <Link href="/admin/brands"    className="sidebar-link active"><Tags size={16}/> {t('sidebar.brands')}</Link>
+./app/admin/brands/page.tsx:66:          <Link href="/admin/users"     className="sidebar-link"><Users size={16}/> {t('sidebar.users')}</Link>
+./app/admin/brands/page.tsx:67:          <Link href="/admin/orders"    className="sidebar-link"><Package size={16}/> {t('sidebar.orders')}</Link>
+./app/admin/brands/page.tsx:81:                {[['all', tCommon('all')], ['pending', tCommon('pending')], ['approved', tCommon('approved')], ['rejected', tCommon('rejected')]].map(([val, label]) => (
+./app/admin/brands/page.tsx:134:                        {actionLoading === brand.id+'approved' ? <span className="spinner"/> : tCommon('approved')}
+./app/admin/brands/page.tsx:139:                        {actionLoading === brand.id+'rejected' ? <span className="spinner"/> : tCommon('rejected')}
+./app/admin/dashboard/page.tsx:33:  const t = useTranslations('admin.sidebar');
+./app/admin/dashboard/page.tsx:36:      <span className="dash-sidebar-label">{t('panel')}</span>
+./app/admin/dashboard/page.tsx:37:      <SidebarLink href="/admin/dashboard" icon={<LayoutDashboard size={16}/>} label={t('dashboard')} active={active==='dashboard'}/>
+./app/admin/dashboard/page.tsx:38:      <SidebarLink href="/admin/brands"    icon={<Tags size={16}/>}            label={t('brands')}    active={active==='brands'}/>
+./app/admin/dashboard/page.tsx:39:      <SidebarLink href="/admin/users"     icon={<Users size={16}/>}           label={t('users')}     active={active==='users'}/>
+./app/admin/dashboard/page.tsx:40:      <SidebarLink href="/admin/orders"    icon={<Package size={16}/>}         label={t('orders')}    active={active==='orders'}/>
+./app/admin/dashboard/page.tsx:52:  const t = useTranslations('admin');
+./app/admin/dashboard/page.tsx:53:  const tCommon = useTranslations('common');
+./app/admin/dashboard/page.tsx:58:      fetch('/api/admin/orders'), 
+./app/admin/dashboard/page.tsx:59:      fetch('/api/admin/brands'),
+./app/admin/dashboard/page.tsx:60:      fetch('/api/reviews?sort=recent') // Fetch all recent for admin
+./app/admin/dashboard/page.tsx:94:    { label: t('stats.activeBrands'),     value: stats?.approved_brands, icon: <Tags size={20}/>,       cls: 'icon-blue' },
+./app/admin/dashboard/page.tsx:95:    { label: t('stats.pendingBrands'),    value: stats?.pending_brands,  icon: <Clock size={20}/>,      cls: 'icon-amber' },
+./app/admin/dashboard/page.tsx:96:    { label: t('stats.totalRevenue'),     value: formatPrice(stats?.total_revenue || 0), icon: <DollarSign size={20}/>, cls: 'icon-green' },
+./app/admin/dashboard/page.tsx:97:    { label: t('stats.totalOrders'),      value: stats?.total_orders,    icon: <Package size={20}/>,    cls: 'icon-navy' },
+./app/admin/dashboard/page.tsx:108:              <h1>{t('overview.title')}</h1>
+./app/admin/dashboard/page.tsx:109:              <p>{t('overview.subtitle')}</p>
+./app/admin/dashboard/page.tsx:137:                    <h2 style={{ fontSize: 16 }}>{t('pending.title')}</h2>
+./app/admin/dashboard/page.tsx:140:                    {t('pending.manage')} {locale === 'ar' ? <ArrowRight size={14} style={{ transform: 'rotate(180deg)' }}/> : <ArrowRight size={14}/>}
+./app/admin/dashboard/page.tsx:147:                    <h3>{t('pending.allClear')}</h3>
+./app/admin/dashboard/page.tsx:178:                    <h2 style={{ fontSize: 16 }}>{t('moderation.title')}</h2>
+./app/admin/dashboard/page.tsx:181:                     {t('moderation.flagged', { count: moderationQueue.length })}
+./app/admin/dashboard/page.tsx:188:                    <h3>{t('moderation.healthyContent')}</h3>
+./app/admin/dashboard/page.tsx:197:                               <span style={{ fontSize: 11, fontWeight: 700, color: '#4B5563' }}>{t('moderation.from', { name: review.buyer_name || t('moderation.anonymous') })}</span>
+./app/admin/dashboard/page.tsx:199:                            {review.flagged && <span style={{ fontSize: 10, background: '#FEE2E2', color: '#B91C1C', padding: '1px 6px', borderRadius: 10 }}>{t('moderation.flaggedLabel')}</span>}
+./app/admin/dashboard/page.tsx:201:                         <p style={{ fontSize: 13, color: '#111827', margin: '0 0 10px', lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', textAlign: locale === 'ar' ? 'right' : 'left' }}>{review.content || t('moderation.noComment')}</p>
+./app/admin/dashboard/page.tsx:205:                               {actionLoading === review.id+'keep' ? '...' : t('moderation.keepContent')}
+./app/admin/dashboard/page.tsx:209:                               {actionLoading === review.id+'remove' ? '...' : t('moderation.remove')}
+./app/admin/dashboard/page.tsx:224:                  <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--navy)' }}>{t('stats.networkGrowth')}</div>
+./app/admin/dashboard/page.tsx:225:                  <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{t('stats.networkGrowthDesc', { count: stats?.total_users || 0 })}</div>
+./app/admin/dashboard/page.tsx:233:                  <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--navy)' }}>{t('stats.marketplaceSize')}</div>
+./app/admin/dashboard/page.tsx:234:                  <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{t('stats.marketplaceSizeDesc', { count: stats?.total_brands || 0 })}</div>
+./app/admin/users/page.tsx:16:  const t = useTranslations('admin');
+./app/admin/users/page.tsx:17:  const tCommon = useTranslations('common');
+./app/admin/users/page.tsx:20:  const [filter, setFilter] = useState('all');
+./app/admin/users/page.tsx:25:    fetch('/api/admin/users').then(r => r.json()).then(d => { setUsers(d.users || []); setLoading(false); });
+./app/admin/users/page.tsx:38:          <span className="dash-sidebar-label">{t('sidebar.panel')}</span>
+./app/admin/users/page.tsx:39:          <Link href="/admin/dashboard" className="sidebar-link"><LayoutDashboard size={16}/> {t('sidebar.dashboard')}</Link>
+./app/admin/users/page.tsx:40:          <Link href="/admin/brands"    className="sidebar-link"><Tags size={16}/> {t('sidebar.brands')}</Link>
+./app/admin/users/page.tsx:41:          <Link href="/admin/users"     className="sidebar-link active"><Users size={16}/> {t('sidebar.users')}</Link>
+./app/admin/users/page.tsx:42:          <Link href="/admin/orders"    className="sidebar-link"><Package size={16}/> {t('sidebar.orders')}</Link>
+./app/admin/orders/page.tsx:19:  const t = useTranslations('admin');
+./app/admin/orders/page.tsx:20:  const tCommon = useTranslations('common');
+./app/admin/orders/page.tsx:23:  const [filter, setFilter] = useState('all');
+./app/admin/orders/page.tsx:28:    fetch('/api/admin/orders').then(r => r.json()).then(d => { setOrders(d.orders || []); setLoading(false); });
+./app/admin/orders/page.tsx:45:          <span className="dash-sidebar-label">{t('sidebar.panel')}</span>
+./app/admin/orders/page.tsx:46:          <Link href="/admin/dashboard" className="sidebar-link"><LayoutDashboard size={16}/> {t('sidebar.dashboard')}</Link>
+./app/admin/orders/page.tsx:47:          <Link href="/admin/brands"    className="sidebar-link"><Tags size={16}/> {t('sidebar.brands')}</Link>
+./app/admin/orders/page.tsx:48:          <Link href="/admin/users"     className="sidebar-link"><Users size={16}/> {t('sidebar.users')}</Link>
+./app/admin/orders/page.tsx:49:          <Link href="/admin/orders"    className="sidebar-link active"><Package size={16}/> {t('sidebar.orders')}</Link>
+./app/admin/orders/page.tsx:63:                {[['all', locale === 'ar' ? 'جميع الطلبات' : 'All Orders'], ['pending', tCommon('pending')], ['approved', tCommon('approved')], ['rejected', tCommon('rejected')]].map(([val, label]) => (
+./app/dashboard/page.tsx:29:    const s = document.createElement('script');
+./app/dashboard/page.tsx:42:    return { label: d.toLocaleString('default', { month: 'short' }), year: d.getFullYear(), month: d.getMonth() };
+./app/dashboard/page.tsx:107:  const t = useTranslations('dashboard');
+./app/dashboard/page.tsx:108:  const tCommon = useTranslations('common');
+./app/dashboard/page.tsx:133:      fetch('/api/auth/me').then(r => r.json()),
+./app/dashboard/page.tsx:134:      fetch('/api/orders').then(r => r.json()),
+./app/dashboard/page.tsx:319:  const greeting = getGreeting(locale as any, user?.name?.split(' ')[0]);
+./app/dashboard/page.tsx:356:              {user?.company_name} · {t('subtitle', { company: '', role: 'Buyer Account' }).replace(' · ', '')}
+./app/dashboard/page.tsx:368:                   <div style={{ fontSize: 15, fontWeight: 800, color: '#111827', marginBottom: 2 }}>{tCommon('trust.buildTitle')}</div>
+./app/dashboard/page.tsx:370:                      {tCommon('trust.buildSubtitle', { count: orders.filter(o => o.status === 'completed').length })}
+./app/dashboard/page.tsx:382:                {tCommon('submit')} {locale === 'ar' ? '←' : '→'}
+./app/dashboard/page.tsx:410:                    <div className="stat-label">{t('metrics.totalOrders')}</div>
+./app/dashboard/page.tsx:413:                      <div style={{ fontSize: 10, color: 'var(--text-muted)', marginTop: 2 }}>{tCommon('trend.vsLastMonth')}</div>
+./app/dashboard/page.tsx:422:                    <div className="stat-label">{t('metrics.pending')}</div>
+./app/dashboard/page.tsx:423:                    <span style={{ fontSize: 10, color: '#D97706', fontWeight: 600 }}>{tCommon('status.awaitingReview')}</span>
+./app/dashboard/page.tsx:431:                    <div className="stat-label">{t('metrics.approved')}</div>
+./app/dashboard/page.tsx:432:                    <span style={{ fontSize: 10, color: '#16A34A', fontWeight: 600 }}>{tCommon('status.fulfilledOrders')}</span>
+./app/dashboard/page.tsx:442:                    <div className="stat-label">{t('metrics.totalSpent')}</div>
+./app/dashboard/page.tsx:445:                      <div style={{ fontSize: 10, color: 'var(--text-muted)', marginTop: 2 }}>{tCommon('trend.vsLastMonth')}</div>
+./app/dashboard/page.tsx:457:              <SectionLabel label={tCommon('analytics')} title={t('charts.orderActivity')}/>
+./app/dashboard/page.tsx:458:              <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 12, textAlign: locale === 'ar' ? 'right' : 'left' }}>{t('charts.ordersPerMonth')}</div>
+./app/dashboard/page.tsx:469:                      {t('viewAll')} <ArrowUpRight size={13} style={{ transform: locale === 'ar' ? 'rotate(-90deg)' : 'none' }}/>
+./app/dashboard/page.tsx:478:              <div className="card-header" style={{ flexDirection: locale === 'ar' ? 'row-reverse' : 'row' }}><h2>{t('quickActions.title')}</h2></div>
+./app/dashboard/page.tsx:488:                      <div style={{ fontWeight: 600, fontSize: 14, color: 'var(--text-primary)' }}>{t('quickActions.browseMarketplace')}</div>
+./app/dashboard/page.tsx:489:                      <div className="desktop-only" style={{ fontSize: 12, color: 'var(--text-muted)' }}>{tCommon('status.discoverVerified')}</div>
+./app/dashboard/page.tsx:503:                      <div style={{ fontWeight: 600, fontSize: 14, color: 'var(--text-primary)' }}>{t('quickActions.viewAllOrders')}</div>
+./app/dashboard/page.tsx:504:                      <div className="desktop-only" style={{ fontSize: 12, color: 'var(--text-muted)' }}>{tCommon('status.totalOrdersCount', { count: orders.length })}</div>
+./app/dashboard/page.tsx:511:                  <div style={{ fontWeight: 600, fontSize: 13, color: 'var(--navy)', marginBottom: 8 }}>{tCommon('howItWorks.title')}</div>
+./app/dashboard/page.tsx:513:                    <li>{tCommon('howItWorks.step1')}</li>
+./app/dashboard/page.tsx:514:                    <li>{tCommon('howItWorks.step2')}</li>
+./app/dashboard/page.tsx:515:                    <li>{tCommon('howItWorks.step3')}</li>
+./app/dashboard/page.tsx:516:                    <li>{tCommon('howItWorks.step4')}</li>
+./app/dashboard/page.tsx:527:              <SectionLabel label="Breakdown" title={t('charts.spendingByBrand')}/>
+./app/dashboard/page.tsx:552:              <SectionLabel label="Overview" title={t('charts.orderStatus')}/>
+./app/dashboard/page.tsx:571:              <h2>{t('recentOrders')}</h2>
+./app/dashboard/page.tsx:573:                {tCommon('viewAll')} {locale === 'ar' ? <ChevronRight size={13} style={{ transform: 'rotate(180deg)' }} /> : <ChevronRight size={13} />}
+./app/dashboard/page.tsx:582:                <h3>{t('empty.noOrders')}</h3>
+./app/dashboard/page.tsx:583:                <Link href="/marketplace" className="btn btn-primary btn-sm">{t('empty.browse')}</Link>
+./app/dashboard/page.tsx:602:                      <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{formatDate(order.created_at, locale as any)} · {tCommon('status.itemsCount', { count: order.items?.length })}</div>
+./app/register/page.tsx:10:  const t = useTranslations('auth.register');
+./app/register/page.tsx:11:  const tCommon = useTranslations('common');
+./app/register/page.tsx:22:    if (form.password !== form.confirm_password) { setError('Passwords do not match'); return; }
+./app/register/page.tsx:23:    if (form.password.length < 6) { setError('Password must be at least 6 characters'); return; }
+./app/register/page.tsx:26:      const res = await fetch('/api/auth/register', {
+./app/register/page.tsx:34:    } catch { setError('Network error. Please try again.'); }
+./app/register/page.tsx:51:          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 700, marginBottom: 4 }}>{t('title')}</h1>
+./app/register/page.tsx:53:            {t('alreadyAccount')} <Link href="/login" style={{ color: 'var(--blue)', fontWeight: 600 }}>{t('loginLink')}</Link>
+./app/register/page.tsx:62:              <span className={`step-label ${step >= 1 ? 'active' : ''}`}>{t('steps.role')}</span>
+./app/register/page.tsx:67:              <span className={`step-label ${step >= 2 ? 'active' : ''}`}>{t('steps.details')}</span>
+./app/register/page.tsx:76:                {t('usagePrompt')}
+./app/register/page.tsx:80:                  id="role-brand-owner" onClick={() => setRole('brand_owner')}
+./app/register/page.tsx:83:                  <div className="role-card-title">{t('roles.brand.title')}</div>
+./app/register/page.tsx:84:                  <div className="role-card-desc">{t('roles.brand.desc')}</div>
+./app/register/page.tsx:87:                  id="role-buyer" onClick={() => setRole('buyer')}
+./app/register/page.tsx:90:                  <div className="role-card-title">{t('roles.buyer.title')}</div>
+./app/register/page.tsx:91:                  <div className="role-card-desc">{t('roles.buyer.desc')}</div>
+./app/register/page.tsx:96:                  <AlertCircle size={15}/> {t('roles.brand.warning')}
+./app/register/page.tsx:101:                {tCommon('next')} {locale === 'ar' ? <ArrowRight size={15} style={{ transform: 'rotate(180deg)' }} /> : <ArrowRight size={15} />}
+./app/register/page.tsx:110:                  <label className="form-label" htmlFor="register-name">{t('fullName')}</label>
+./app/register/page.tsx:111:                  <input id="register-name" className="form-input" placeholder={t('fullNamePlaceholder')} value={form.name}
+./app/register/page.tsx:115:                  <label className="form-label" htmlFor="register-company">{t('companyName')}</label>
+./app/register/page.tsx:116:                  <input id="register-company" className="form-input" placeholder={t('companyPlaceholder')} value={form.company_name}
+./app/register/page.tsx:121:                <label className="form-label" htmlFor="register-email">{t('workEmail')}</label>
+./app/register/page.tsx:122:                <input id="register-email" type="email" className="form-input" placeholder={t('emailPlaceholder')} value={form.email}
+./app/register/page.tsx:127:                  <label className="form-label" htmlFor="register-password">{t('password')}</label>
+./app/register/page.tsx:128:                  <input id="register-password" type="password" className="form-input" placeholder={t('passwordPlaceholder')} value={form.password}
+./app/register/page.tsx:132:                  <label className="form-label" htmlFor="register-confirm">{t('confirmPassword')}</label>
+./app/register/page.tsx:133:                  <input id="register-confirm" type="password" className="form-input" placeholder={t('confirmPlaceholder')} value={form.confirm_password}
+./app/register/page.tsx:139:                  {loading ? <><span className="spinner"/> {t('loadingAccount')}…</> : <>{t('button')} {locale === 'ar' ? <ArrowRight size={15} style={{ transform: 'rotate(180deg)' }} /> : <ArrowRight size={15} />}</>}
+./app/register/page.tsx:141:                <button type="button" className="btn btn-ghost btn-full" onClick={() => setStep(1)}>{tCommon('back')}</button>
+./app/layout.tsx:10:  metadataBase: new URL('https://kuwaitb2bhub.com'),
+./app/api/messages/route.ts:11:  const orderId = searchParams.get('order_id');
+./app/api/messages/route.ts:34:    id: generateId('msg'),
+./app/api/products/bulk/route.ts:57:        id: generateId('product'),
+./app/api/products/route.ts:9:  const brandId = searchParams.get('brand_id');
+./app/api/products/route.ts:30:    id: generateId('prod'),
+./app/api/auth/logout/route.ts:5:  response.cookies.set('b2b_user_id', '', { maxAge: 0, path: '/' });
+./app/api/auth/logout/route.ts:6:  response.cookies.set('b2b_user_role', '', { maxAge: 0, path: '/' });
+./app/api/auth/register/route.ts:18:    const userId = generateId('user');
+./app/api/auth/register/route.ts:35:        id: generateId('brand'),
+./app/api/auth/register/route.ts:81:    response.cookies.set('b2b_user_id', userId, {
+./app/api/auth/register/route.ts:87:    response.cookies.set('b2b_user_role', role, {
+./app/api/auth/login/route.ts:27:    response.cookies.set('b2b_user_id', user.id, {
+./app/api/auth/login/route.ts:33:    response.cookies.set('b2b_user_role', user.role, {
+./app/api/brands/route.ts:10:  const search = searchParams.get('search') || '';
+./app/api/brands/route.ts:11:  const mine = searchParams.get('mine') === 'true';
+./app/api/brands/route.ts:49:      id: generateId('brand'),
+./app/api/orders/route.ts:70:      id: generateId('item'),
+./app/api/orders/route.ts:78:  const orderId = generateId('order');
+./app/api/orders/route.ts:97:    body: `${user.name} from ${user.company_name} placed an order request for KD ${total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+./app/api/orders/[id]/route.ts:66:  const amt = `KD ${order.total_amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+./app/api/reviews/route.ts:10:  const brandId = searchParams.get('brand_id');
+./app/api/reviews/route.ts:11:  const sort = searchParams.get('sort') || 'recent'; // recent | high | low
+./app/orders/[id]/page.tsx:35:  const t = useTranslations('orderDetails');
+./app/orders/[id]/page.tsx:40:    const [meRes, orderRes] = await Promise.all([fetch('/api/auth/me'), fetch(`/api/orders/${id}`)]);
+./app/orders/[id]/page.tsx:66:    await fetch('/api/messages', {
+./app/orders/[id]/page.tsx:113:                <h1 style={{ fontSize: 20, margin: 0 }}>{t('title')}</h1>
+./app/orders/[id]/page.tsx:115:              <p style={{ fontSize: 13, color: 'var(--text-secondary)' }}>{t('orderId', { id: String(id.slice(-8)), brand: String(order?.brand?.brand_name || '') })}</p>
+./app/orders/[id]/page.tsx:129:                ⏳ {t('alerts.awaiting', { brand: String(order?.brand?.brand_name || '') })}
+./app/orders/[id]/page.tsx:134:                ✅ {t('alerts.approved')}
+./app/orders/[id]/page.tsx:139:                ❌ {t('alerts.rejected')}
+./app/orders/[id]/page.tsx:148:                <div style={{ fontSize: 13, fontWeight: 700, color: '#15803D', marginBottom: 2 }}>{t('whatsapp.sendDetails')}</div>
+./app/orders/[id]/page.tsx:149:                <div style={{ fontSize: 12, color: '#166534' }}>{t('whatsapp.sendDetailsHint', { brand: order.brand.brand_name })}</div>
+./app/orders/[id]/page.tsx:154:                label={t('whatsapp.sendButton')}
+./app/orders/[id]/page.tsx:165:              <div style={{ flex: 1, fontSize: 13, color: '#15803D', fontWeight: 600, textAlign: locale === 'ar' ? 'right' : 'left' }}>🎉 {t('whatsapp.approvedShare')}</div>
+./app/orders/[id]/page.tsx:169:                label={t('whatsapp.approvedShareButton')}
+./app/orders/[id]/page.tsx:183:                    {t('review.title')}
+./app/orders/[id]/page.tsx:186:                    {t('review.subtitle', { brand: order?.brand?.brand_name })}
+./app/orders/[id]/page.tsx:192:                <Star size={13} style={{ [locale === 'ar' ? 'marginLeft' : 'marginRight']: 4 }} /> {t('review.button')}
+./app/orders/[id]/page.tsx:200:                <div className="card-header" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><h2>{t('summary')}</h2></div>
+./app/orders/[id]/page.tsx:214:                      <Shield size={10} /> {t('verifiedBrand')}
+./app/orders/[id]/page.tsx:217:                  <Link href={`/brands/${order?.brand?.id}`} className="btn btn-ghost btn-sm" style={{ padding: '0 8px', height: 32 }}>{t('visitBrand')}</Link>
+./app/orders/[id]/page.tsx:220:                  [t('orderDate'), new Date(order?.created_at || '').toLocaleDateString(locale === 'ar' ? 'ar-KW' : 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' })],
+./app/orders/[id]/page.tsx:221:                  [t('totalAmount'), formatPrice(order?.total_amount ?? 0)],
+./app/orders/[id]/page.tsx:225:                    <span style={{ fontWeight: label === t('totalAmount') ? 800 : 600, color: label === t('totalAmount') ? 'var(--navy)' : 'var(--text-primary)' }}>{value}</span>
+./app/orders/[id]/page.tsx:231:                <div className="card-header" style={{ textAlign: locale === 'ar' ? 'right' : 'left' }}><h2>{t('itemsCount', { count: order?.items.length || 0 })}</h2></div>
+./app/orders/[id]/page.tsx:246:                        <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>{item.quantity} {t('units')} × {formatPrice(item.unit_price)}</div>
+./app/orders/[id]/page.tsx:252:                    <span>{t('total')}</span>
+./app/orders/[id]/page.tsx:266:                  <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>{t('chat.title', { id: id.slice(-6) })}</div>
+./app/orders/[id]/page.tsx:273:                    <p>{t('chat.noMessages')}</p>
+./app/orders/[id]/page.tsx:286:                  placeholder={t('chat.placeholder')}
+./app/orders/page.tsx:20:  const t = useTranslations('orders');
+./app/orders/page.tsx:21:  const tCommon = useTranslations('common');
+./app/orders/page.tsx:24:  const [filter, setFilter] = useState('all');
+./app/orders/page.tsx:29:    const res = await fetch('/api/orders');
+./app/orders/page.tsx:59:            <h1>{t('title')}</h1>
+./app/orders/page.tsx:60:            <p>{t('subtitle', { count: orders.length })}</p>
+./app/orders/page.tsx:64:              <Store size={16} /> {t('newOrder')}
+./app/orders/page.tsx:68:              {tCommon('retry')}
+./app/orders/page.tsx:78:                ['all', tCommon('all')],
+./app/orders/page.tsx:79:                ['pending', tCommon('pending')],
+./app/orders/page.tsx:80:                ['approved', tCommon('approved')],
+./app/orders/page.tsx:81:                ['completed', tCommon('completed')],
+./app/orders/page.tsx:82:                ['rejected', tCommon('rejected')]
+./app/orders/page.tsx:115:                <h3>{t('empty.title')}</h3>
+./app/orders/page.tsx:116:                <p>{t('empty.subtitle')}</p>
+./app/orders/page.tsx:117:                <Link href="/marketplace" className="btn btn-primary btn-sm">{t('empty.cta')}</Link>
+./app/orders/page.tsx:135:                        <div className="order-card-mobile-id">{t('orderNumber', { id: order.id.slice(-8) })}</div>
+./app/orders/page.tsx:137:                          {t('itemsCount', { count: order.items?.length })} · {order.items?.slice(0, 2).map(i => i.product?.name).filter(Boolean).join(', ')}{order.items?.length > 2 ? '…' : ''}
+./app/orders/page.tsx:164:                        {t('orderNumber', { id: order.id.slice(-8) })} · {formatDate(order.created_at, locale as any)} · {t('itemsCount', { count: order.items?.length })}
+./app/page.tsx:25:    if (user.role === 'admin') redirect('/admin/dashboard');
+./app/page.tsx:26:    if (user.role === 'brand_owner') redirect('/brand/dashboard');
+./app/page.tsx:27:    redirect('/marketplace');
+./app/globals.css:1:@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700;800&display=swap');
+./app/globals.css:528:  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+./app/notifications/page.tsx:101:  const t = useTranslations('notifications');
+./app/notifications/page.tsx:102:  const tCommon = useTranslations('common');
+./app/notifications/page.tsx:105:  const [userRole,      setUserRole] = useState('buyer');
+./app/notifications/page.tsx:114:      const saved = localStorage.getItem('notif_prefs');
+./app/notifications/page.tsx:122:      try { localStorage.setItem('notif_prefs', JSON.stringify(next)); } catch { /* ignore */ }
+./app/notifications/page.tsx:131:        fetch('/api/notifications'),
+./app/notifications/page.tsx:132:        fetch('/api/auth/me'),
+./app/notifications/page.tsx:144:    await fetch('/api/notifications', { method: 'PATCH' });
+./app/notifications/page.tsx:172:              <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1 }}>{t('title')}</h1>
+./app/notifications/page.tsx:181:                {tabKey === 'all' ? tCommon('all') : tabKey === 'unread' ? `${locale === 'ar' ? 'غير مقروء' : 'Unread'}${unreadCount > 0 ? ` (${unreadCount})` : ''}` : (locale === 'ar' ? 'التفضيلات' : 'Preferences')}
+./app/notifications/page.tsx:214:                  <span style={{ fontSize: 10, fontWeight: 700, background: 'var(--border)', color: 'var(--text-muted)', padding: '2px 6px', borderRadius: 4 }}>{tCommon('comingSoon')}</span>
+./app/notifications/page.tsx:231:                    {t('markAllRead')}
+./app/notifications/page.tsx:246:                    {tab === 'unread' ? (locale === 'ar' ? 'لا توجد إشعارات غير مقروءة' : 'No unread notifications') : t('empty')}
+./app/notifications/page.tsx:248:                  <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>{t('emptyHint')}</p>
+./app/login/page.tsx:10:  const t = useTranslations('auth.login');
+./app/login/page.tsx:11:  const tCommon = useTranslations('common');
+./app/login/page.tsx:23:      const res = await fetch('/api/auth/login', {
+./app/login/page.tsx:31:      if (role === 'admin') router.push('/admin/dashboard');
+./app/login/page.tsx:33:      else router.push('/marketplace');
+./app/login/page.tsx:34:    } catch { setError('Network error. Please try again.'); }
+./app/login/page.tsx:61:                {t('title')}
+./app/login/page.tsx:64:                {t('subtitle')}
+./app/login/page.tsx:94:            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 4 }}>{t('title')}</h2>
+./app/login/page.tsx:96:              {t('noAccount')} <Link href="/register" style={{ color: 'var(--blue)', fontWeight: 600 }}>{t('registerLink')}</Link>
+./app/login/page.tsx:107:                <label className="form-label" htmlFor="email">{t('workEmail')}</label>
+./app/login/page.tsx:111:                    placeholder={t('emailPlaceholder')} value={email} onChange={e => setEmail(e.target.value)} required autoComplete="email" inputMode="email" />
+./app/login/page.tsx:115:                <label className="form-label" htmlFor="password">{t('password')}</label>
+./app/login/page.tsx:123:                {loading ? <><span className="spinner" /> {t('loading')}…</> : <>{t('button')} {locale === 'ar' ? <ArrowRight size={16} style={{ transform: 'rotate(180deg)' }} /> : <ArrowRight size={16} />}</>}
+./app/login/page.tsx:127:            <div className="divider-label" style={{ marginTop: 24 }}><span>{t('demoLabel')}</span></div>
+./app/pending/page.tsx:13:    fetch('/api/auth/me').then(r => r.json()).then(d => {
+./app/pending/page.tsx:14:      if (!d.user) { router.push('/login'); return; }
+./app/pending/page.tsx:15:      if (d.user.verification_status !== 'pending') { router.push('/brand/dashboard'); return; }
+./app/pending/page.tsx:21:    await fetch('/api/auth/logout', { method: 'POST' });
+./app/pending/page.tsx:22:    router.push('/login');
+./hooks.txt:2:./calls.txt:6:./app/brands/[id]/page.tsx:  const t = useTranslations('brandCatalogView');
+./hooks.txt:3:./calls.txt:7:./app/brands/[id]/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:4:./calls.txt:8:./app/brands/[id]/page.tsx:  const tMarketplace = useTranslations('marketplace');
+./hooks.txt:5:./calls.txt:9:./app/brands/[id]/page.tsx:  const tTrust = useTranslations('trust');
+./hooks.txt:6:./calls.txt:51:./app/brand/products/page.tsx:  const t = useTranslations('brandProducts');
+./hooks.txt:7:./calls.txt:52:./app/brand/products/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:8:./calls.txt:53:./app/brand/products/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:9:./calls.txt:85:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:10:./calls.txt:91:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandDashboard');
+./hooks.txt:11:./calls.txt:92:./app/brand/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:12:./calls.txt:129:./app/brand/profile/page.tsx:  const t = useTranslations('brandProfileSettings');
+./hooks.txt:13:./calls.txt:130:./app/brand/profile/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:14:./calls.txt:173:./app/brand/orders/[id]/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:15:./calls.txt:174:./app/brand/orders/[id]/page.tsx:  const tOrders = useTranslations('brandOrders');
+./hooks.txt:16:./calls.txt:191:./app/brand/orders/page.tsx:  const t = useTranslations('brandOrders');
+./hooks.txt:17:./calls.txt:192:./app/brand/orders/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:18:./calls.txt:193:./app/brand/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:19:./calls.txt:210:./app/marketplace/page.tsx:  const t = useTranslations('marketplace');
+./hooks.txt:20:./calls.txt:211:./app/marketplace/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:21:./calls.txt:247:./app/admin/brands/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:22:./calls.txt:248:./app/admin/brands/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:23:./calls.txt:259:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin.sidebar');
+./hooks.txt:24:./calls.txt:265:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:25:./calls.txt:266:./app/admin/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:26:./calls.txt:291:./app/admin/users/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:27:./calls.txt:292:./app/admin/users/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:28:./calls.txt:300:./app/admin/orders/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:29:./calls.txt:301:./app/admin/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:30:./calls.txt:312:./app/dashboard/page.tsx:  const t = useTranslations('dashboard');
+./hooks.txt:31:./calls.txt:313:./app/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:32:./calls.txt:349:./app/register/page.tsx:  const t = useTranslations('auth.register');
+./hooks.txt:33:./calls.txt:350:./app/register/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:34:./calls.txt:403:./app/orders/[id]/page.tsx:  const t = useTranslations('orderDetails');
+./hooks.txt:35:./calls.txt:431:./app/orders/page.tsx:  const t = useTranslations('orders');
+./hooks.txt:36:./calls.txt:432:./app/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:37:./calls.txt:455:./app/notifications/page.tsx:  const t = useTranslations('notifications');
+./hooks.txt:38:./calls.txt:456:./app/notifications/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:39:./calls.txt:469:./app/login/page.tsx:  const t = useTranslations('auth.login');
+./hooks.txt:40:./calls.txt:470:./app/login/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:41:./calls.txt:489:./hooks.txt:./calls.txt:./app/brands/[id]/page.tsx:  const t = useTranslations('brandCatalogView');
+./hooks.txt:42:./calls.txt:490:./hooks.txt:./calls.txt:./app/brands/[id]/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:43:./calls.txt:491:./hooks.txt:./calls.txt:./app/brands/[id]/page.tsx:  const tMarketplace = useTranslations('marketplace');
+./hooks.txt:44:./calls.txt:492:./hooks.txt:./calls.txt:./app/brands/[id]/page.tsx:  const tTrust = useTranslations('trust');
+./hooks.txt:45:./calls.txt:493:./hooks.txt:./calls.txt:./app/brand/products/page.tsx:  const t = useTranslations('brandProducts');
+./hooks.txt:46:./calls.txt:494:./hooks.txt:./calls.txt:./app/brand/products/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:47:./calls.txt:495:./hooks.txt:./calls.txt:./app/brand/products/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:48:./calls.txt:496:./hooks.txt:./calls.txt:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:49:./calls.txt:497:./hooks.txt:./calls.txt:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandDashboard');
+./hooks.txt:50:./calls.txt:498:./hooks.txt:./calls.txt:./app/brand/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:51:./calls.txt:499:./hooks.txt:./calls.txt:./app/brand/profile/page.tsx:  const t = useTranslations('brandProfileSettings');
+./hooks.txt:52:./calls.txt:500:./hooks.txt:./calls.txt:./app/brand/profile/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:53:./calls.txt:501:./hooks.txt:./calls.txt:./app/brand/orders/[id]/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:54:./calls.txt:502:./hooks.txt:./calls.txt:./app/brand/orders/[id]/page.tsx:  const tOrders = useTranslations('brandOrders');
+./hooks.txt:55:./calls.txt:503:./hooks.txt:./calls.txt:./app/brand/orders/page.tsx:  const t = useTranslations('brandOrders');
+./hooks.txt:56:./calls.txt:504:./hooks.txt:./calls.txt:./app/brand/orders/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:57:./calls.txt:505:./hooks.txt:./calls.txt:./app/brand/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:58:./calls.txt:506:./hooks.txt:./calls.txt:./app/marketplace/page.tsx:  const t = useTranslations('marketplace');
+./hooks.txt:59:./calls.txt:507:./hooks.txt:./calls.txt:./app/marketplace/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:60:./calls.txt:508:./hooks.txt:./calls.txt:./app/admin/brands/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:61:./calls.txt:509:./hooks.txt:./calls.txt:./app/admin/brands/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:62:./calls.txt:510:./hooks.txt:./calls.txt:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin.sidebar');
+./hooks.txt:63:./calls.txt:511:./hooks.txt:./calls.txt:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:64:./calls.txt:512:./hooks.txt:./calls.txt:./app/admin/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:65:./calls.txt:513:./hooks.txt:./calls.txt:./app/admin/users/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:66:./calls.txt:514:./hooks.txt:./calls.txt:./app/admin/users/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:67:./calls.txt:515:./hooks.txt:./calls.txt:./app/admin/orders/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:68:./calls.txt:516:./hooks.txt:./calls.txt:./app/admin/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:69:./calls.txt:517:./hooks.txt:./calls.txt:./app/dashboard/page.tsx:  const t = useTranslations('dashboard');
+./hooks.txt:70:./calls.txt:518:./hooks.txt:./calls.txt:./app/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:71:./calls.txt:519:./hooks.txt:./calls.txt:./app/register/page.tsx:  const t = useTranslations('auth.register');
+./hooks.txt:72:./calls.txt:520:./hooks.txt:./calls.txt:./app/register/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:73:./calls.txt:521:./hooks.txt:./calls.txt:./app/orders/[id]/page.tsx:  const t = useTranslations('orderDetails');
+./hooks.txt:74:./calls.txt:522:./hooks.txt:./calls.txt:./app/orders/page.tsx:  const t = useTranslations('orders');
+./hooks.txt:75:./calls.txt:523:./hooks.txt:./calls.txt:./app/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:76:./calls.txt:524:./hooks.txt:./calls.txt:./app/notifications/page.tsx:  const t = useTranslations('notifications');
+./hooks.txt:77:./calls.txt:525:./hooks.txt:./calls.txt:./app/notifications/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:78:./calls.txt:526:./hooks.txt:./calls.txt:./app/login/page.tsx:  const t = useTranslations('auth.login');
+./hooks.txt:79:./calls.txt:527:./hooks.txt:./calls.txt:./app/login/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:80:./calls.txt:528:./hooks.txt:./calls.txt:./hooks.txt:./app/brands/[id]/page.tsx:  const t = useTranslations('brandCatalogView');
+./hooks.txt:81:./calls.txt:529:./hooks.txt:./calls.txt:./hooks.txt:./app/brands/[id]/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:82:./calls.txt:530:./hooks.txt:./calls.txt:./hooks.txt:./app/brands/[id]/page.tsx:  const tMarketplace = useTranslations('marketplace');
+./hooks.txt:83:./calls.txt:531:./hooks.txt:./calls.txt:./hooks.txt:./app/brands/[id]/page.tsx:  const tTrust = useTranslations('trust');
+./hooks.txt:84:./calls.txt:532:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/products/page.tsx:  const t = useTranslations('brandProducts');
+./hooks.txt:85:./calls.txt:533:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/products/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:86:./calls.txt:534:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/products/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:87:./calls.txt:535:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:88:./calls.txt:536:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandDashboard');
+./hooks.txt:89:./calls.txt:537:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:90:./calls.txt:538:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/profile/page.tsx:  const t = useTranslations('brandProfileSettings');
+./hooks.txt:91:./calls.txt:539:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/profile/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:92:./calls.txt:540:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/orders/[id]/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:93:./calls.txt:541:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/orders/[id]/page.tsx:  const tOrders = useTranslations('brandOrders');
+./hooks.txt:94:./calls.txt:542:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/orders/page.tsx:  const t = useTranslations('brandOrders');
+./hooks.txt:95:./calls.txt:543:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/orders/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:96:./calls.txt:544:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:97:./calls.txt:545:./hooks.txt:./calls.txt:./hooks.txt:./app/marketplace/page.tsx:  const t = useTranslations('marketplace');
+./hooks.txt:98:./calls.txt:546:./hooks.txt:./calls.txt:./hooks.txt:./app/marketplace/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:99:./calls.txt:547:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/brands/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:100:./calls.txt:548:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/brands/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:101:./calls.txt:549:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin.sidebar');
+./hooks.txt:102:./calls.txt:550:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:103:./calls.txt:551:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:104:./calls.txt:552:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/users/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:105:./calls.txt:553:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/users/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:106:./calls.txt:554:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/orders/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:107:./calls.txt:555:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:108:./calls.txt:556:./hooks.txt:./calls.txt:./hooks.txt:./app/dashboard/page.tsx:  const t = useTranslations('dashboard');
+./hooks.txt:109:./calls.txt:557:./hooks.txt:./calls.txt:./hooks.txt:./app/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:110:./calls.txt:558:./hooks.txt:./calls.txt:./hooks.txt:./app/register/page.tsx:  const t = useTranslations('auth.register');
+./hooks.txt:111:./calls.txt:559:./hooks.txt:./calls.txt:./hooks.txt:./app/register/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:112:./calls.txt:560:./hooks.txt:./calls.txt:./hooks.txt:./app/orders/[id]/page.tsx:  const t = useTranslations('orderDetails');
+./hooks.txt:113:./calls.txt:561:./hooks.txt:./calls.txt:./hooks.txt:./app/orders/page.tsx:  const t = useTranslations('orders');
+./hooks.txt:114:./calls.txt:562:./hooks.txt:./calls.txt:./hooks.txt:./app/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:115:./calls.txt:563:./hooks.txt:./calls.txt:./hooks.txt:./app/notifications/page.tsx:  const t = useTranslations('notifications');
+./hooks.txt:116:./calls.txt:564:./hooks.txt:./calls.txt:./hooks.txt:./app/notifications/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:117:./calls.txt:565:./hooks.txt:./calls.txt:./hooks.txt:./app/login/page.tsx:  const t = useTranslations('auth.login');
+./hooks.txt:118:./calls.txt:566:./hooks.txt:./calls.txt:./hooks.txt:./app/login/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:119:./calls.txt:567:./hooks.txt:./calls.txt:./hooks.txt:./components/Navbar.tsx:  const t = useTranslations('nav');
+./hooks.txt:120:./calls.txt:568:./hooks.txt:./calls.txt:./hooks.txt:./components/Navbar.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:121:./calls.txt:569:./hooks.txt:./calls.txt:./hooks.txt:./components/Navbar.tsx:  const tAuth = useTranslations('auth');
+./hooks.txt:122:./calls.txt:570:./hooks.txt:./calls.txt:./hooks.txt:./components/BottomNav.tsx:  const t = useTranslations('nav');
+./hooks.txt:123:./calls.txt:571:./hooks.txt:./calls.txt:./hooks.txt:./components/StatusBadge.tsx:  const t = useTranslations('common');
+./hooks.txt:124:./calls.txt:572:./hooks.txt:./calls.txt:./hooks.txt:./components/MobileTopBar.tsx:  const t = useTranslations('nav');
+./hooks.txt:125:./calls.txt:573:./hooks.txt:./calls.txt:./hooks.txt:./components/MobileTopBar.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:126:./calls.txt:574:./hooks.txt:./calls.txt:./components/Navbar.tsx:  const t = useTranslations('nav');
+./hooks.txt:127:./calls.txt:575:./hooks.txt:./calls.txt:./components/Navbar.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:128:./calls.txt:576:./hooks.txt:./calls.txt:./components/Navbar.tsx:  const tAuth = useTranslations('auth');
+./hooks.txt:129:./calls.txt:577:./hooks.txt:./calls.txt:./components/BottomNav.tsx:  const t = useTranslations('nav');
+./hooks.txt:130:./calls.txt:578:./hooks.txt:./calls.txt:./components/StatusBadge.tsx:  const t = useTranslations('common');
+./hooks.txt:131:./calls.txt:579:./hooks.txt:./calls.txt:./components/MobileTopBar.tsx:  const t = useTranslations('nav');
+./hooks.txt:132:./calls.txt:580:./hooks.txt:./calls.txt:./components/MobileTopBar.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:133:./calls.txt:581:./hooks.txt:./app/brands/[id]/page.tsx:  const t = useTranslations('brandCatalogView');
+./hooks.txt:134:./calls.txt:582:./hooks.txt:./app/brands/[id]/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:135:./calls.txt:583:./hooks.txt:./app/brands/[id]/page.tsx:  const tMarketplace = useTranslations('marketplace');
+./hooks.txt:136:./calls.txt:584:./hooks.txt:./app/brands/[id]/page.tsx:  const tTrust = useTranslations('trust');
+./hooks.txt:137:./calls.txt:585:./hooks.txt:./app/brand/products/page.tsx:  const t = useTranslations('brandProducts');
+./hooks.txt:138:./calls.txt:586:./hooks.txt:./app/brand/products/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:139:./calls.txt:587:./hooks.txt:./app/brand/products/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:140:./calls.txt:588:./hooks.txt:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:141:./calls.txt:589:./hooks.txt:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandDashboard');
+./hooks.txt:142:./calls.txt:590:./hooks.txt:./app/brand/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:143:./calls.txt:591:./hooks.txt:./app/brand/profile/page.tsx:  const t = useTranslations('brandProfileSettings');
+./hooks.txt:144:./calls.txt:592:./hooks.txt:./app/brand/profile/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:145:./calls.txt:593:./hooks.txt:./app/brand/orders/[id]/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:146:./calls.txt:594:./hooks.txt:./app/brand/orders/[id]/page.tsx:  const tOrders = useTranslations('brandOrders');
+./hooks.txt:147:./calls.txt:595:./hooks.txt:./app/brand/orders/page.tsx:  const t = useTranslations('brandOrders');
+./hooks.txt:148:./calls.txt:596:./hooks.txt:./app/brand/orders/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:149:./calls.txt:597:./hooks.txt:./app/brand/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:150:./calls.txt:598:./hooks.txt:./app/marketplace/page.tsx:  const t = useTranslations('marketplace');
+./hooks.txt:151:./calls.txt:599:./hooks.txt:./app/marketplace/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:152:./calls.txt:600:./hooks.txt:./app/admin/brands/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:153:./calls.txt:601:./hooks.txt:./app/admin/brands/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:154:./calls.txt:602:./hooks.txt:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin.sidebar');
+./hooks.txt:155:./calls.txt:603:./hooks.txt:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:156:./calls.txt:604:./hooks.txt:./app/admin/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:157:./calls.txt:605:./hooks.txt:./app/admin/users/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:158:./calls.txt:606:./hooks.txt:./app/admin/users/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:159:./calls.txt:607:./hooks.txt:./app/admin/orders/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:160:./calls.txt:608:./hooks.txt:./app/admin/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:161:./calls.txt:609:./hooks.txt:./app/dashboard/page.tsx:  const t = useTranslations('dashboard');
+./hooks.txt:162:./calls.txt:610:./hooks.txt:./app/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:163:./calls.txt:611:./hooks.txt:./app/register/page.tsx:  const t = useTranslations('auth.register');
+./hooks.txt:164:./calls.txt:612:./hooks.txt:./app/register/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:165:./calls.txt:613:./hooks.txt:./app/orders/[id]/page.tsx:  const t = useTranslations('orderDetails');
+./hooks.txt:166:./calls.txt:614:./hooks.txt:./app/orders/page.tsx:  const t = useTranslations('orders');
+./hooks.txt:167:./calls.txt:615:./hooks.txt:./app/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:168:./calls.txt:616:./hooks.txt:./app/notifications/page.tsx:  const t = useTranslations('notifications');
+./hooks.txt:169:./calls.txt:617:./hooks.txt:./app/notifications/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:170:./calls.txt:618:./hooks.txt:./app/login/page.tsx:  const t = useTranslations('auth.login');
+./hooks.txt:171:./calls.txt:619:./hooks.txt:./app/login/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:172:./calls.txt:620:./hooks.txt:./components/Navbar.tsx:  const t = useTranslations('nav');
+./hooks.txt:173:./calls.txt:621:./hooks.txt:./components/Navbar.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:174:./calls.txt:622:./hooks.txt:./components/Navbar.tsx:  const tAuth = useTranslations('auth');
+./hooks.txt:175:./calls.txt:623:./hooks.txt:./components/BottomNav.tsx:  const t = useTranslations('nav');
+./hooks.txt:176:./calls.txt:624:./hooks.txt:./components/StatusBadge.tsx:  const t = useTranslations('common');
+./hooks.txt:177:./calls.txt:625:./hooks.txt:./components/MobileTopBar.tsx:  const t = useTranslations('nav');
+./hooks.txt:178:./calls.txt:626:./hooks.txt:./components/MobileTopBar.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:179:./calls.txt:635:./components/Navbar.tsx:  const t = useTranslations('nav');
+./hooks.txt:180:./calls.txt:636:./components/Navbar.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:181:./calls.txt:637:./components/Navbar.tsx:  const tAuth = useTranslations('auth');
+./hooks.txt:182:./calls.txt:657:./components/BottomNav.tsx:  const t = useTranslations('nav');
+./hooks.txt:183:./calls.txt:685:./components/StatusBadge.tsx:  const t = useTranslations('common');
+./hooks.txt:184:./calls.txt:708:./components/MobileTopBar.tsx:  const t = useTranslations('nav');
+./hooks.txt:185:./calls.txt:709:./components/MobileTopBar.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:186:./app/brands/[id]/page.tsx:56:  const t = useTranslations('brandCatalogView');
+./hooks.txt:187:./app/brands/[id]/page.tsx:57:  const tCommon = useTranslations('common');
+./hooks.txt:188:./app/brands/[id]/page.tsx:58:  const tMarketplace = useTranslations('marketplace');
+./hooks.txt:189:./app/brands/[id]/page.tsx:59:  const tTrust = useTranslations('trust');
+./hooks.txt:190:./app/brand/products/page.tsx:24:  const t = useTranslations('brandProducts');
+./hooks.txt:191:./app/brand/products/page.tsx:25:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:192:./app/brand/products/page.tsx:26:  const tCommon = useTranslations('common');
+./hooks.txt:193:./app/brand/dashboard/page.tsx:91:  const t = useTranslations('brandSidebar');
+./hooks.txt:194:./app/brand/dashboard/page.tsx:108:  const t = useTranslations('brandDashboard');
+./hooks.txt:195:./app/brand/dashboard/page.tsx:109:  const tCommon = useTranslations('common');
+./hooks.txt:196:./app/brand/profile/page.tsx:31:  const t = useTranslations('brandProfileSettings');
+./hooks.txt:197:./app/brand/profile/page.tsx:32:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:198:./app/brand/orders/[id]/page.tsx:30:  const t = useTranslations('brandSidebar');
+./hooks.txt:199:./app/brand/orders/[id]/page.tsx:31:  const tOrders = useTranslations('brandOrders');
+./hooks.txt:200:./app/brand/orders/page.tsx:22:  const t = useTranslations('brandOrders');
+./hooks.txt:201:./app/brand/orders/page.tsx:23:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:202:./app/brand/orders/page.tsx:24:  const tCommon = useTranslations('common');
+./hooks.txt:203:./app/marketplace/page.tsx:28:  const t = useTranslations('marketplace');
+./hooks.txt:204:./app/marketplace/page.tsx:29:  const tCommon = useTranslations('common');
+./hooks.txt:205:./app/admin/brands/page.tsx:17:  const t = useTranslations('admin');
+./hooks.txt:206:./app/admin/brands/page.tsx:18:  const tCommon = useTranslations('common');
+./hooks.txt:207:./app/admin/dashboard/page.tsx:33:  const t = useTranslations('admin.sidebar');
+./hooks.txt:208:./app/admin/dashboard/page.tsx:52:  const t = useTranslations('admin');
+./hooks.txt:209:./app/admin/dashboard/page.tsx:53:  const tCommon = useTranslations('common');
+./hooks.txt:210:./app/admin/users/page.tsx:16:  const t = useTranslations('admin');
+./hooks.txt:211:./app/admin/users/page.tsx:17:  const tCommon = useTranslations('common');
+./hooks.txt:212:./app/admin/orders/page.tsx:19:  const t = useTranslations('admin');
+./hooks.txt:213:./app/admin/orders/page.tsx:20:  const tCommon = useTranslations('common');
+./hooks.txt:214:./app/dashboard/page.tsx:107:  const t = useTranslations('dashboard');
+./hooks.txt:215:./app/dashboard/page.tsx:108:  const tCommon = useTranslations('common');
+./hooks.txt:216:./app/register/page.tsx:10:  const t = useTranslations('auth.register');
+./hooks.txt:217:./app/register/page.tsx:11:  const tCommon = useTranslations('common');
+./hooks.txt:218:./app/orders/[id]/page.tsx:35:  const t = useTranslations('orderDetails');
+./hooks.txt:219:./app/orders/page.tsx:20:  const t = useTranslations('orders');
+./hooks.txt:220:./app/orders/page.tsx:21:  const tCommon = useTranslations('common');
+./hooks.txt:221:./app/notifications/page.tsx:101:  const t = useTranslations('notifications');
+./hooks.txt:222:./app/notifications/page.tsx:102:  const tCommon = useTranslations('common');
+./hooks.txt:223:./app/login/page.tsx:10:  const t = useTranslations('auth.login');
+./hooks.txt:224:./app/login/page.tsx:11:  const tCommon = useTranslations('common');
+./hooks.txt:226:./hooks.txt:2:./calls.txt:6:./app/brands/[id]/page.tsx:  const t = useTranslations('brandCatalogView');
+./hooks.txt:227:./hooks.txt:3:./calls.txt:7:./app/brands/[id]/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:228:./hooks.txt:4:./calls.txt:8:./app/brands/[id]/page.tsx:  const tMarketplace = useTranslations('marketplace');
+./hooks.txt:229:./hooks.txt:5:./calls.txt:9:./app/brands/[id]/page.tsx:  const tTrust = useTranslations('trust');
+./hooks.txt:230:./hooks.txt:6:./calls.txt:51:./app/brand/products/page.tsx:  const t = useTranslations('brandProducts');
+./hooks.txt:231:./hooks.txt:7:./calls.txt:52:./app/brand/products/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:232:./hooks.txt:8:./calls.txt:53:./app/brand/products/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:233:./hooks.txt:9:./calls.txt:85:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:234:./hooks.txt:10:./calls.txt:91:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandDashboard');
+./hooks.txt:235:./hooks.txt:11:./calls.txt:92:./app/brand/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:236:./hooks.txt:12:./calls.txt:129:./app/brand/profile/page.tsx:  const t = useTranslations('brandProfileSettings');
+./hooks.txt:237:./hooks.txt:13:./calls.txt:130:./app/brand/profile/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:238:./hooks.txt:14:./calls.txt:173:./app/brand/orders/[id]/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:239:./hooks.txt:15:./calls.txt:174:./app/brand/orders/[id]/page.tsx:  const tOrders = useTranslations('brandOrders');
+./hooks.txt:240:./hooks.txt:16:./calls.txt:191:./app/brand/orders/page.tsx:  const t = useTranslations('brandOrders');
+./hooks.txt:241:./hooks.txt:17:./calls.txt:192:./app/brand/orders/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:242:./hooks.txt:18:./calls.txt:193:./app/brand/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:243:./hooks.txt:19:./calls.txt:210:./app/marketplace/page.tsx:  const t = useTranslations('marketplace');
+./hooks.txt:244:./hooks.txt:20:./calls.txt:211:./app/marketplace/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:245:./hooks.txt:21:./calls.txt:247:./app/admin/brands/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:246:./hooks.txt:22:./calls.txt:248:./app/admin/brands/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:247:./hooks.txt:23:./calls.txt:259:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin.sidebar');
+./hooks.txt:248:./hooks.txt:24:./calls.txt:265:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:249:./hooks.txt:25:./calls.txt:266:./app/admin/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:250:./hooks.txt:26:./calls.txt:291:./app/admin/users/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:251:./hooks.txt:27:./calls.txt:292:./app/admin/users/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:252:./hooks.txt:28:./calls.txt:300:./app/admin/orders/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:253:./hooks.txt:29:./calls.txt:301:./app/admin/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:254:./hooks.txt:30:./calls.txt:312:./app/dashboard/page.tsx:  const t = useTranslations('dashboard');
+./hooks.txt:255:./hooks.txt:31:./calls.txt:313:./app/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:256:./hooks.txt:32:./calls.txt:349:./app/register/page.tsx:  const t = useTranslations('auth.register');
+./hooks.txt:257:./hooks.txt:33:./calls.txt:350:./app/register/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:258:./hooks.txt:34:./calls.txt:403:./app/orders/[id]/page.tsx:  const t = useTranslations('orderDetails');
+./hooks.txt:259:./hooks.txt:35:./calls.txt:431:./app/orders/page.tsx:  const t = useTranslations('orders');
+./hooks.txt:260:./hooks.txt:36:./calls.txt:432:./app/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:261:./hooks.txt:37:./calls.txt:455:./app/notifications/page.tsx:  const t = useTranslations('notifications');
+./hooks.txt:262:./hooks.txt:38:./calls.txt:456:./app/notifications/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:263:./hooks.txt:39:./calls.txt:469:./app/login/page.tsx:  const t = useTranslations('auth.login');
+./hooks.txt:264:./hooks.txt:40:./calls.txt:470:./app/login/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:265:./hooks.txt:41:./calls.txt:489:./hooks.txt:./calls.txt:./app/brands/[id]/page.tsx:  const t = useTranslations('brandCatalogView');
+./hooks.txt:266:./hooks.txt:42:./calls.txt:490:./hooks.txt:./calls.txt:./app/brands/[id]/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:267:./hooks.txt:43:./calls.txt:491:./hooks.txt:./calls.txt:./app/brands/[id]/page.tsx:  const tMarketplace = useTranslations('marketplace');
+./hooks.txt:268:./hooks.txt:44:./calls.txt:492:./hooks.txt:./calls.txt:./app/brands/[id]/page.tsx:  const tTrust = useTranslations('trust');
+./hooks.txt:269:./hooks.txt:45:./calls.txt:493:./hooks.txt:./calls.txt:./app/brand/products/page.tsx:  const t = useTranslations('brandProducts');
+./hooks.txt:270:./hooks.txt:46:./calls.txt:494:./hooks.txt:./calls.txt:./app/brand/products/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:271:./hooks.txt:47:./calls.txt:495:./hooks.txt:./calls.txt:./app/brand/products/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:272:./hooks.txt:48:./calls.txt:496:./hooks.txt:./calls.txt:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:273:./hooks.txt:49:./calls.txt:497:./hooks.txt:./calls.txt:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandDashboard');
+./hooks.txt:274:./hooks.txt:50:./calls.txt:498:./hooks.txt:./calls.txt:./app/brand/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:275:./hooks.txt:51:./calls.txt:499:./hooks.txt:./calls.txt:./app/brand/profile/page.tsx:  const t = useTranslations('brandProfileSettings');
+./hooks.txt:276:./hooks.txt:52:./calls.txt:500:./hooks.txt:./calls.txt:./app/brand/profile/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:277:./hooks.txt:53:./calls.txt:501:./hooks.txt:./calls.txt:./app/brand/orders/[id]/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:278:./hooks.txt:54:./calls.txt:502:./hooks.txt:./calls.txt:./app/brand/orders/[id]/page.tsx:  const tOrders = useTranslations('brandOrders');
+./hooks.txt:279:./hooks.txt:55:./calls.txt:503:./hooks.txt:./calls.txt:./app/brand/orders/page.tsx:  const t = useTranslations('brandOrders');
+./hooks.txt:280:./hooks.txt:56:./calls.txt:504:./hooks.txt:./calls.txt:./app/brand/orders/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:281:./hooks.txt:57:./calls.txt:505:./hooks.txt:./calls.txt:./app/brand/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:282:./hooks.txt:58:./calls.txt:506:./hooks.txt:./calls.txt:./app/marketplace/page.tsx:  const t = useTranslations('marketplace');
+./hooks.txt:283:./hooks.txt:59:./calls.txt:507:./hooks.txt:./calls.txt:./app/marketplace/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:284:./hooks.txt:60:./calls.txt:508:./hooks.txt:./calls.txt:./app/admin/brands/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:285:./hooks.txt:61:./calls.txt:509:./hooks.txt:./calls.txt:./app/admin/brands/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:286:./hooks.txt:62:./calls.txt:510:./hooks.txt:./calls.txt:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin.sidebar');
+./hooks.txt:287:./hooks.txt:63:./calls.txt:511:./hooks.txt:./calls.txt:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:288:./hooks.txt:64:./calls.txt:512:./hooks.txt:./calls.txt:./app/admin/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:289:./hooks.txt:65:./calls.txt:513:./hooks.txt:./calls.txt:./app/admin/users/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:290:./hooks.txt:66:./calls.txt:514:./hooks.txt:./calls.txt:./app/admin/users/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:291:./hooks.txt:67:./calls.txt:515:./hooks.txt:./calls.txt:./app/admin/orders/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:292:./hooks.txt:68:./calls.txt:516:./hooks.txt:./calls.txt:./app/admin/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:293:./hooks.txt:69:./calls.txt:517:./hooks.txt:./calls.txt:./app/dashboard/page.tsx:  const t = useTranslations('dashboard');
+./hooks.txt:294:./hooks.txt:70:./calls.txt:518:./hooks.txt:./calls.txt:./app/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:295:./hooks.txt:71:./calls.txt:519:./hooks.txt:./calls.txt:./app/register/page.tsx:  const t = useTranslations('auth.register');
+./hooks.txt:296:./hooks.txt:72:./calls.txt:520:./hooks.txt:./calls.txt:./app/register/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:297:./hooks.txt:73:./calls.txt:521:./hooks.txt:./calls.txt:./app/orders/[id]/page.tsx:  const t = useTranslations('orderDetails');
+./hooks.txt:298:./hooks.txt:74:./calls.txt:522:./hooks.txt:./calls.txt:./app/orders/page.tsx:  const t = useTranslations('orders');
+./hooks.txt:299:./hooks.txt:75:./calls.txt:523:./hooks.txt:./calls.txt:./app/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:300:./hooks.txt:76:./calls.txt:524:./hooks.txt:./calls.txt:./app/notifications/page.tsx:  const t = useTranslations('notifications');
+./hooks.txt:301:./hooks.txt:77:./calls.txt:525:./hooks.txt:./calls.txt:./app/notifications/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:302:./hooks.txt:78:./calls.txt:526:./hooks.txt:./calls.txt:./app/login/page.tsx:  const t = useTranslations('auth.login');
+./hooks.txt:303:./hooks.txt:79:./calls.txt:527:./hooks.txt:./calls.txt:./app/login/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:304:./hooks.txt:80:./calls.txt:528:./hooks.txt:./calls.txt:./hooks.txt:./app/brands/[id]/page.tsx:  const t = useTranslations('brandCatalogView');
+./hooks.txt:305:./hooks.txt:81:./calls.txt:529:./hooks.txt:./calls.txt:./hooks.txt:./app/brands/[id]/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:306:./hooks.txt:82:./calls.txt:530:./hooks.txt:./calls.txt:./hooks.txt:./app/brands/[id]/page.tsx:  const tMarketplace = useTranslations('marketplace');
+./hooks.txt:307:./hooks.txt:83:./calls.txt:531:./hooks.txt:./calls.txt:./hooks.txt:./app/brands/[id]/page.tsx:  const tTrust = useTranslations('trust');
+./hooks.txt:308:./hooks.txt:84:./calls.txt:532:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/products/page.tsx:  const t = useTranslations('brandProducts');
+./hooks.txt:309:./hooks.txt:85:./calls.txt:533:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/products/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:310:./hooks.txt:86:./calls.txt:534:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/products/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:311:./hooks.txt:87:./calls.txt:535:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:312:./hooks.txt:88:./calls.txt:536:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/dashboard/page.tsx:  const t = useTranslations('brandDashboard');
+./hooks.txt:313:./hooks.txt:89:./calls.txt:537:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:314:./hooks.txt:90:./calls.txt:538:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/profile/page.tsx:  const t = useTranslations('brandProfileSettings');
+./hooks.txt:315:./hooks.txt:91:./calls.txt:539:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/profile/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:316:./hooks.txt:92:./calls.txt:540:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/orders/[id]/page.tsx:  const t = useTranslations('brandSidebar');
+./hooks.txt:317:./hooks.txt:93:./calls.txt:541:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/orders/[id]/page.tsx:  const tOrders = useTranslations('brandOrders');
+./hooks.txt:318:./hooks.txt:94:./calls.txt:542:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/orders/page.tsx:  const t = useTranslations('brandOrders');
+./hooks.txt:319:./hooks.txt:95:./calls.txt:543:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/orders/page.tsx:  const tSidebar = useTranslations('brandSidebar');
+./hooks.txt:320:./hooks.txt:96:./calls.txt:544:./hooks.txt:./calls.txt:./hooks.txt:./app/brand/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:321:./hooks.txt:97:./calls.txt:545:./hooks.txt:./calls.txt:./hooks.txt:./app/marketplace/page.tsx:  const t = useTranslations('marketplace');
+./hooks.txt:322:./hooks.txt:98:./calls.txt:546:./hooks.txt:./calls.txt:./hooks.txt:./app/marketplace/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:323:./hooks.txt:99:./calls.txt:547:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/brands/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:324:./hooks.txt:100:./calls.txt:548:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/brands/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:325:./hooks.txt:101:./calls.txt:549:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin.sidebar');
+./hooks.txt:326:./hooks.txt:102:./calls.txt:550:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/dashboard/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:327:./hooks.txt:103:./calls.txt:551:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:328:./hooks.txt:104:./calls.txt:552:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/users/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:329:./hooks.txt:105:./calls.txt:553:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/users/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:330:./hooks.txt:106:./calls.txt:554:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/orders/page.tsx:  const t = useTranslations('admin');
+./hooks.txt:331:./hooks.txt:107:./calls.txt:555:./hooks.txt:./calls.txt:./hooks.txt:./app/admin/orders/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:332:./hooks.txt:108:./calls.txt:556:./hooks.txt:./calls.txt:./hooks.txt:./app/dashboard/page.tsx:  const t = useTranslations('dashboard');
+./hooks.txt:333:./hooks.txt:109:./calls.txt:557:./hooks.txt:./calls.txt:./hooks.txt:./app/dashboard/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:334:./hooks.txt:110:./calls.txt:558:./hooks.txt:./calls.txt:./hooks.txt:./app/register/page.tsx:  const t = useTranslations('auth.register');
+./hooks.txt:335:./hooks.txt:111:./calls.txt:559:./hooks.txt:./calls.txt:./hooks.txt:./app/register/page.tsx:  const tCommon = useTranslations('common');
+./hooks.txt:336:./hooks.txt:112:./calls.txt:560:./hooks.txt:./calls.txt:./hooks.txt:./app/orders/[id]/page.tsx:  const t = useTranslations('orderDetails');
+./hooks.txt:337:./hooks.txt:113:./calls.txt:561:./hooks.txt:./calls.txt:./hooks.txt:./app/orders/page.tsx:  const t = useTranslations('orders');
+./hooks.txt:339:./components/Navbar.tsx:43:  const t = useTranslations('nav');
+./hooks.txt:340:./components/Navbar.tsx:44:  const tCommon = useTranslations('common');
+./hooks.txt:341:./components/Navbar.tsx:45:  const tAuth = useTranslations('auth');
+./hooks.txt:342:./components/BottomNav.tsx:17:  const t = useTranslations('nav');
+./hooks.txt:343:./components/StatusBadge.tsx:5:  const t = useTranslations('common');
+./hooks.txt:344:./components/MobileTopBar.tsx:21:  const t = useTranslations('nav');
+./hooks.txt:345:./components/MobileTopBar.tsx:22:  const tCommon = useTranslations('common');
+./find_missing.py:15:with open('../messages/en.json') as f:
+./find_missing.py:17:with open('../messages/ar.json') as f:
+./find_missing.py:22:for root, dirs, files in os.walk('.'):
+./find_missing.py:24:        if file.endswith('.tsx'):
+./find_missing.py:28:                # tVar = useTranslations('ns')
+./find_missing.py:31:                    # tVar('key')
+./debug_translations.py:4:for root, dirs, files in os.walk('src'):
+./debug_translations.py:6:        if file.endswith('.tsx'):
+./components/Navbar.tsx:43:  const t = useTranslations('nav');
+./components/Navbar.tsx:44:  const tCommon = useTranslations('common');
+./components/Navbar.tsx:45:  const tAuth = useTranslations('auth');
+./components/Navbar.tsx:56:          { href: '/admin/dashboard', label: t('dashboard'), icon: <LayoutDashboard size={15}/> },
+./components/Navbar.tsx:57:          { href: '/admin/brands',    label: t('brands'),    icon: <Tags size={15}/> },
+./components/Navbar.tsx:58:          { style: {}, href: '/admin/users',     label: t('users'),     icon: <Users size={15}/> },
+./components/Navbar.tsx:59:          { href: '/admin/orders',    label: t('orders'),    icon: <Package size={15}/> },
+./components/Navbar.tsx:63:          { href: '/brand/dashboard', label: t('dashboard'), icon: <LayoutDashboard size={15}/> },
+./components/Navbar.tsx:64:          { href: '/brand/products',  label: t('products'),  icon: <ShoppingBag size={15}/> },
+./components/Navbar.tsx:65:          { href: '/brand/orders',    label: t('orders'),    icon: <Package size={15}/> },
+./components/Navbar.tsx:66:          { href: '/brand/profile',   label: t('profile'),   icon: <Tags size={15}/> },
+./components/Navbar.tsx:70:          { href: '/marketplace',     label: t('marketplace'), icon: <Store size={15}/> },
+./components/Navbar.tsx:71:          { href: '/orders',          label: t('orders'),   icon: <Package size={15}/> },
+./components/Navbar.tsx:72:          { href: '/dashboard',       label: t('dashboard'),   icon: <LayoutDashboard size={15}/> },
+./components/Navbar.tsx:80:    fetch('/api/auth/me').then(r => r.json()).then(d => { setUser(d.user); setLoading(false); }).catch(() => setLoading(false));
+./components/Navbar.tsx:84:    await fetch('/api/auth/logout', { method: 'POST' });
+./components/Navbar.tsx:86:    router.push('/login');
+./components/Navbar.tsx:141:              <Link href="/login"    className="btn btn-ghost btn-sm">{tAuth('signIn')}</Link>
+./components/Navbar.tsx:142:              <Link href="/register" className="btn btn-primary btn-sm">{tAuth('signUp')}</Link>
+./components/LanguageToggle.tsx:15:    localStorage.setItem('b2b-hub-locale', newLocale);
+./components/LanguageToggle.tsx:31:        onClick={() => toggleLanguage('en')}
+./components/LanguageToggle.tsx:47:        onClick={() => toggleLanguage('ar')}
+./components/BottomNav.tsx:17:  const t = useTranslations('nav');
+./components/BottomNav.tsx:24:    fetch('/api/auth/me')
+./components/BottomNav.tsx:30:          fetch('/api/orders?status=pending')
+./components/BottomNav.tsx:43:    { href: '/marketplace', label: t('marketplace'), icon: Store },
+./components/BottomNav.tsx:44:    { href: '/orders',      label: t('orders'),      icon: Package,       badge: true },
+./components/BottomNav.tsx:45:    { href: '/dashboard',   label: t('dashboard'),   icon: LayoutDashboard },
+./components/BottomNav.tsx:46:    { href: '/profile',     label: t('profile'),     icon: User },
+./components/BottomNav.tsx:50:    { href: '/brand/dashboard', label: t('dashboard'), icon: LayoutDashboard },
+./components/BottomNav.tsx:51:    { href: '/brand/products',  label: t('products'),  icon: ShoppingBag },
+./components/BottomNav.tsx:52:    { href: '/brand/orders',    label: t('orders'),    icon: Package, badge: true },
+./components/BottomNav.tsx:53:    { href: '/brand/profile',   label: t('profile'),   icon: Tags },
+./components/BottomNav.tsx:57:    { href: '/admin/dashboard', label: t('dashboard'), icon: LayoutDashboard },
+./components/BottomNav.tsx:58:    { href: '/admin/brands',    label: t('brands'),    icon: Tags },
+./components/BottomNav.tsx:59:    { href: '/admin/orders',    label: t('orders'),    icon: Package, badge: true },
+./components/BottomNav.tsx:60:    { href: '/admin/users',     label: t('users'),     icon: Users },
+./components/NotificationBell.tsx:65:    window.addEventListener('resize', check);
+./components/NotificationBell.tsx:66:    return () => window.removeEventListener('resize', check);
+./components/NotificationBell.tsx:72:      const res  = await fetch('/api/notifications');
+./components/NotificationBell.tsx:89:      const res  = await fetch('/api/notifications');
+./components/NotificationBell.tsx:111:    document.addEventListener('mousedown', handler);
+./components/NotificationBell.tsx:112:    return () => document.removeEventListener('mousedown', handler);
+./components/NotificationBell.tsx:118:    document.addEventListener('keydown', handler);
+./components/NotificationBell.tsx:119:    return () => document.removeEventListener('keydown', handler);
+./components/NotificationBell.tsx:135:    await fetch('/api/notifications', { method: 'PATCH' });
+./components/NotificationBell.tsx:207:            onClick={() => { setOpen(false); router.push('/notifications'); }}
+./components/ReviewCard.tsx:89:                 onClick={() => handleModerate('keep')} // Placeholder for flagging
+./components/ReviewCard.tsx:98:                <button onClick={() => handleModerate('keep')} className="btn btn-ghost btn-sm" style={{ padding: '4px 8px', color: '#059669', fontSize: 11 }}><CheckCircle size={13} /> Keep</button>
+./components/ReviewCard.tsx:99:                <button onClick={() => handleModerate('remove')} className="btn btn-ghost btn-sm" style={{ padding: '4px 8px', color: '#DC4444', fontSize: 11 }}><Trash2 size={13} /> Remove</button>
+./components/StatusBadge.tsx:5:  const t = useTranslations('common');
+./components/StatusBadge.tsx:8:    pending: t('pending'),
+./components/StatusBadge.tsx:9:    approved: t('approved'),
+./components/StatusBadge.tsx:10:    rejected: t('rejected'),
+./components/StatusBadge.tsx:11:    completed: t('completed'),
+./components/ReviewModal.tsx:22:      setError('Please select a star rating.');
+./components/ReviewModal.tsx:26:    const res = await fetch('/api/reviews', {
+./components/ReviewModal.tsx:35:      setError('Failed to submit review. Please try again.');
+./components/CurrencySelector.tsx:18:    document.addEventListener('mousedown', handler);
+./components/CurrencySelector.tsx:19:    return () => document.removeEventListener('mousedown', handler);
+./components/CatalogImportModal.tsx:159:    if (!name) errors.push('Product Name is required');
+./components/CatalogImportModal.tsx:160:    if (!raw.price || isNaN(price) || price <= 0) errors.push('Valid Price is required');
+./components/CatalogImportModal.tsx:161:    if (!raw.moq || isNaN(moq) || moq <= 0) errors.push('Valid MOQ is required');
+./components/CatalogImportModal.tsx:162:    if (!raw.stock || isNaN(stock) || stock < 0) errors.push('Valid Stock Quantity is required');
+./components/CatalogImportModal.tsx:163:    if (!raw.description) warnings.push('No description provided');
+./components/CatalogImportModal.tsx:164:    if (!raw.category) warnings.push('No category specified');
+./components/CatalogImportModal.tsx:237:        setStep('preview');
+./components/CatalogImportModal.tsx:239:        alert('Could not parse file. Please use the provided template.');
+./components/CatalogImportModal.tsx:258:    setStep('importing');
+./components/CatalogImportModal.tsx:272:    const res = await fetch('/api/products/bulk', {
+./components/CatalogImportModal.tsx:289:    setStep('done');
+./components/CatalogImportModal.tsx:481:                <button className="btn btn-ghost btn-sm" onClick={() => { setStep('upload'); setRows([]); setFileName(''); }}>
+./components/CatalogImportModal.tsx:547:                <button className="btn btn-ghost" style={{ flex: 1 }} onClick={() => { setStep('upload'); setRows([]); setFileName(''); setResult(null); }}>
+./components/MobileTopBar.tsx:21:  const t = useTranslations('nav');
+./components/MobileTopBar.tsx:22:  const tCommon = useTranslations('common');
+./components/MobileTopBar.tsx:30:    fetch('/api/auth/me')
+./components/MobileTopBar.tsx:37:    await fetch('/api/auth/logout', { method: 'POST' });
+./components/MobileTopBar.tsx:38:    router.push('/login');
+./components/MobileTopBar.tsx:99:              <span>{t('profile')}</span>
+./components/MobileTopBar.tsx:108:                <span>{tCommon('language')}</span>
+./components/MobileTopBar.tsx:117:              <span>{t('signOut')}</span>
+./debug.py:3:for root, dirs, files in os.walk('.'):
+./debug.py:5:        if file.endswith('.tsx'):
+./proxy.ts:6:  const locale = request.cookies.get('NEXT_LOCALE')?.value || 'en';
+./proxy.ts:8:  response.headers.set('X-NEXT-INTL-LOCALE', locale);
+./lib/notifications.ts:17:      id: generateId('notif'),
+./lib/notifications.ts:39:        id: generateId('notif'),
+./lib/i18n.ts:13:    return new Intl.DateTimeFormat('ar-KW', {
+./lib/i18n.ts:19:  return new Intl.DateTimeFormat('en-GB', {
+./lib/auth.ts:6:  const userId = cookieStore.get('b2b_user_id')?.value;
+./lib/auth.ts:14:  if (!user) throw new Error('Unauthorized');
+./lib/auth.ts:21:  if (!roles.includes(user.role)) throw new Error('Forbidden');
