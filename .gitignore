@@ -34,3 +34,4 @@ yarn-error.log*
 
 # Claude / AI agent config
 .claude/
+node_modules
